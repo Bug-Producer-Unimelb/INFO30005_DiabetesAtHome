@@ -1,0 +1,754 @@
+* {
+    margin:0;
+}
+
+
+
+@media screen and (min-device-width: 375px) and (min-device-height: 812px){
+    #phone_header {
+        display: inherit;
+    }
+    
+    #other_header {
+        display: none;
+    }
+    
+    #menu_icon {
+        height: 15px;
+        margin: 28px 15px;
+    }
+    
+    
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #6470C7; 
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 70px;
+    }
+
+    header hr {
+        display: none;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li img {
+        content: url(images/Group_192.png);
+        position: fixed;
+        right: 10px;
+        top: 28px;
+        height: 40px;
+        
+    }
+
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        color: rgba(29, 32, 134, 0.65); 
+
+    }
+
+    header li a:active {
+        color: rgba(29, 32, 134, 1); 
+    }
+
+    header p {
+        display: none;
+    }
+
+    main {
+        margin-right: 2%;
+        margin-left: 2%;
+
+        margin-top: 1%;
+    }
+
+    .left_column {
+        width: 100%;
+        float: top;
+    }
+    
+    .try_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 7px 35px;
+        border-radius: 17px;
+        border: none;
+        opacity: 75%; 
+        position: absolute
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+    
+
+    
+    .left_column h1 span {
+        color: #132086;
+        font-family: Arial;
+    }
+
+    .body_text {
+        margin-top: 15%;
+    }
+    
+    .body_text p {
+        font-family: Bangla MN;
+        font-weight: bold;
+        font-size: 18px;
+        color: #132086;
+    }
+    
+    
+    .right_column {
+        width: 100%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    
+    .left_column.about_us{
+        display: none;
+    }
+    
+    .right_column.about_us {
+        margin-top: 100px;
+        background-image: url(images/doctor-checking-on-patient.png);
+        background-size: 170%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+    
+    .left_column.about_us h1 {
+        font-size: 45px;
+        padding-bottom: 30px;
+    }
+    
+    .left_column.about_us h1, h2 {
+        padding-top: 30px;
+        color: #6464BA;
+        font-family: Arial;
+    }
+    
+    .left_column.about_us h2 {
+        margin-bottom: 8%;
+        font-size: 25px;
+    }
+    
+    .right_column h1 {
+        margin-top: 50px;
+        font-family: Arial;
+        font-size: 30px;
+        color: #132086;
+    }
+    
+    .right_column.about_us h2 {
+        font-family: Tamil MN;
+        font-size: 30px;
+        color: #4E4E4E;
+    }
+    .right_column.about_us h3 {
+    5 font-family: Arial;
+        font-size: 20px;
+        color: #6464BA;
+    }
+
+    .right_column p {
+        font-family: Tamil MN;
+        font-size: 20px;
+        color: #4E4E4E;
+    }
+    
+    .lower_row p {
+        padding-top: 15px;
+    }
+    
+    .line {
+        margin-top: 38px;
+    }
+    
+    #phone_contact {
+        margin-top: 30px;
+    }
+    
+    #team {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .lower_row {
+        margin-top: 50px;
+    }
+    .lower_row p {
+        margin-top: 20px;
+    }
+    
+    .left_column.about_dia {
+        margin-left: 3%;
+        width: 100%;
+    }
+    
+    .right_column.about_dia {
+        margin-top: 20%;
+    }
+    
+    .left_column.about_dia h1 {
+        margin-top: 120px;
+        font-family: Arial;
+        font-size: 25px;
+        color: #132086;
+    }
+    
+    .left_column.about_dia iframe {
+        margin-top: 20px;
+        width: 360px;
+        height: 200px;
+        margin-left: 5px;
+    }
+    
+    .right_column.about_dia h1 {
+        margin-top: 70px;
+        margin-bottom: 10px;
+    }
+    
+    #other_contact {
+        display: none;
+    }
+    
+    #des {
+        font-family: Tamil MN;
+        font-size: 18px;
+        color: #4E4E4E;
+        padding-left: 15px;
+        padding-right: 10px;
+    }
+    #but {
+        text-align: center;
+    }
+    #last_sent {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .phone_ver {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 50px;
+
+    }
+    
+    .note {
+        font-family: Bangla MN;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        font-size: 12px;
+        font-weight: bold;
+        color: #132086;
+        text-align: center;
+    }
+    
+    #up_button {
+        display: none;
+    }
+    
+    #but {
+        display: none;
+    }
+    
+    #mins {
+        display: none;
+    }
+    
+    #op_sent {
+        display: none;
+    }
+}
+
+@media screen and (min-device-width: 1024px) and (min-device-height: 768px){
+    #phone_header {
+        display: none;
+    }
+    #other_header {
+        display: inherit;
+    }
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #F2F1F7;
+        position: fixed;
+        top: 1%;
+        width: 45%;
+    }
+
+    header hr {
+        width: 55%;
+        position: fixed;
+        color: #132086; 
+        top: 4%;
+        right: 0;
+        border: 1px solid #132086;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li img {
+        width: 35px;
+        padding-top: 15%;
+        padding-left: 15%;
+    }
+
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        color: rgba(29, 32, 134, 0.65); 
+
+    }
+
+    header li a:active {
+        color: rgba(29, 32, 134, 1); 
+    }
+
+    header p {
+        position: fixed;
+        top: 0.5%;
+        right: 3%;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 22px;
+        color: rgba(72, 82, 204, 0.24); 
+    }
+
+    main {
+        margin-right: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+        margin-top: 1%;
+    }
+
+    .left_column {
+        width: 60%;
+        float: left;
+    }
+    
+    .try_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 7px 35px;
+        border-radius: 17px;
+        border: none;
+        opacity: 75%; 
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+    
+
+    
+    .left_column h1 span {
+        color: #132086;
+        font-family: Arial;
+    }
+
+    .body_text {
+        margin-top: 15%;
+    }
+    
+    .body_text p {
+        font-family: Bangla MN;
+        font-weight: bold;
+        font-size: 18px;
+        color: #132086;
+    }
+    
+    .note {
+        font-family: Bangla MN;
+        margin-top: 10%;
+        font-size: 12px;
+        font-weight: bold;
+        color: #132086;
+        text-align: center;
+    }
+    
+    .right_column {
+        width: 40%;
+        float: right;
+    }
+    
+    .left_column.about_us{
+        width: 55%;
+        padding-top: 10%;
+        padding-left: 2%;
+        padding-right: 2%;
+        background-image: url(images/doctor-checking-on-patient.png);
+        background-size: cover;
+        text-align: center;
+    }
+    
+    .left_column.about_us h1 {
+        font-size: 45px;
+        padding-bottom: 30px;
+    }
+    
+    .left_column.about_us h1, h2 {
+        padding-top: 30px;
+        color: #6464BA;
+        font-family: Arial;
+    }
+    
+    .left_column.about_us h2 {
+        margin-bottom: 8%;
+        font-size: 25px;
+    }
+    
+    .right_column h1 {
+        margin-top: 50px;
+        font-family: Arial;
+        font-size: 22px;
+        color: #132086;
+    }
+    
+    .right_column.about_us h2 {
+        margin-top: 25px;
+        font-family: Tamil MN;
+        font-size: 25px;
+        color: #4E4E4E;
+    }
+    .right_column.about_us h3 {
+        font-family: Arial;
+        font-size: 18px;
+        color: #6464BA;
+    }
+
+    .right_column p {
+        font-family: Tamil MN;
+        font-size: 15px;
+        color: #4E4E4E;
+    }
+    #team {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    #other_contact p {
+        margin-left: 100px;
+    }
+    
+    #phone_contact {
+        display: none;
+    }
+    
+    .phone_ver {
+        display: none;
+    }
+    
+    .lower_row {
+        margin-top: 50px;
+    }
+    .lower_row p {
+        margin-top: 20px;
+    }
+    
+    .left_column.about_dia {
+        margin-left: 2%;
+        width: 60%;
+    }
+    
+    .right_column.about_dia {
+        margin-top: 2%;
+        margin-right: 1%;
+        width: 36%;
+    }
+    
+    .left_column.about_dia h1 {
+        margin-top: 80px;
+        font-family: Arial;
+        font-size: 40px;
+        color: #132086;
+    }
+    
+    .left_column.about_dia iframe {
+        margin-top: 20px;
+        width: 500px;
+        height: 250px;
+    }
+    
+    .right_column.about_dia h1 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    
+    #des {
+        font-family: Tamil MN;
+        font-size: 18px;
+        color: #4E4E4E;
+        padding-right: 80px;
+    }
+    #but {
+        text-align: center;
+    }
+    #last_sent {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-device-width: 1565px) and (min-device-height: 800px){
+    #phone_header {
+        display: none;
+    }
+    #other_header {
+        display: inherit;
+    }
+    
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #F2F1F7;
+        position: fixed;
+        top: 1%;
+        width: 35%;
+    }
+
+    header hr {
+        width: 65%;
+        position: fixed;
+        color: #132086; 
+        top: 4%;
+        right: 0;
+        border: 1px solid #132086;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li img {
+        width: 50px;
+        padding-top: 20%;
+        padding-left: 20%;
+        margin-right: 40px;
+    }
+
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        color: rgba(29, 32, 134, 0.65); 
+        padding: 25px;
+    }
+
+    header li a:active {
+        color: rgba(29, 32, 134, 1); 
+    }
+
+    header p {
+        position: fixed;
+        top: 1%;
+        right: 3%;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 25px;
+        color: rgba(72, 82, 204, 0.24); 
+    }
+
+    main {
+        margin-right: 5%;
+        margin-left: 2%;
+        margin-bottom: 5%;
+        margin-top: 1%;
+    }
+
+    .left_column {
+        width: 60%;
+        float: left;
+    }
+    
+    .try_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 25px;
+        padding: 8px 40px;
+        border-radius: 17px;
+        border: none;
+        opacity: 75%; 
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+    
+
+    
+    .left_column h1 span {
+        color: #132086;
+        font-family: Arial;
+    }
+
+    .body_text {
+        margin-top: 15%;
+    }
+    
+    .body_text p {
+        font-family: Bangla MN;
+        font-weight: bold;
+        font-size: 18px;
+        color: #132086;
+    }
+    
+    .note {
+        font-family: Bangla MN;
+        margin-top: 8%;
+        font-size: 15px;
+        font-weight: bold;
+        color: #132086;
+        text-align: center;
+    }
+    
+    .right_column {
+        width: 40%;
+        float: right;
+    }
+    
+    .left_column.about_us{
+        padding-top: 10%;
+        background-image: url(images/doctor-checking-on-patient.png);
+        background-size: cover;
+        text-align: center;
+    }
+    
+    .left_column.about_us h1 {
+        font-size: 80px;
+    }
+    
+    .left_column.about_us h1, h2 {
+        color: #6464BA;
+        font-family: Arial;
+    }
+    
+    .left_column.about_us h2 {
+        margin-bottom: 8%;
+        font-size: 35px;
+    }
+    
+    .phone_ver {
+        display: none;
+    }
+    
+    .right_column h1 {
+        margin-top: 80px;
+        font-family: Arial;
+        font-size: 30px;
+        color: #132086;
+    }
+    
+    .right_column.about_us h2 {
+        margin-top: 25px;
+        font-family: Tamil MN;
+        font-size: 40px;
+        color: #4E4E4E;
+    }
+    .right_column.about_us h3 {
+        font-family: Arial;
+        font-size: 20px;
+        color: #6464BA;
+    }
+    .right_column p {
+        font-family: Tamil MN;
+        font-size: 20px;
+        color: #4E4E4E;
+    }
+    #team {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+    #other_contact p {
+        margin-left: 100px;
+    }
+    
+    #phone_contact {
+        display: none;
+    }
+    
+    .lower_row {
+        margin-top: 100px;
+    }
+    .lower_row p {
+        margin-top: 25px;
+    }
+    
+    .left_column.about_dia {
+        margin-left: 2%;
+        width: 60%;
+    }
+    
+    .right_column.about_dia {
+        margin-right: 2%;
+        width: 36%;
+    }
+    
+    .left_column.about_dia h1 {
+        margin-top: 80px;
+        font-family: Arial;
+        font-size: 50px;
+        color: #132086;
+    }
+    
+    .left_column.about_dia iframe {
+        margin-top: 20px;
+        width: 700px;
+        height: 330px;
+        margin-bottom: 15px;
+    }
+    
+    .right_column.about_dia h1 {
+        margin-top: 60px;
+        margin-bottom: 10px;
+    }
+    
+    #des {
+        font-family: Tamil MN;
+        font-size: 20px;
+        color: #4E4E4E;
+        padding-right: 180px;
+    }
+    #but {
+        text-align: center;
+    }
+    #last_sent {
+        margin-bottom: 50px;
+    }
+}
