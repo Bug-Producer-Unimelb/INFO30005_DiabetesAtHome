@@ -1,0 +1,199 @@
+* {
+    margin:0;
+}
+
+@media screen and (device-width: 1920px) and (device-height: 1080px){
+    #phone_header {
+        display: none;
+    }
+    #other_header {
+        display: inherit;
+    }
+
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #F2F1F7;
+        position: fixed;
+        top: 1%;
+        width: 35%;
+    }
+
+    header hr {
+        width: 65%;
+        position: fixed;
+        color: #132086; 
+        top: 4%;
+        right: 0;
+        border: 1px solid #132086;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li img {
+        width: 50px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        padding-left: 20%;
+        padding-right: 40px;
+    }
+
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        color: rgba(29, 32, 134, 0.65); 
+        padding: 25px;
+    }
+
+    header li a:active {
+        color: rgba(29, 32, 134, 1); 
+    }
+
+    header p {
+        position: fixed;
+        top: 1%;
+        right: 3%;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 25px;
+        color: rgba(72, 82, 204, 0.24); 
+    }
+}
+
+@media screen and (device-width: 1024px) and (device-height: 768px){
+    #phone_header {
+        display: none;
+    }
+    #other_header {
+        display: inherit;
+    }
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #F2F1F7;
+        position: fixed;
+        top: 1%;
+        width: 45%;
+    }
+
+    header hr {
+        width: 55%;
+        position: fixed;
+        color: #132086; 
+        top: 4%;
+        right: 0;
+        border: 1px solid #132086;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li img {
+        width: 35px;
+        padding-top: 15%;
+        padding-left: 15%;
+    }
+
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        color: rgba(29, 32, 134, 0.65); 
+
+    }
+
+    header li a:active {
+        color: rgba(29, 32, 134, 1); 
+    }
+
+    header p {
+        position: fixed;
+        top: 0.5%;
+        right: 3%;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 22px;
+        color: rgba(72, 82, 204, 0.24); 
+    }
+}
+
+@media screen and (device-width: 375px) and (device-height: 812px){
+    #phone_header {
+        display: inherit;
+    }
+    
+    #other_header {
+        display: none;
+    }
+    
+    #menu_icon {
+        height: 15px;
+        margin: 28px 15px;
+    }
+    
+    
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #6470C7; 
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 70px;
+    }
+
+    header hr {
+        display: none;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li img {
+        content: url(images/Group_192.png);
+        position: fixed;
+        right: 10px;
+        top: 28px;
+        height: 40px;
+        
+    }
+
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        color: rgba(29, 32, 134, 0.65); 
+
+    }
+
+    header li a:active {
+        color: rgba(29, 32, 134, 1); 
+    }
+
+    header p {
+        display: none;
+    }
+}
