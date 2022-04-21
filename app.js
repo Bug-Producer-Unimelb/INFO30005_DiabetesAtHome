@@ -25,6 +25,12 @@ app.get('/aboutdiabetes', (req, res) => {
     res.render('about_diabetes.hbs')
 })
 
+// clinician pages
+app.get('/clinicianhome', (req, res) => {
+    res.render('clinician_home.hbs')
+})
+
+
 app.listen(3000, () => {
     console.log('Demo app is listening on port 3000!')
 })
