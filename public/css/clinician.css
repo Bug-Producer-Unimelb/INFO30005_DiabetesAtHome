@@ -6,6 +6,23 @@
         margin-top: 1%;
     }
 
+    .dashboard {
+        padding-top: 10%;
+        background-image:url(/images/bg_top.png);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 50%;
+
+    }
+
+
+    .dashboard h1 {
+        margin-left: 3%;
+        font-family: Tamil MN;
+        font-size: 40px;
+        color: #132086;
+    }
+
     .dashboard_table {
         width: 1200px;
         height: 200px;
