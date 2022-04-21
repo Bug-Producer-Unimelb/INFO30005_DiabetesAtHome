@@ -1,0 +1,27 @@
+@media screen and (device-width: 1920px) and (device-height: 1080px){
+    main {
+        margin-right: 5%;
+        margin-left: 2%;
+        margin-bottom: 5%;
+        margin-top: 1%;
+    }
+
+    .dashboard_table {
+        width: 1200px;
+        height: 200px;
+        margin: 100px auto;
+        text-align: center;
+    }
+
+    .dashboard_table th {
+        font-family: Tamil MN;
+        font-size: 15px;
+        color: #132086;
+    }
+
+}
+
+table, th, td {
+    border: 3px solid #707070;
+    border-collapse: collapse;
+}
