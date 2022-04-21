@@ -1,4 +1,56 @@
 @media screen and (device-width: 1920px) and (device-height: 1080px){
+
+    #before_log_phone_header {
+        display: none;
+    }
+
+    #after_log_web_header {
+        display: inherit;
+    }
+
+    #before_log_web_header {
+        display: none;
+    }
+
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #F2F1F7;
+        position: fixed;
+        top: 0%;
+        width: 100%;
+    }
+
+    header ri {
+        float: right;
+    }
+
+    header ri a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: 'Al Bayan';
+        font-weight: bold;
+        color: rgba(29, 32, 134, 0.65); 
+        padding: 25px;
+    }
+
+    header li b {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: 'Al Bayan';
+        font-weight: bold;
+        color: rgba(29, 32, 134, 0.65); 
+        padding: 25px;
+    }
+
     main {
         margin-right: 5%;
         margin-left: 2%;
