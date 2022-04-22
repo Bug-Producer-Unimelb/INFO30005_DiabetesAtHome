@@ -4,7 +4,7 @@
   "description": "A project helps users record their health data at home.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js" ,
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --single-quote --no-semi --tab-width 4 --write **/*.js *.js"
   },
@@ -12,9 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
-    "express-handlebars": "^6.0.4"
+    "express-handlebars": "^6.0.4",
+    "mongoose": "^6.3.1"
   },
   "devDependencies": {
+    "dotenv": "^16.0.0",
     "prettier": "^2.6.2"
   }
 }

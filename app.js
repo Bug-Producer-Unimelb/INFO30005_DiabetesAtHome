@@ -1,6 +1,6 @@
+const exphbs = require('express-handlebars')
 const express = require('express')
 const app = express()
-const exphbs = require('express-handlebars')
 
 app.use(express.static('public'))
 
@@ -12,6 +12,12 @@ app.engine(
     })
 )
 app.set('view engine', 'hbs')
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
+const patientRouter = require('./routes/patientRouter')
+app.use('/patient', patientRouter)
 
 app.get('/', (req, res) => {
     res.render('index.hbs')
