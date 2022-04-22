@@ -52,13 +52,27 @@
     }
 
     main {
-        margin-right: 5%;
-        margin-left: 2%;
-        margin-bottom: 5%;
-        margin-top: 1%;
+        margin-top: 0;
+        padding: 0;
     }
 
-    .dashboard_table {
+
+    .dashboard {
+        background-image:url(/images/background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .dashboard h1 {
+        padding-top: 8%;
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 40px;
+        color: #132086;
+    }
+
+    dashboard_table {
         width: 1200px;
         height: 200px;
         margin: 100px auto;
@@ -70,10 +84,11 @@
         font-size: 15px;
         color: #132086;
     }
+    
+    table, th, td {
+        border: 3px solid #707070;
+        border-collapse: collapse;
+    }
 
 }
 
-table, th, td {
-    border: 3px solid #707070;
-    border-collapse: collapse;
-}
