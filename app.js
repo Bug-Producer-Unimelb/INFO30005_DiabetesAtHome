@@ -19,6 +19,8 @@ app.use(express.urlencoded({ extended: false }))
 const patientRouter = require('./routes/patientRouter')
 app.use('/patient', patientRouter)
 
+require('./models/index.js')
+
 app.get('/', (req, res) => {
     res.render('index.hbs')
 })

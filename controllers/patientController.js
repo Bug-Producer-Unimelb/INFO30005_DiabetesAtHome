@@ -6,7 +6,7 @@ const Patient = require('../models/patient')
 const getAllPatientsData = async (req, res, next) => {
     try {
         const patients = await Patient.find().lean()
-        return res.render('allData', { data: patients })
+        return res.render('record', { data: patients })
     } catch (err) {
         return next(err)
     }
@@ -21,7 +21,7 @@ const getDataById = async (req, res, next) => {
             return res.sendStatus(404)
         }
 
-        return res.render('oneData', { oneItem: patient })
+        return res.render('record', { oneItem: patient })
     } catch (err) {
         return next(err)
     }
