@@ -1,6 +1,6 @@
 // import people model
 // const res = require('express/lib/response')
-const patient = require('../models/patient')
+const Patient = require('../models/patient')
 
 
 // handle request to get all data instances

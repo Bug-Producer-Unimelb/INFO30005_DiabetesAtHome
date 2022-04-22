@@ -1,4 +1,4 @@
-const patient = require('../models/clinician')
+const Clinician = require('../models/clinician')
 
 
 // handle request to get all data instances
