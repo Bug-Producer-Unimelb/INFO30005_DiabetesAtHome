@@ -3,7 +3,7 @@ const clinicianRouter = express.Router()
 
 const clinicianController = require('../controllers/clinicianController')
 
-clinicianRouter.get('/', clinicianController.getAllClinicianData)
+clinicianRouter.get('/', clinicianController.getAllCliniciansData)
 
 clinicianRouter.get('/clinician_id', clinicianController.getDataById)
 
