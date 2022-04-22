@@ -8,7 +8,7 @@ const schema = new mongoose.Schema({
     blood_glucose: Number,
     weight: Number,
     does_of_insulin: Number,
-    exercise: Number
+    exercise: Number,
 })
 
 const Patient = mongoose.model('Patient', schema)

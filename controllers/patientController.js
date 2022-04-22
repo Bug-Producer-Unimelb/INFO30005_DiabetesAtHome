@@ -2,12 +2,11 @@
 // const res = require('express/lib/response')
 const Patient = require('../models/patient')
 
-
 // handle request to get all data instances
 const getAllPatientsData = async (req, res, next) => {
     try {
         const patients = await Patient.find().lean()
-        return res.render('allData', {data: patients})
+        return res.render('allData', { data: patients })
     } catch (err) {
         return next(err)
     }
@@ -22,16 +21,15 @@ const getDataById = async (req, res, next) => {
             return res.sendStatus(404)
         }
 
-        return res.render('oneData', {oneItem: patient})
+        return res.render('oneData', { oneItem: patient })
     } catch (err) {
         return next(err)
     }
-
 }
 
 const insertData = async (req, res, next) => {
     try {
-        newPatient = new Patient( req.body )
+        newPatient = new Patient(req.body)
         await newPatient.save()
         return res.redirect('/patient_dashboard')
     } catch (err) {

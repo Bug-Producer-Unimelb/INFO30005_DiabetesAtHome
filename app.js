@@ -31,6 +31,6 @@ app.get('/aboutdiabetes', (req, res) => {
     res.render('about_diabetes.hbs')
 })
 
-app.listen(3000, () => {
-    console.log('Demo app is listening on port 3000!')
+app.listen(process.env.PORT || 3000, () => {
+    console.log('App is listening on port 3000!')
 })

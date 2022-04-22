@@ -1,11 +1,10 @@
 const Clinician = require('../models/clinician')
 
-
 // handle request to get all data instances
 const getAllCliniciansData = async (req, res, next) => {
     try {
         const clinicians = await Clinician.find().lean()
-        return res.render('allData', {data: clinicians})
+        return res.render('allData', { data: clinicians })
     } catch (err) {
         return next(err)
     }
@@ -15,21 +14,22 @@ const getAllCliniciansData = async (req, res, next) => {
 const getDataById = async (req, res, next) => {
     // search the database by ID
     try {
-        const clinician = await Clinician.findById(req.params.clinician_id).lean()
+        const clinician = await Clinician.findById(
+            req.params.clinician_id
+        ).lean()
         if (!clinician) {
             return res.sendStatus(404)
         }
 
-        return res.render('oneData', {oneItem: clinician})
+        return res.render('oneData', { oneItem: clinician })
     } catch (err) {
         return next(err)
     }
-
 }
 
 const insertData = async (req, res, next) => {
     try {
-        newClinician = new Clinician( req.body )
+        newClinician = new Clinician(req.body)
         await newClinician.save()
         return res.redirect('/clinician_dashboard')
     } catch (err) {
