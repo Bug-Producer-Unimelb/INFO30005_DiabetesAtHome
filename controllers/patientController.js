@@ -31,7 +31,7 @@ const insertData = async (req, res, next) => {
     try {
         newPatient = new Patient(req.body)
         await newPatient.save()
-        return res.redirect('/patient_dashboard')
+        return res.redirect('/patient')
     } catch (err) {
         return next(err)
     }
