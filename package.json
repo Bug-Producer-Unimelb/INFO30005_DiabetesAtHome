@@ -17,8 +17,5 @@
   "devDependencies": {
     "dotenv": "^16.0.0",
     "prettier": "^2.6.2"
-  },
-  "engines": {
-    "node": "12.11.1"
   }
 }
