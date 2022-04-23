@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --single-quote --no-semi --tab-width 4 --write **/*.js *.js"
   },
   "author": "bug_producers",
@@ -18,5 +17,8 @@
   "devDependencies": {
     "dotenv": "^16.0.0",
     "prettier": "^2.6.2"
+  },
+  "engines": {
+    "node": "12.11.1"
   }
 }
