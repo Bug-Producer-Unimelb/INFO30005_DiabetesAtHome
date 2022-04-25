@@ -1,0 +1,41 @@
+
+
+@media screen and (device-width: 1920px) and (device-height: 1080px){
+
+}
+
+@media screen and (device-width: 1024px) and (device-height: 768px){
+
+}
+
+@media screen and (device-width: 375px) and (device-height: 812px){
+    main {
+        margin-top: 70px;
+    }
+
+    #user_info {
+        padding-bottom: 150px;
+        background-image: url(/images/rec.png);
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    #user_avatar {
+        position: inherit;
+        padding: 30px;
+    }
+
+    #screen_name {
+        font-size: 15px;
+        font-family: Tamil MN;
+        color: #303030;
+    }
+
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+
+    }
+}
