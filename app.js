@@ -33,6 +33,15 @@ app.get('/aboutdiabetes', (req, res) => {
     res.render('about_diabetes.hbs')
 })
 
+// clinician pages
+app.get('/clinicianhome', (req, res) => {
+    res.render('clinician_home.hbs')
+})
+
+app.get('/cliniciancomment', (req, res) => {
+    res.render('clinician_comment.hbs')
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
