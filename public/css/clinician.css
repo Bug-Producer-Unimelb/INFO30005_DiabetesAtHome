@@ -73,12 +73,21 @@
         color: #132086;
     }
 
+    .dashboard h2 {
+        padding-left: 81%;
+        padding-top: 2.5%;
+        font-family: Tamil MN;
+        font-size: 20px;
+        color: #808080;
+
+    }
+
     .dashboard_table {
         /* table size*/
         width: 1700px;
         height: 690px;
 
-        margin: 85px 150px;
+        margin: 10px 150px;
         background-color: #FFFFFF;
         /*box-shadow: -50px -50px 2px #F2F2F2;*/
 
