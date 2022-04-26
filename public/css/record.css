@@ -10,11 +10,11 @@
 
 @media screen and (device-width: 375px) and (device-height: 812px){
     main {
-        margin-top: 70px;
+        margin-top: 60px;
     }
 
     #user_info {
-        padding-bottom: 150px;
+        padding-bottom: 115px;
         background-image: url(/images/rec.png);
         background-repeat: no-repeat;
         text-align: center;
@@ -31,11 +31,98 @@
         color: #303030;
     }
 
-    .checkbox {
+    .radio{
         width: 20px;
         height: 20px;
-        border-radius: 50%;
-        cursor: pointer;
-
+        appearance: none;
+        position: relative;
     }
+    .radio:before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 1px solid #7d7d7d;
+        display: inline-block;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    .radio:checked:before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 2px solid #132086;
+        display: inline-block;
+        border-radius: 50%;
+        vertical-align: middle;
+     }
+     .radio:checked:after{
+        content: '';
+        width: 12px;
+        height: 12px;
+        text-align: center;
+        background:#132086;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+     }
+
+    .comment_icon {
+         background-image: url(/images/comment_icon.png) center no-repeat;
+         font-size: 16px;
+         background-size: cover;
+     }
+
+    #data_form {
+        padding-left: 35px;
+    }
+
+    .form_label {
+         padding-left: 22px;
+         font-family: Tamil MN;
+         font-weight: bold;
+         color: #303030;
+     }
+
+    .form_icon {
+         padding-left: 20px;
+     }
+
+
+    .form_info {
+         float: right;
+         padding:20px;
+    }
+
+    .form_unit {
+        font-family: Tamil MN;
+        font-weight: bold;
+        color: #303030;
+    }
+
+    .form_input {
+        border: none;
+        border-bottom: 1px solid #303030;
+        width: 68px;
+        text-align: center;
+    }
+
+    #submit {
+        width: 92px;
+        height: 36px;
+        background: #6470C7;
+        border: none;
+        border-radius: 35px;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: 600;
+        font-size: 15px;
+        position: fixed;
+        right: 25px;
+        bottom: 50px;
+    }
+
+
 }

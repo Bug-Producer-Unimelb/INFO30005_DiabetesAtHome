@@ -146,6 +146,13 @@
         height: 15px;
         margin: 28px 15px;
     }
+
+    #phone_logo {
+        position: fixed;
+        top: 20px;
+        width: 180px;
+        height: 35px;
+    }
     
     
     header ul {

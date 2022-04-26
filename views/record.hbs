@@ -13,13 +13,19 @@
                 <h1 id="screen_name">Pat</h1>
             </div>
 
-            <form action="/patient_record" method="POST">
-                <input class="checkbox" type="checkbox" name="check_bg" />
-                <label>Blood Glucose Level</label>
-                <button type="button" name="comment"></button>
-                <input type="number" name="blood_glucose" />
-                <label>nmol/L</label>
-                <input type="submit" />
+            <form id="data_form" action="/patient_record" method="POST">
+                <div class="form_field"></div>
+                        <input class="radio" type="radio" name="check_bg" />
+                        <label class="form_label" id="bg_label">Blood Glucose Level</label>
+                        <img class="form_icon" src="/images/comment_icon.png" onclick="">
+                    <br/>
+                    <div class="form_info">
+                        <input type="number" class="form_input" />
+                        <label class="form_unit">nmol/L</label>
+                        <br/>
+                    </div>
+                </div>
+                <input id="submit" type="submit" />
             </form>
         </main>
     </body>
