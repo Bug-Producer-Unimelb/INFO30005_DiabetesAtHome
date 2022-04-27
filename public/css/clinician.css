@@ -48,6 +48,18 @@
         padding: 25px;
     }
 
+    header li b {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        color: rgba(29, 32, 134, 1); 
+        padding: 25px;
+    }
+
     header li a:active {
         color: rgba(29, 32, 134, 1); 
     }
