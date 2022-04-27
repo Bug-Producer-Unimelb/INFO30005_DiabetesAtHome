@@ -6,6 +6,7 @@ const schema = new mongoose.Schema({
         ref: 'Patient',
     },
     data_name: String,
+    data_content: Number,
     content: String,
 })
 

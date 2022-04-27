@@ -4,11 +4,7 @@ const schema = new mongoose.Schema({
     first_name: String,
     last_name: String,
     screen_name: String,
-    record_days: Number,
-    blood_glucose: Number,
-    weight: Number,
-    does_of_insulin: Number,
-    exercise: Number
+    record_days: Number
 })
 
 const Patient = mongoose.model('Patient', schema)

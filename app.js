@@ -18,6 +18,8 @@ app.use(express.urlencoded({ extended: false }))
 
 const patientRouter = require('./routes/patientRouter')
 app.use('/patient', patientRouter)
+const commentRouter = require('./routes/commentRouter')
+app.use('/comment', commentRouter)
 
 require('./models/index.js')
 

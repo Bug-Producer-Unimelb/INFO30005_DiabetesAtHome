@@ -3,30 +3,85 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About This Website</title>
-        <link rel="icon" type="image/png" href="/image/logo.png">
+        <link rel="icon" type="image/png" href="/images/logo.png">
         <link rel="stylesheet" href="/css/record.css" />
     </head>
-    <body>
+    <body id="phone_version">
         <main>
-            <div id="user_info">
-                <img id="user_avatar" src="/images/avatar.png" >
-                <h1 id="screen_name">Pat</h1>
+            <div id="phone_content">
+                <div id="user_info">
+                    <img id="user_avatar" src="/images/avatar.png" >
+                    <h1 id="screen_name">Pat</h1>
+                </div>
+
+                <form id="data_form" action="/comment" method="POST">
+                    <div class="form_field"></div>
+                            <input class="radio" type="radio" name="check_bg" />
+                            <label class="form_label" id="bg_label">Blood Glucose Level</label>
+                            <img class="form_icon" src="/images/comment_icon.png" onclick="">
+                        <br/>
+                        <div class="form_info">
+                            <input type="number" class="form_input" name="data_content" />
+                            <label class="form_unit">nmol/L</label>
+                            <br/>
+                        </div>
+                    </div>
+                    <input id="submit" type="submit" />
+                </form>
             </div>
 
-            <form id="data_form" action="/patient_record" method="POST">
-                <div class="form_field"></div>
-                        <input class="radio" type="radio" name="check_bg" />
-                        <label class="form_label" id="bg_label">Blood Glucose Level</label>
-                        <img class="form_icon" src="/images/comment_icon.png" onclick="">
-                    <br/>
-                    <div class="form_info">
-                        <input type="number" class="form_input" />
-                        <label class="form_unit">nmol/L</label>
-                        <br/>
+                <div id="other_content">
+                    <div class="center_box">
+                        <p class="title">Record your data</p>
+                        <form action="" method="post">
+                            <div class="form_head">
+                                <div class="form_part_one">
+                                    <div class="form_part_one_left">
+                                        <div class="form_name">
+                                            <p class="title">Patient Information:</p>
+                                            <img src="/images/info_avatar.png" id="avatar"/>
+                                            <p class="normal_text"> Patient Name: Pat</p>
+                                        </div>
+                                        <div class="form_info">
+                                            <p class="title">Record Data:</p>
+                                            <input type="radio" checked="checked" name="info"/>
+                                            <p class="normal_text">Blood Glucose Level</p>
+                                            <div class="input_field">
+                                                <input type="number" class="form_input" name="data_content" />
+                                                <label class="normal_text">nmol/L</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_part_two">
+                                    <div class="form_part_one_right">
+                                        <p class="normal_text">Comment About Your Blood Glucose Level Data</p>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_foot">
+                                <div class="formbox">
+                                    <div class="arror_left">
+                                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                        <input id="submit" type="submit" />
+                                    </div>
+                                    <div class="arror_right">
+                                        
+                                        <button> Go back to Dashboard</button>
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <input id="submit" type="submit" />
-            </form>
         </main>
     </body>
+
 </html>

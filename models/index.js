@@ -22,4 +22,5 @@ db.once('open', async () => {
     console.log(`Mongo connection started on ${db.host}:${db.port}`)
 })
 require('./patient')
+require('./comment')
 require('./clinician')
