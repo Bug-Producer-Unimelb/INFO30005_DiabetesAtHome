@@ -8,6 +8,13 @@ const ObjectId = require('mongodb').ObjectId
 const getAllPatientsData = async (req, res, next) => {
     try {
         const patients = await Patient.find().lean()
+        let out_range = []
+        let required = []
+
+        for (let i = 0; i < patients.length; i++) {
+
+        }
+        
         return res.render('clinician_home.hbs', { data: patients })
     } catch (err) {
         return next(err)
@@ -62,7 +69,7 @@ const updateData = async (req, res, next) => {
         } catch (err) {
             return next(err)
         }
-        return res.render('clinician_home.hbs', { oneItem: patient })
+        return res.render('record.hbs', { oneItem: patient })
     } catch (err) {
         return next(err)
     }

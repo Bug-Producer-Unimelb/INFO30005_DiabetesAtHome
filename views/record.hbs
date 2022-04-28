@@ -17,9 +17,12 @@
                     <div class="form_field"></div>
                             <input class="radio" type="radio" name="check_bg" />
                             <label class="form_label" id="bg_label">Blood Glucose Level</label>
-                            <img class="form_icon" src="/images/comment_icon.png" onclick="show_comment()">
+                            <img class="form_icon" src="/images/comment_icon.png">
                         <br/>
                         <div class="form_info">
+                            {{#with oneItem}}
+                                <p>{{this.blood_glucose_level}}</p>
+                            {{/with}}
                             <input type="number" class="form_input" name="data_content" />
                             <label class="form_unit">nmol/L</label>
                             <br/>
@@ -27,13 +30,7 @@
                     </div>
                     <div id="comment_form">
                         <p class="normal_text">Comment About Blood Glucose Level Data:</p>
-                        <textarea name="content" id="comment_box" cols="35" rows="6">                                          
-                                                
-                                                   
-                                                               
-                                                                       
-                                                                       
-                                        </textarea>
+                        <textarea name="content" id="comment_box" cols="35" rows="6"></textarea>
                     </div>
                     <input id="submit" type="submit" />
                 </form>
