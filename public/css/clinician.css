@@ -118,5 +118,13 @@
     .dashboard_table td:last-child {
         border-right: none;
     }
+
+    .out_range {
+        background-color: rgba(240, 141, 68, 0.27)
+    }
+
+    .not_required {
+        background-color: rgba(229, 229, 229, 0.62)
+    }
 }
 

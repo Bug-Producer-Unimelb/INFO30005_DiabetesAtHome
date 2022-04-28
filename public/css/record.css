@@ -569,6 +569,8 @@
     #comment_box {
         border-radius:10px;
         font-size: 15px;
+        line-height: 25px;
+        text-decoration: underline;
     }
 
     .normal_text {
