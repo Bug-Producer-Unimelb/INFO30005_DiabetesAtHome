@@ -9,6 +9,9 @@ app.engine(
     exphbs.engine({
         defaultlayout: 'main',
         extname: 'hbs',
+        helpers: {
+            isSafe: x => x > 115
+        }
     })
 )
 app.set('view engine', 'hbs')

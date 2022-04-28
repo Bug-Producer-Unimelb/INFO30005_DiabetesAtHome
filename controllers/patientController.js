@@ -10,10 +10,6 @@ const getAllPatientsData = async (req, res, next) => {
         const patients = await Patient.find().lean()
         let out_range = []
         let required = []
-
-        for (let i = 0; i < patients.length; i++) {
-
-        }
         
         return res.render('clinician_home.hbs', { data: patients })
     } catch (err) {

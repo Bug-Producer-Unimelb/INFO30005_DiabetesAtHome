@@ -21,10 +21,15 @@
                         <br/>
                         <div class="form_info">
                             {{#with oneItem}}
-                                <p>{{this.blood_glucose_level}}</p>
+                                {{#if this.blood_glucose_level}}
+                                    <label>{{this.blood_glucose_level}}</label>
+                                    <label class="form_unit">nmol/L</label>
+                                    {{else}}
+                                        <input type="number" class="form_input" name="data_content" />
+                                        <label class="form_unit">nmol/L</label>
+                                {{/if}}
                             {{/with}}
-                            <input type="number" class="form_input" name="data_content" />
-                            <label class="form_unit">nmol/L</label>
+
                             <br/>
                         </div>
                     </div>
