@@ -5,6 +5,12 @@
         display: none;
     }
 
+    #comment_box_for_other_device {
+        border-radius:10px;
+        font-size: 15px;
+    }
+
+
     a{
         text-decoration:none
     }
@@ -202,6 +208,15 @@
 }
 
 @media screen and (device-width: 1024px) and (device-height: 768px){
+    #phone_content {
+        display: none;
+    }
+
+    #comment_box_for_other_device {
+        border-radius:10px;
+        font-size: 15px;
+        margin: 10px;
+    }
 
     #submit {
         outline: none;
@@ -539,6 +554,30 @@
         border-bottom: 1px solid #303030;
         width: 68px;
         text-align: center;
+    }
+
+    #comment_form {
+        margin-top: 80px;
+        text-align: center;
+        border: 2px solid #303030;
+        border-radius: 10px;
+        padding: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    #comment_box {
+        border-radius:10px;
+        font-size: 15px;
+    }
+
+    .normal_text {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: Tamil MN;
+        font-weight: bold;
+        color: #303030;
     }
 
     #submit {

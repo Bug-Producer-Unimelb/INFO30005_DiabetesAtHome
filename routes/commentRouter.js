@@ -3,7 +3,9 @@ const commentRouter = express.Router()
 
 const commentController = require('../controllers/commentController')
 
-commentRouter.get('/:patient_id', commentController.getData)
+commentRouter.get('/', commentController.getAllCommentsData)
+
+commentRouter.get('/:patient_id/:data_name', commentController.getData)
 
 commentRouter.post('/', commentController.insertData)
 

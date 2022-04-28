@@ -6,19 +6,18 @@
         <link rel="icon" type="image/png" href="/images/logo.png">
         <link rel="stylesheet" href="/css/record.css" />
     </head>
-    <body id="phone_version">
-        <main>
-            <div id="phone_content">
+    <body>
+        <main id="phone_content">
                 <div id="user_info">
                     <img id="user_avatar" src="/images/avatar.png" >
                     <h1 id="screen_name">Pat</h1>
                 </div>
 
-                <form id="data_form" action="/comment" method="POST">
+                <form id="data_form" action="/patient/record" method="POST">
                     <div class="form_field"></div>
                             <input class="radio" type="radio" name="check_bg" />
                             <label class="form_label" id="bg_label">Blood Glucose Level</label>
-                            <img class="form_icon" src="/images/comment_icon.png" onclick="">
+                            <img class="form_icon" src="/images/comment_icon.png" onclick="show_comment()">
                         <br/>
                         <div class="form_info">
                             <input type="number" class="form_input" name="data_content" />
@@ -26,14 +25,17 @@
                             <br/>
                         </div>
                     </div>
+                    <div id="comment_form">
+                        <p class="normal_text">Comment About Blood Glucose Level Data:</p>
+                        <textarea name="content" id="comment_box" cols="35" rows="8"> </textarea>
+                    </div>
                     <input id="submit" type="submit" />
                 </form>
-            </div>
-
-                <div id="other_content">
+            </main>
+            <main id="other_content">
                     <div class="center_box">
                         <p class="title">Record your data</p>
-                        <form action="" method="post">
+                        <form id="data_form" action="/patient/record" method="POST">
                             <div class="form_head">
                                 <div class="form_part_one">
                                     <div class="form_part_one_left">
@@ -56,12 +58,7 @@
                                 <div class="form_part_two">
                                     <div class="form_part_one_right">
                                         <p class="normal_text">Comment About Your Blood Glucose Level Data</p>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
-                                        <div></div>
+                                        <textarea name="content" id="comment_box_for_other_device" cols="35" rows="8"> </textarea>
                                     </div>
                                 </div>
                             </div>
@@ -73,15 +70,19 @@
                                     </div>
                                     <div class="arror_right">
                                         
-                                        <button> Go back to Dashboard</button>
+                                        <button> Back to Homepage</button>
                                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-                </div>
         </main>
     </body>
+    <script>
+        function show_comment() {
+            $('button').css('width', '200px');
+        }
+    </script>
 
 </html>

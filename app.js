@@ -18,6 +18,8 @@ app.use(express.urlencoded({ extended: false }))
 
 const patientRouter = require('./routes/patientRouter')
 app.use('/patient', patientRouter)
+app.use('/clinicianhome', patientRouter)
+
 const commentRouter = require('./routes/commentRouter')
 app.use('/comment', commentRouter)
 
@@ -35,6 +37,10 @@ app.get('/aboutdiabetes', (req, res) => {
     res.render('about_diabetes.hbs')
 })
 
+app.get('/record', (req, res) => {
+    res.render('record.hbs')
+})
+
 // clinician pages
 app.get('/clinicianhome', (req, res) => {
     res.render('clinician_home.hbs')
@@ -44,8 +50,8 @@ app.get('/cliniciancomment', (req, res) => {
     res.render('clinician_comment.hbs')
 })
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+    console.log(`Our app is running on port ${PORT}`)
+})

@@ -8,10 +8,10 @@ const mongoose = require('mongoose')
 // We've also used Heroku CLI to set MONGO_URL for our Heroku app before.
 
 mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost', {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        dbName: 'diabete@home',
-    })
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'diabete@home',
+})
 // Exit on error
 const db = mongoose.connection.on('error', (err) => {
     console.error(err)
