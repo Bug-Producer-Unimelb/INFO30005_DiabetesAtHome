@@ -20,24 +20,25 @@
                             <img class="form_icon" src="/images/comment_icon.png">
                         <br/>
                         <div class="form_info">
+                            <input type="number" class="form_input" name="data_content" />
+                            <label class="form_unit">nmol/L</label>
+                            <br/>
                             {{#with oneItem}}
                                 {{#if this.blood_glucose_level}}
-                                    <label>{{this.blood_glucose_level}}</label>
-                                    <label class="form_unit">nmol/L</label>
-                                    {{else}}
-                                        <input type="number" class="form_input" name="data_content" />
-                                        <label class="form_unit">nmol/L</label>
+                                    <label class="form_digit">Last Record: {{this.blood_glucose_level}}</label>
+                                    <br/>
+                                {{else}} <label class="form_digit">None</label>
                                 {{/if}}
                             {{/with}}
 
-                            <br/>
                         </div>
                     </div>
-                    <div id="comment_form">
-                        <p class="normal_text">Comment About Blood Glucose Level Data:</p>
-                        <textarea name="content" id="comment_box" cols="35" rows="6"></textarea>
-                    </div>
-                    <input id="submit" type="submit" />
+                                <div id="comment_form">
+                                    <p class="normal_text">Comment About Blood Glucose Level Data:</p>
+                                    <textarea name="content" id="comment_box" cols="35" rows="6"></textarea>
+                                </div>
+                                <input id="submit" type="submit" />
+
                 </form>
             </main>
             <main id="other_content">
@@ -59,6 +60,12 @@
                                             <div class="input_field">
                                                 <input type="number" class="form_input" name="data_content" />
                                                 <label class="normal_text">nmol/L</label>
+                                                {{#with oneItem}}
+                                                    {{#if this.blood_glucose_level}}
+                                                    <br/>
+                                                    <label class="form_digit">Last Record: {{this.blood_glucose_level}}</label>
+                                                    {{/if}}
+                                                {{/with}}
                                             </div>
                                         </div>
                                     </div>
@@ -76,6 +83,7 @@
                                         <i class="fa fa-arrow-left" aria-hidden="true"></i>
                                         <input id="submit" type="submit" />
                                     </div>
+                                    
                                     <div class="arror_right">
                                         
                                         <button> Back to Homepage</button>
