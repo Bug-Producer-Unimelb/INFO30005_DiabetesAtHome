@@ -34,6 +34,9 @@ app.get('/cliniciancomment', (req, res) => {
     res.render('clinician_comment.hbs')
 })
 
+app.get('/c_patientdetail', (req, res) => {
+    res.render('clinician_pdetail.hbs')
+})
 
 app.listen(3000, () => {
     console.log('Demo app is listening on port 3000!')
