@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About This Website</title>
+        <link rel="icon" type="image/png" href="/images/logo.png">
+        <link rel="stylesheet" href="/css/record.css" />
+    </head>
+    <body>
+        
+        <main class="other_version">
+            <h1>Diabetes@Home</h1>
+            {{#each flash}}
+            <p class="alert">{{this}}</p>
+            {{/each}}
+
+            <div class="role_selection">
+                <a href="">Patient</a>
+                <a href="">Clinician</a>
+            </div>
+            <div class="login_field">
+                <form action="login" method="POST">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" />
+                    <label for="password">Password</label>
+                    <input type="password" name="password" />
+                    <input type="submit" value="Sign In" />
+                </form>
+            </div>
+            
+
+        </main>
+        <footer>
+            <h2>Meet Issues</h2>
+            <p>If you have any issue with sign in or sign up, please send us an email.</p>
+            <a href="/aboutus">About Us</a>
+            <a href="/aboutdiabetes">About Diabetes</a>
+            <a href="/aboutus">Contact Us</a>
+        </footer>
+    </body>
+
+
+</html>

@@ -1,6 +1,6 @@
 {
   "name": "diabetesathome_v2",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A project helps users record their health data at home.",
   "main": "app.js",
   "scripts": {
@@ -10,9 +10,17 @@
   "author": "bug_producers",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^4.6.0",
     "express": "^4.17.3",
+    "express-flash": "0.0.2",
     "express-handlebars": "^6.0.4",
-    "mongoose": "^6.3.1"
+    "express-session": "^1.17.2",
+    "flash": "^1.1.0",
+    "mongoose": "^6.3.1",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "dotenv": "^16.0.0",

@@ -1,5 +1,10 @@
 const exphbs = require('express-handlebars')
 const express = require('express')
+const flash = require('express-flash')
+const session = require('express-session')
+const MongoStore = require('connect-mongo')
+const mongooseClient = require('./models')
+
 const app = express()
 
 app.use(express.static('public'))
@@ -16,8 +21,34 @@ app.engine(
 )
 app.set('view engine', 'hbs')
 
+app.use(flash())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+
+app.use(
+    session({
+        // The secret used to sign session cookies (ADD ENV VAR)
+        secret: process.env.SESSION_SECRET || 'no more bug',
+        name: 'diabetesathome', // The cookie name (CHANGE THIS)
+        saveUninitialized: false,
+        resave: false,
+        cookie: {
+            sameSite: 'strict',
+            httpOnly: true,
+            secure: app.get('env') === 'production'
+        },
+        store: MongoStore.create({ clientPromise: mongooseClient }),
+        })
+)
+
+if (app.get('env') === 'production') {
+    app.set('trust proxy', 1); // Trust first proxy
+}
+
+const passport = require('./passport')
+app.use(passport.authenticate('session'))
+const authRouter = require('./routes/auth')
+app.use(authRouter)
 
 const patientRouter = require('./routes/patientRouter')
 app.use('/patient', patientRouter)
