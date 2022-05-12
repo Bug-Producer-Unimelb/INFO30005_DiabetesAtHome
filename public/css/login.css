@@ -1,0 +1,153 @@
+@media screen and (device-width: 1920px) and (device-height: 1080px) {
+
+
+    main {
+        margin-top: 0;
+        padding: 0;
+    }
+    header {
+        display: none;
+    }
+
+    #doc_image {
+        position: absolute;
+        left: -60px;
+        top: 40px;
+    }
+
+    h1 {
+        font-family: Tamil MN;
+        font-size: 95px;
+        color: #4852CC;
+        text-shadow: 10px 10px 0px rgba(72, 82, 204, 0.24);
+        float: right;
+        margin-bottom: 50px;
+        margin-right: -100px;
+    }
+
+    #slogan {
+        position: absolute;
+        width: 325px;
+        height: 100px;
+        margin-top: 250px;
+        margin-left: 50px;
+
+    }
+
+    #slogan p {
+        font-family: Myanmar MN;
+        font-size: 30px;
+        font-weight: bold;
+        color: #3F79D6;
+    }
+
+    footer h2, a {
+        font-family: Arial;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 25px;
+        color: #5686BF;
+    }
+
+    footer p {
+        font-family: Tamil MN;
+        font-size: 25px;
+    }
+    .login_field {
+        float: right;
+        margin-right: 250px;
+        width: 500px;
+        margin-top: 150px;
+    }
+
+    .login_fill {
+        margin-left: 70px;
+    }
+
+    
+
+    .login_field label {
+        color: #132086;
+        font-family: Didot;
+        font-size: 30px;
+    }
+
+    .login_field input[type=text] {
+        margin-top: 5px;
+        margin-bottom: 50px;
+        width: 425px;
+        height: 61px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+        border-color: #132086;
+        background-color: #EEEDF4;
+    }
+    .login_field input[type=password] {
+        margin-top: 5px;
+        width: 425px;
+        height: 61px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+        border-color: #132086;
+        background-color: #EEEDF4;
+    }
+    .login_field input[type=submit] {
+        margin-top: 45px;
+        border-radius: 20px;
+        padding: 18px 0px;
+        width: 465px;
+        background-color: #CAC4ED;
+        font-size: 30px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #132086;
+    }
+
+    .role_selection a {
+        font-family: Arial;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-right: 25px;
+    }
+
+    .role_selection {
+        margin-bottom: 25px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+    }
+    
+    #links {
+        text-align: center;
+    }
+
+    #links a {
+        margin-left: 100px;
+        margin-right: 10px;
+    }
+
+    #gmail_icon {
+        margin-bottom: -10px;
+    }
+
+    hr {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (device-width: 1024px) and (device-height: 768px) {
+
+}
+
+@media screen and (device-width: 375px) and (device-height: 812px) {
+
+}
