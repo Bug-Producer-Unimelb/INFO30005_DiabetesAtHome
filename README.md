@@ -1,8 +1,15 @@
 **The University of Melbourne**
-# INFO30005 -- DiabetesAtHome
+# INFO30005 - DiabetesAtHome - Bug Producer
 
-## Team members
-Zheng Li, Lujia Yang, Jiayi Wu, Bowen Yu, Wuge Liu
+## Team Members and Contributions
+
+| Name         | Contributions                                                                             | State |
+| :----------- | :---------------------------------------------------------------------------------------- | :---- |
+| Zheng Li     | UI Design | ✅    |
+| Lujia Yang   | UI Design | ✅    |
+| Jiayi Wu     | UI Design | ✅    |
+| Bowen Yu     | UI Design | ✅    |
+| Wuge Liu     | UI Design | ✅    |
 
 ## Reference
 
