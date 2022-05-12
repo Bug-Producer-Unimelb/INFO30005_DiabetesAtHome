@@ -12,6 +12,26 @@ const getAllCommentsData = async (req, res, next) => {
     }
 }
 
+ const getCommentByPatientId = async (req, res) => {
+     try {
+        const { patient_id, data_name, comment_date } = req.query
+        const comment = await Comment.findOne(
+            {
+                patient_id: patient_id,
+                data_name: data_name,
+                comment_date: new Date(comment_date)
+            }
+        )
+        if (!comment) {
+            return res.sendStatus(404)
+        }
+     }
+
+     catch (err) {
+         console.log(err)
+     }
+ }
+
 // handle request to get one data instance
 const getData = async (req, res, next) => {
     // search the database by ID
@@ -45,6 +65,7 @@ const insertData = async (req, res, next) => {
 }
 
 module.exports = {
+    getCommentByPatientId,
     getAllCommentsData,
     getData,
     insertData,

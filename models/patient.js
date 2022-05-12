@@ -26,8 +26,11 @@ const schema = new mongoose.Schema({
         required: true
     },
     dataset: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Comment'
+        comment_id: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: comment,
+            required: true
+        }
     }],
     thresholds: [{
         type: mongoose.Schema.Types.ObjectId,
