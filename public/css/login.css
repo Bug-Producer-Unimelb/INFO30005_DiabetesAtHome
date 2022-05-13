@@ -1,5 +1,7 @@
 @media screen and (device-width: 1920px) and (device-height: 1080px) {
-
+    .phone_version {
+        display: none;
+    }
 
     main {
         margin-top: 0;
@@ -145,9 +147,240 @@
 }
 
 @media screen and (device-width: 1024px) and (device-height: 768px) {
+    .phone_version {
+        display: none;
+    }
 
+    .other_version {
+        margin-top: 0;
+        padding: 0;
+    }
+    header {
+        display: none;
+    }
+
+    #doc_image {
+        position: absolute;
+        width: 500px;
+        left: -60px;
+        bottom: 0px;
+    }
+
+    h1 {
+        font-family: Tamil MN;
+        font-size: 45px;
+        color: #4852CC;
+        text-shadow: 10px 10px 0px rgba(72, 82, 204, 0.24);
+        float: right;
+        margin-bottom: 50px;
+        margin-right: 75px;
+    }
+
+    #slogan {
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        margin-top: 250px;
+        margin-left: 50px;
+
+    }
+
+    #slogan p {
+        font-family: Myanmar MN;
+        font-size: 15px;
+        font-weight: bold;
+        color: #3F79D6;
+    }
+
+    footer h2, a {
+        font-family: Arial;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 15px;
+        color: #5686BF;
+    }
+
+    footer p {
+        font-family: Tamil MN;
+        font-size: 15px;
+    }
+    .login_field {
+        float: right;
+        margin-right: 50px;
+        width: 500px;
+        margin-top: 150px;
+    }
+
+    .login_fill {
+        margin-left: 70px;
+    }
+
+    
+
+    .login_field label {
+        color: #132086;
+        font-family: Didot;
+        font-size: 18px;
+    }
+
+    .login_field input[type=text] {
+        margin-top: 5px;
+        margin-bottom: 50px;
+        width: 250px;
+        height: 50px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+        border-color: #132086;
+        background-color: #EEEDF4;
+    }
+    .login_field input[type=password] {
+        margin-top: 5px;
+        width: 250px;
+        height: 50px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+        border-color: #132086;
+        background-color: #EEEDF4;
+    }
+    .login_field input[type=submit] {
+        margin-top: 45px;
+        border-radius: 20px;
+        padding: 8px 0px;
+        width: 290px;
+        background-color: #CAC4ED;
+        font-size: 30px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #132086;
+    }
+
+
+
+    .role_selection {
+        display: none;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 25px;
+        right: 10px;
+    }
+    
+    #links {
+        text-align: center;
+    }
+
+    #links a {
+        margin-left: 30px;
+        margin-right: 10px;
+    }
+
+    #gmail_icon {
+        margin-bottom: -12px;
+    }
+
+    hr {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
 
 @media screen and (device-width: 375px) and (device-height: 812px) {
+    .other_version {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
 
+    h1 {
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 37px;
+        color: rgba(19, 32, 134, 0.65)
+    }
+    .phone_version {
+        text-align: center;
+        margin-top: 150px;
+        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("/images/phone_background.png") no-repeat 0% 20%;
+        background-size: 550px;
+        background-position: top center;
+        padding-bottom: 180px;
+        
+    }
+
+    label {
+        float: left;
+        position: absolute;
+        left: 40px;
+        margin-top: 42px;
+        font-family: Didot;
+        font-size: 20px;
+        color: #132086;
+    }
+
+    .login_field input[type=text] {
+        margin-top: 5px;
+        margin-bottom: 25px;
+        width: 300px;
+        height: 55px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+        border-color: #132086;
+        background-color: #EEEDF4;
+        text-indent: 100px;
+    }
+    .login_field input[type=password] {
+        margin-top: 5px;
+        width: 300px;
+        height: 55px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+        border-color: #132086;
+        background-color: #EEEDF4;
+        text-indent: 100px;
+    }
+    .login_field input[type=submit] {
+        margin-top: 45px;
+        border-radius: 20px;
+        padding: 10px 0px;
+        width: 340px;
+        background-color: #CAC4ED;
+        font-size: 30px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #132086;
+    }
+
+    .login_fill {
+        margin-top: 100px;
+    }
+
+    #meet_issue {
+        position: absolute;
+        padding-left: 15px;
+        padding-right: 5px;
+        bottom: 5px;
+        text-align: left;
+    }
+
+    #meet_issue h2 {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 18px;
+        color: #5686BF;
+    }
+    #meet_issue p {
+        font-family: Arial;
+        font-size: 15px;
+        color: #616161;
+    }
 }

@@ -7,6 +7,8 @@ commentRouter.get('/', commentController.getAllCommentsData)
 
 commentRouter.get('/:patient_id/:data_name', commentController.getData)
 
+commentRouter.get('/:patient_id/:data_name/:comment_date', commentController.getCommentByPatientId)
+
 commentRouter.post('/', commentController.insertData)
 
 // export the router

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
+const user = require('./user.js')
 
 const schema = new mongoose.Schema({
     first_name: String,
@@ -12,22 +13,14 @@ const schema = new mongoose.Schema({
     Weight: Number,
     Doses: Number,
     Exercise: Number,
-    username: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    secret: {
-        type: String,
-        required: true
-    },
+    account: user.userSchema,
+
     dataset: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Comment'
+        comment_id: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: comment,
+            required: true
+        }
     }],
     thresholds: [{
         type: mongoose.Schema.Types.ObjectId,

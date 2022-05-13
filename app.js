@@ -75,6 +75,10 @@ app.get('/record', (req, res) => {
     res.render('record.hbs')
 })
 
+app.get('/clinicianlogin', (req, res) => {
+    res.render('clinician_login.hbs')
+})
+
 // clinician pages
 app.get('/clinicianhome', (req, res) => {
     res.render('clinician_home.hbs')
