@@ -88,6 +88,9 @@ app.get('/cliniciancomment', (req, res) => {
     res.render('clinician_comment.hbs')
 })
 
+app.get('/c_patientdetail', (req, res) => {
+    res.render('clinician_pdetail.hbs')
+})
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
