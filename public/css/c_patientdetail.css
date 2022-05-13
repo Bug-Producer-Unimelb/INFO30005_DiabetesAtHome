@@ -1,0 +1,116 @@
+@media screen and (device-width: 1920px) and (device-height: 1080px){
+
+    #after_log_web_header {
+        display: inherit;
+    }
+
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #F2F1F7;
+        position: fixed;
+        top: 0%;
+        width: 100%;
+    }
+    
+    header ri {
+        float: right;
+    }
+
+    header ri a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 25px;
+        color: #707070; 
+        padding: 25px;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgba(29, 32, 134, 0.65); 
+        padding: 25px;
+    }
+
+    header li b {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgba(29, 32, 134, 1); 
+        padding: 25px;
+    }
+
+    header li a:active {
+        color: rgba(29, 32, 134, 1); 
+    }
+
+    #clinicianImg {
+        position: fixed;
+        top: 6px;
+        right: 235px;
+    }
+
+    main {
+        margin-top: 0;
+        padding: 0;
+    }
+
+
+    .dashboard {
+        background-image:url(/images/patient_bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .dashboard h1 {
+        padding-top: 8%;
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 40px;
+        color: #132086;
+    }
+
+    .dashboard h2 {
+        padding-left: 81%;
+        padding-top: 2.5%;
+        font-family: Tamil MN;
+        font-size: 20px;
+        color: #808080;
+
+    }
+
+
+
+
+    .out_range {
+        background-color: rgba(240, 141, 68, 0.27)
+    }
+
+    .not_required {
+        background-color: rgba(229, 229, 229, 0.62)
+    }
+}
+
