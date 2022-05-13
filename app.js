@@ -45,6 +45,25 @@ if (app.get('env') === 'production') {
     app.set('trust proxy', 1); // Trust first proxy
 }
 
+const isAuthenticated = (req, res, next) => {
+    // If user is not authenticated via passport, redirect to login page
+    if (!req.isAuthenticated()) {
+        return res.redirect('/login')
+    }
+    // Otherwise, proceed to next middleware function
+    return next()
+}
+
+const hasRole = (thisRole) => {
+    return (req, res, next) => {
+        if (req.user.role == thisRole) 
+            return next()
+        else {
+            res.redirect('/')
+        }
+    }    
+}
+
 const passport = require('./passport')
 app.use(passport.authenticate('session'))
 const authRouter = require('./routes/auth')
@@ -52,7 +71,8 @@ app.use(authRouter)
 
 const patientRouter = require('./routes/patientRouter')
 app.use('/patient', patientRouter)
-app.use('/clinicianhome', patientRouter)
+
+app.use('/clinician', patientRouter)
 
 const commentRouter = require('./routes/commentRouter')
 app.use('/comment', commentRouter)
@@ -79,12 +99,14 @@ app.get('/clinicianlogin', (req, res) => {
     res.render('clinician_login.hbs')
 })
 
+
 // clinician pages
-app.get('/clinicianhome', (req, res) => {
+app.get('/clinicianhome', isAuthenticated, hasRole('clinician'), async (req, res) => {
     res.render('clinician_home.hbs')
 })
 
-app.get('/cliniciancomment', (req, res) => {
+
+app.get('/cliniciancomment', isAuthenticated, hasRole('clinician'), async (req, res) => {
     res.render('clinician_comment.hbs')
 })
 
