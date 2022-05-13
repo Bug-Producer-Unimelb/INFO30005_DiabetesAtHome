@@ -29,12 +29,26 @@
         color: white;
         text-align: center;
         padding: 15px 15px;
+        margin-right: 10px;
         text-decoration: none;
         font-family: "Tamil MN";
         font-weight: normal;
         font-size: 25px;
         color: #707070; 
         padding: 25px;
+    }
+
+    header ri button {
+        outline: none;
+        background: #747bb7;
+        border-radius: 10px;
+        border: navajowhite;
+        width: 75px;
+        height: 30px;
+        color: #fff;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 25px;
     }
 
     header li {
