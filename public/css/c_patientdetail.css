@@ -85,7 +85,7 @@
         height: 100vh;
     }
 
-    .dashboard h1 {
+    .dashboard h2 {
         padding-top: 8%;
         padding-left: 6%;
         font-family: Tamil MN;
@@ -93,24 +93,55 @@
         color: #132086;
     }
 
-    .dashboard h2 {
-        padding-left: 81%;
-        padding-top: 2.5%;
+    .dashboard h1 {
+        padding-top: 8%;
+        padding-left: 6%;
         font-family: Tamil MN;
         font-size: 20px;
-        color: #808080;
+        color: #132086;
+    }
+
+    .dashboard h3 {
+        font-family: Tamil MN;
+        font-size: 15px;
+        color: #303030;
+    }
+
+    .patient_info {
+        width: 25%;
+        float: left;
+        padding-top: 3%;
+    }
+
+    .patient_info h1 {
+        padding-left: 50%;
+    }
+
+    .patient_info img {
+        padding-top: 10%;
+        padding-left: 55%;
+    }
+
+    .patient_info h3 {
+        padding-top: 7%;
+        padding-left: 50%;
+    }
+
+
+
+    .patient_data {
+        width: 25%;
+        margin: 0 80px;
 
     }
 
 
 
-
-    .out_range {
-        background-color: rgba(240, 141, 68, 0.27)
+    .clinician_note {
+        width: 25%;
+        float:right;
     }
 
-    .not_required {
-        background-color: rgba(229, 229, 229, 0.62)
-    }
+
 }
 
