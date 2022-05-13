@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
-const user = require('./user.js')
+const user = require('./user')
 
 const schema = new mongoose.Schema({
     first_name: String,
@@ -13,12 +13,11 @@ const schema = new mongoose.Schema({
     Weight: Number,
     Doses: Number,
     Exercise: Number,
-    account: user.userSchema,
 
     dataset: [{
         comment_id: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: comment,
+            ref: "comment",
             required: true
         }
     }],
