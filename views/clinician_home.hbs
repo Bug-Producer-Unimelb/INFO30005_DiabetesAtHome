@@ -3,20 +3,20 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Clinician Home</title>
-        <link rel="icon" type="image/png" href="/image/logo.png">
+        <link rel="icon" type="image/png" href="/images/logo.png">
         <link rel="stylesheet" href="/css/clinician.css" />
     </head>
 
     <body>
         <header>
-            </nav id='after_log_web_header'>
+            <nav id='after_log_web_header'>
                 <ul>
                     <li><img src="/images/logo.png"></li>
                         <li><b href="/clinicianhome">DASHBOARD</b></li>
                         <li><a href="#">PATIENT DETAILS</a></li>
                         <li><a href="/cliniciancomment">COMMENT LIST</a></li>
                         <ri><a href="/">Log out</a></ri>
-                        <ri><a href="#">Cris</a></ri>
+                        <ri><a href="#">Chris</a></ri>
                         <ri><img id="clinicianImg" src="images/clinician_pic.jpg"  width="70" height="70"></ri>
                 </ul>
             </nav>            
@@ -41,36 +41,33 @@
                         <th>Exercise/Recommended Amount of Exercise (step count)</th>
                     </tr>
                     
-                    <tr>
-                        <td>3055</td>
-                        <td>Jone</td>
-                        <td>02/02/2022</td>
-                        <td>Male</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    {{#each data}}
+                        <tr>
+                            <td><a>{{this._id}}</a></td>
+                            <td><a>{{this.first_name}} {{this.last_name}}</a></td>
+                            <td><a>{{this.DOB}}</a></td>
+                            <td><a>{{this.gender}}</a></td>
+                            {{#if this.blood_glucose_level}}
+                                {{#if (isSafe this.blood_glucose_level)}}
+                                    <td class="out_range"><a>{{this.blood_glucose_level}}</a></td>
+                                    {{else}}<td><a>{{this.blood_glucose_level}}</a></td>
+                                {{/if}}
+                                {{else}}<td class="not_required"><a>Not Required</a>
+                            </td>{{/if}}
+                            {{#if this.weight}}<td>
+                                <a>{{this.weight}}</a></td>
+                                {{else}}<td class="not_required"><a>Not Required</a>
+                            </td>{{/if}}
+                            {{#if this.doses}}<td>
+                                <a>{{this.doses}}</a></td>
+                                {{else}}<td class="not_required"><a>Not Required</a>
+                            </td>{{/if}}
+                            {{#if this.exercise}}<td>
+                                <a>{{this.exercise}}</a></td>
+                                {{else}}<td class="not_required"><a>Not Required</a>
+                            </td>{{/if}}
+                        </tr>
+                    {{/each}}
                 </table>
 
             </div>

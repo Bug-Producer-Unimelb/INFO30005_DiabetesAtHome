@@ -3,6 +3,7 @@
 }
 
 @media screen and (device-width: 1920px) and (device-height: 1080px){
+
     #before_log_phone_header {
         display: none;
     }
@@ -76,12 +77,18 @@
 }
 
 @media screen and (device-width: 1024px) and (device-height: 768px){
-    #phone_header {
+    #before_log_phone_header {
         display: none;
     }
-    #other_header {
+
+    #after_log_web_header {
+        display: none;
+    }
+
+    #before_log_web_header {
         display: inherit;
     }
+
     header ul {
         list-style-type: none;
         margin: 0;
@@ -140,17 +147,28 @@
 }
 
 @media screen and (device-width: 375px) and (device-height: 812px){
-    #phone_header {
+    #before_log_phone_header {
         display: inherit;
     }
-    
-    #other_header {
+
+    #after_log_web_header {
+        display: none;
+    }
+
+    #before_log_web_header {
         display: none;
     }
     
     #menu_icon {
         height: 15px;
         margin: 28px 15px;
+    }
+
+    #phone_logo {
+        position: fixed;
+        top: 20px;
+        width: 180px;
+        height: 35px;
     }
     
     
@@ -195,6 +213,8 @@
 
     }
 
+
+
     header li a:active {
         color: rgba(29, 32, 134, 1); 
     }
@@ -202,4 +222,6 @@
     header p {
         display: none;
     }
+
+    
 }
