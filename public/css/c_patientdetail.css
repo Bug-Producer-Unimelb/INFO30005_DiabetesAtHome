@@ -109,9 +109,10 @@
         color: #303030;
     }
 
-    .dashboard img {
+    .separate_line {
         padding-top: 2%;
     }
+
     .patient_info {
         width: 25%;
         float: left;
@@ -205,23 +206,29 @@
         margin-bottom: 10%;
     }
 
-    .save_button {
-        text-decoration: none;
-        text-align: center;
-        background: #132086;
-        color: white;
-        font-family: Tamil MN;
-        font-weight: bold;
-        font-size: 15px;
-        padding: 10px 40px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
-        margin-top: 1.5%;
+
+
+
+    
+
+    .buttons {
         margin-left: 10%;
+        margin-right: 5%;
     }
 
-    .dashboard_button {
+    .buttons .to_left {
+        float:left;
+        padding-top: 2%;
+    }
+
+    .buttons .to_right {
+        float:right;
+        padding-top: 2%;
+    }
+
+
+
+    .buttons .save_button {
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -229,15 +236,19 @@
         font-family: Tamil MN;
         font-weight: bold;
         font-size: 15px;
-        padding: 10px 40px;
+        padding: 15px 40px;
         border-radius: 20px;
         border: none;
         opacity: 75%;
-        margin-top: 1.5%;
+
         margin-left: 15%;
+        margin-top: 1.5%;
+
     }
 
-    .data_button {
+
+
+    .buttons .dashboard_button {
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -245,17 +256,30 @@
         font-family: Tamil MN;
         font-weight: bold;
         font-size: 15px;
-        padding: 10px 40px;
+        padding: 15px 40px;
         border-radius: 20px;
         border: none;
         opacity: 75%;
-        margin-top: 1.5%;
-        margin-left: 15%;
+
+        margin-left: 13%;
     }
 
-    .to_left {
-        padding-left: 10%;
+    .buttons .data_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 13%;
     }
+
 
 
 
