@@ -135,6 +135,8 @@
         text-align: right;
     }
 
+    
+
 
 
     .patient_data {
@@ -186,12 +188,12 @@
     }
 
     .clinician_note {
-        width: 25%;
+        width: 5%;
         float: right;
         padding-top: 3%;
     }
 
-    .clinician_note .edit_button {
+    .edit_button {
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -204,14 +206,33 @@
         border: none;
         opacity: 75%; 
         margin-top: 80%;
-        margin-left: 50%;
+        margin-left: 5%;
+        margin-bottom: 10%;
+    }
+
+    .submit_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 8px 20px;
+        border-radius: 17px;
+        border: none;
+        opacity: 75%; 
+        margin-top: 80%;
+        margin-left: 5%;
         margin-bottom: 10%;
     }
 
 
-
-
-    
+    .support_message {
+        width: 25%;
+        float: left;
+        padding-top: 3%;
+    }
 
     .buttons {
         margin-left: 10%;
@@ -227,7 +248,6 @@
         float:right;
         padding-top: 2%;
     }
-
 
 
     .buttons .save_button {
