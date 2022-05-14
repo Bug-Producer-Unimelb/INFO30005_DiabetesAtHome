@@ -1,12 +1,15 @@
 // import people model
 // const res = require('express/lib/response')
 const Comment = require('../models/comment')
+const Patient = require('../models/patient')
 const ObjectId = require('mongodb').ObjectId
 
 const getAllCommentsData = async (req, res, next) => {
     try {
-        const comments = await Comment.find().lean()
-        return res.render('clinician_home.hbs', { data: comments })
+        const comments = await Comment.find().populate('patient_id').lean()
+        console.log(comments)
+
+        return res.render('clinician_comment.hbs', { data: comments })
     } catch (err) {
         return next(err)
     }

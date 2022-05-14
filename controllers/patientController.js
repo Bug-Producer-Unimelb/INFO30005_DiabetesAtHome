@@ -32,6 +32,21 @@ const getDataById = async (req, res, next) => {
     }
 }
 
+const searchByUserId = async (req, res, next) => {
+    try {
+        const patient = await Patient.findOne({
+            user_id: req.user._id
+        }).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        }
+
+        return res.render('record.hbs', { oneItem: patient })
+    } catch (err) {
+        return next(err)
+    }
+}
+
 const getNewestComment = async (req, res, next) => {
     try {
         const comment = await Comment.findOne({
@@ -84,6 +99,7 @@ const insertData = async (req, res, next) => {
 module.exports = {
     getAllPatientsData,
     getNewestComment,
+    searchByUserId,
     updateData,
     getDataById,
     insertData,

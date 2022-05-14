@@ -17,6 +17,8 @@
         top: 40px;
     }
 
+    
+
     h1 {
         font-family: Tamil MN;
         font-size: 95px;
@@ -117,6 +119,10 @@
         margin-right: 25px;
     }
 
+    .role_selection a:active {
+        text-decoration: underline;
+    }
+
     .role_selection {
         margin-bottom: 25px;
     }
@@ -147,6 +153,10 @@
 }
 
 @media screen and (device-width: 1024px) and (device-height: 768px) {
+    .role_selection a:active {
+        text-decoration: underline;
+    }
+
     .phone_version {
         display: none;
     }
