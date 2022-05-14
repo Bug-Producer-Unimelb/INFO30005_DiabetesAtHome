@@ -15,7 +15,9 @@
                         <li><a href="#">VIEW DATA</a></li>
                         <li><a href="/cliniciancomment">ACHIVEMENT</a></li>
                         <ri><form method="POST" action="/logout"><button>Logout</button></form></ri>
-                        <ri><a href="#">Pat Smith</a></ri>
+                        {{#with oneItem}}
+                            <ri><a>{{first_name}} {{last_name}}</a></ri>
+                        {{/with}}
                         <ri><img id="clinicianImg" src="/images/clinician_pic.jpg"  width="70" height="70"></ri>
                 </ul>
             </nav>            

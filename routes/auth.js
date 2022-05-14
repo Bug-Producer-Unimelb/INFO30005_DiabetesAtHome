@@ -1,6 +1,12 @@
 const passport = require('passport')
 const express = require('express')
 
+const Patient = require('../models/patient')
+const Comment = require('../models/comment')
+
+const patientController = require('../controllers/patientController')
+const clinicianController = require('../controllers/clinicianController')
+
 const router = express.Router()
 // -----------Authentication middleware-----------
 const isAuthenticated = (req, res, next) => {
@@ -26,9 +32,7 @@ const hasRole = (thisRole) => {
 
 // Main page which requires login to access
 // Note use of authentication middleware here
-router.get('/', isAuthenticated, hasRole("patient"), (req, res) => {
-    res.render('record', { title: 'Express', user: req.user })
-})
+router.get('/', isAuthenticated, hasRole("patient"), patientController.searchByUserId)
 router.get('/', isAuthenticated, hasRole("clinician"), (req, res) => {
     res.redirect('/clinician')
 })

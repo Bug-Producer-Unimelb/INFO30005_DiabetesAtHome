@@ -38,10 +38,10 @@
                     </tr>
                     {{#each data}}
                     <tr>
-                            <td><a>{{this._id}}</a></td>
-                            <td><a>{{this.first_name}} {{this.last_name}}</a></td>
-                            <td><a>{{this.gender}}</a></td>
-                            <td><a>{{this.comment_date}}</a></td>
+                            <td><a>{{this.patient_id._id}}</a></td>
+                            <td><a>{{this.patient_id.first_name}} {{this.last_name}}</a></td>
+                            <td><a>{{this.patient_id.gender}}</a></td>
+                            <td><a>{{this.timestamps}}</a></td>
                             <td><a>{{this.content}}</a></td>
                     </tr>
                     {{/each}}

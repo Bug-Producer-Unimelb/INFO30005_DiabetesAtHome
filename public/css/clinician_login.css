@@ -1,4 +1,7 @@
-@media screen and (device-width: 1920px) and (device-height: 1080px) {
+@media screen and (device-width: 1920px) and (device-height: 1080px) { 
+    .role_selection a:active {
+        text-decoration: underline;
+    }
 
 
     main {
@@ -146,10 +149,3 @@
     }
 }
 
-@media screen and (device-width: 1024px) and (device-height: 768px) {
-
-}
-
-@media screen and (device-width: 375px) and (device-height: 812px) {
-
-}
