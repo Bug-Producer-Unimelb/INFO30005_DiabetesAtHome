@@ -130,7 +130,9 @@
 
     .patient_info h3 {
         padding-top: 7%;
-        padding-left: 50%;
+        padding-right: 35%;
+
+        text-align: right;
     }
 
 
@@ -280,6 +282,21 @@
         margin-left: 13%;
     }
 
+    .back_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 10px 70px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 13%;
+    }
 
 
 
