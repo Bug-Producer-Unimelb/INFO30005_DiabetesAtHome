@@ -1,0 +1,304 @@
+@media screen and (device-width: 1920px) and (device-height: 1080px){
+
+    #after_log_web_header {
+        display: inherit;
+    }
+
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #F2F1F7;
+        position: fixed;
+        top: 0%;
+        width: 100%;
+    }
+    
+    header ri {
+        float: right;
+    }
+
+    header ri a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 25px;
+        color: #707070; 
+        padding: 25px;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgba(29, 32, 134, 0.65); 
+        padding: 25px;
+    }
+
+    header li b {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgba(29, 32, 134, 1); 
+        padding: 25px;
+    }
+
+    header li a:active {
+        color: rgba(29, 32, 134, 1); 
+    }
+
+    #clinicianImg {
+        position: fixed;
+        top: 6px;
+        right: 235px;
+    }
+
+    main {
+        margin-top: 0;
+        padding: 0;
+    }
+
+
+    .dashboard {
+        background-image:url(/images/patient_bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    
+
+    .dashboard h1 {
+        padding-top: 8%;
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 20px;
+        color: #132086;
+    }
+
+    .dashboard h2 {
+        padding-top: 8%;
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 40px;
+        color: #132086;
+    }
+
+    .dashboard h3 {
+        font-family: Tamil MN;
+        font-size: 15px;
+        color: #303030;
+    }
+
+    .separate_line {
+        padding-top: 2%;
+    }
+
+    .patient_info {
+        width: 25%;
+        float: left;
+        padding-top: 3%;
+    }
+
+    .patient_info h1 {
+        padding-left: 50%;
+    }
+
+    .patient_info img {
+        padding-top: 10%;
+        padding-left: 55%;
+    }
+
+    .patient_info h3 {
+        padding-top: 7%;
+        padding-right: 35%;
+
+        text-align: right;
+    }
+
+
+
+    .patient_data {
+        width: 25%;
+        float: left;
+        padding-top: 3%;
+    }
+
+    .patient_data h1 {
+        padding-left: 10%;
+    }
+
+    .patient_data .radio{
+        width: 20px;
+        height: 20px;
+        appearance: none;
+
+        padding-left: 10%;
+        padding-top: 17%;
+    }
+
+    .patient_data .radio:before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 1px solid #7d7d7d;
+        display: inline-block;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    .patient_data .form_label {
+        padding-left: 22px;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        color: #303030;
+        padding-left: 10%;
+    }
+
+    .patient_data .form_icon {
+        padding-left: 20px;
+    }
+
+    .patient_note {
+        width: 24%;
+        float: left;
+        padding-top: 3%;
+    }
+
+    .clinician_note {
+        width: 25%;
+        float: right;
+        padding-top: 3%;
+    }
+
+    .clinician_note .edit_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 8px 30px;
+        border-radius: 17px;
+        border: none;
+        opacity: 75%; 
+        margin-top: 80%;
+        margin-left: 50%;
+        margin-bottom: 10%;
+    }
+
+
+
+
+    
+
+    .buttons {
+        margin-left: 10%;
+        margin-right: 5%;
+    }
+
+    .buttons .to_left {
+        float:left;
+        padding-top: 2%;
+    }
+
+    .buttons .to_right {
+        float:right;
+        padding-top: 2%;
+    }
+
+
+
+    .buttons .save_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 15%;
+        margin-top: 1.5%;
+
+    }
+
+
+
+    .buttons .dashboard_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 13%;
+    }
+
+    .buttons .data_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 13%;
+    }
+
+    .back_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 10px 70px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 13%;
+    }
+
+
+
+}
+
