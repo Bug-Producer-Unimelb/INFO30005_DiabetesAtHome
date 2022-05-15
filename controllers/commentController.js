@@ -59,6 +59,7 @@ const insertData = async (req, res, next) => {
         newComment = new Comment(req.body)
         newComment.patient_id = ObjectId('62623d0a745775707e941445')
         newComment.data_name = 'Blood Glucose Level'
+        newComment.createdAt = Date.now();
 
         await newComment.save()
         return res.redirect('/patient')

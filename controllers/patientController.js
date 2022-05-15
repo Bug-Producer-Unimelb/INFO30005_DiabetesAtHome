@@ -2,6 +2,7 @@
 // const res = require('express/lib/response')
 const Patient = require('../models/patient')
 const Comment = require('../models/comment')
+const User = require('../models/user')
 const ObjectId = require('mongodb').ObjectId
 
 // handle request to get all data instances
@@ -88,9 +89,28 @@ const updateData = async (req, res, next) => {
 
 const insertData = async (req, res, next) => {
     try {
-        newPatient = new Patient(req.body)
+        console.log(req.body)
+
+        User.create({ username: req.body.username, password: req.body.password, role: "patient", createdAt: Date.now(), secret: 'INFO30005' }, (err) => {
+            if (err) { console.log(err); return; }
+            console.log('Dummy user inserted')
+        })
+
+        const newUser = await User.findOne({}, {}, { sort: {'createdAt': -1 } }).lean()
+        console.log(newUser)
+
+        newPatient = new Patient({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            gender: req.body.gender,
+            DOB: req.body.DOB,
+            screen_name: req.body.screen_name,
+            user_id: newUser._id,
+        })
         await newPatient.save()
-        return res.redirect('/patient')
+
+
+        return res.redirect('/clinicianhome')
     } catch (err) {
         return next(err)
     }

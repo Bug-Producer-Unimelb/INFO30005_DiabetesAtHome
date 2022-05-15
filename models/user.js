@@ -6,7 +6,8 @@ const bcrypt = require('bcrypt')
 const userSchema = new mongoose.Schema({
     username: {type: String, required: true, unique: true},
     password: {type: String, required: true},
-    role: {type: String}
+    role: {type: String},
+    createdAt: Date
 })
 
 // password comparison function

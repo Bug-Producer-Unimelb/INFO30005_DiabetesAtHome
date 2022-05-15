@@ -17,7 +17,7 @@
             <div class="login_field">
                 <h1>Diabetes@Home</h1>
                 <div class="login_fill">
-                    <form action="login" method="POST">
+                    <form action="/patient/signup" method="POST">
                         <label for="first_name">First Name</label>
                         <br/>
                         <input class="twoInOne left" type="text" name="first_name"/>
@@ -31,10 +31,12 @@
                         <br/>
                         <input class="oneInOne" type="text" name="screen_name"/>
                         <br/>
+                        <br/>
 
                         <label for="DOB">Date of Birth</label>
                         <br/>
                         <input type="date" name="DOB" class="twoInOne left"/>
+                        <br/>
                         <br/>
 
                         <label for="gender">Gender</label>
@@ -45,16 +47,18 @@
                             <option value="Others">Others</option>
                         </select>
                         <br/>
+                        <br/>
 
                         <label for="username">Username</label>
                         <br/>
                         <input type="text" name="username" class="oneInOne"/>
                         <br/>
+                        <br/>
                         <label for="password">Password</label>
                         <br/>
                         <input type="password" name="password" class="oneInOne"/>
                         <br/>
-                        <input type="submit" value="Sign In" />
+                        <input type="submit" value="Sign Up" />
                     </form>
                 </div>
             </div>
