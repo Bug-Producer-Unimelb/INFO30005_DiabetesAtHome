@@ -33,9 +33,9 @@ const hasRole = (thisRole) => {
 // Main page which requires login to access
 // Note use of authentication middleware here
 router.get('/', isAuthenticated, hasRole("patient"), patientController.searchByUserId)
-router.get('/', isAuthenticated, hasRole("clinician"), (req, res) => {
-    res.redirect('/clinician')
-})
+router.get('/clinicianhome', isAuthenticated, hasRole("clinician"), patientController.getAllPatientsData)
+
+
 // Login page (with failure message displayed upon login failure)
 router.get('/login', (req, res) => {
     res.render('login', { flash: req.flash('error'), title: 'Login' })
@@ -44,6 +44,16 @@ router.get('/login', (req, res) => {
 router.post('/login',
     passport.authenticate('local', {
         successRedirect: '/', failureRedirect: '/login', failureFlash: true
+    })
+)
+
+router.get('/clinicianlogin', (req, res) => {
+    res.render('clinician_login', { flash: req.flash('error'), title: 'Login' })
+})
+
+router.post('/clinicianlogin',
+    passport.authenticate('local', {
+        successRedirect: '/clinicianhome', failureRedirect: '/clinicianlogin', failureFlash: true
     })
 )
 

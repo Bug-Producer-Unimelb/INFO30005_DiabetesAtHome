@@ -9,8 +9,6 @@ const ObjectId = require('mongodb').ObjectId
 const getAllPatientsData = async (req, res, next) => {
     try {
         const patients = await Patient.find().lean()
-        let out_range = []
-        let required = []
         
         return res.render('clinician_home.hbs', { data: patients })
     } catch (err) {
@@ -66,7 +64,8 @@ const getNewestComment = async (req, res, next) => {
 
 const updateData = async (req, res, next) => {
     try {
-        pid = ObjectId('62623d0a745775707e941445')
+        pid = ObjectId(req.body.pid)
+        console.log(pid)
         const patient = await Patient.findByIdAndUpdate(pid, { blood_glucose_level: Number(req.body.data_content)}).lean()
         if (!patient) {
             return res.sendStatus(404)
