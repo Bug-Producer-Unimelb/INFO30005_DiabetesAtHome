@@ -117,7 +117,8 @@ app.get('/c_patientdetail', (req, res) => {
 
 app.get('/signup', (req, res) => {
     res.render('patient_signup.hbs')
-    
+})
+
 app.get('/c_historicaldetail', (req, res) => {
     res.render('clinician_hdetail.hbs')
 })
