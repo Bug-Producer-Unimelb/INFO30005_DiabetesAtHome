@@ -8,6 +8,7 @@ const mongooseClient = require('./models')
 const app = express()
 
 app.use(express.static('public'))
+app.use('/js', express.static(__dirname + './public/js'))
 
 app.engine(
     'hbs',
@@ -116,6 +117,9 @@ app.get('/c_patientdetail', (req, res) => {
 
 app.get('/signup', (req, res) => {
     res.render('patient_signup.hbs')
+    
+app.get('/c_historicaldetail', (req, res) => {
+    res.render('clinician_hdetail.hbs')
 })
 
 const PORT = process.env.PORT || 3000

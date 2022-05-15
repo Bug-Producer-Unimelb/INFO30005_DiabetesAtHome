@@ -5,6 +5,7 @@
         <title>c patient detail</title>
         <link rel="icon" type="image/png" href="/images/logo.png">
         <link rel="stylesheet" href="/css/c_patientdetail.css" />
+        <script src="/js/buttonInteraction.js"></script>
     </head>
 
     <body>
@@ -55,28 +56,32 @@
 
                 <div class="patient_note">
                     <h1>Patient notes:</h1>
+                    <div class="rectangle">
+                        <h4>Patient message</h4>
+                    </div>
                 </div>
 
-                <img src="/images/separate_line.png">
+                <img class="separate_line" src="/images/separate_line.png">
                 
                 <div class="clinician_note">
                     <h1>Clinician notes:</h1>
-                    <button class="edit_button">EDIT</button>
+                    <textarea class="clinician_note_content" id="clinician-note-content"
+                        disabled="disabled">This is a message.</textarea>
+                    <button class="edit_button" onclick="changeEditable('true', 'clinician-note-content')">EDIT</button>
+                    <button class="submit_button" onclick="changeEditable('false', 'clinician-note-content')">SAVE</button>
                 </div>
 
-
-                <button class="save_button">Save the changes</button>
-                <button class="dashboard_button">Go back to Dashboard</button>
-                <button class="data_button">Visualise Health data</button>
-
+                <div class="buttons">
+                    <img class="to_left" src="/images/to_left.png">
+                    <button class="save_button">Save the changes</button>
+                    <button class="dashboard_button" onclick="window.location.href='/clinicianhome'">Go back to Dashboard</button>
+                    <button class="data_button" onclick="window.location.href='/c_historicaldetail'">Visualise Health data</button>
+                    <img class="to_right" src="/images/to_right.png">
+                </div>
                 
 
+
             </div>
-
-            
-
-
-            
         </main>
         
     </body>>

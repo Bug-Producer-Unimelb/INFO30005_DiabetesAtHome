@@ -109,9 +109,10 @@
         color: #303030;
     }
 
-    .dashboard img {
+    .separate_line {
         padding-top: 2%;
     }
+
     .patient_info {
         width: 25%;
         float: left;
@@ -129,8 +130,12 @@
 
     .patient_info h3 {
         padding-top: 7%;
-        padding-left: 50%;
+        padding-right: 35%;
+
+        text-align: right;
     }
+
+    
 
 
 
@@ -188,7 +193,7 @@
         padding-top: 3%;
     }
 
-    .clinician_note .edit_button {
+    .edit_button {
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -196,16 +201,16 @@
         font-family: Tamil MN;
         font-weight: bold;
         font-size: 15px;
-        padding: 8px 30px;
+        padding: 8px 20px;
         border-radius: 17px;
         border: none;
         opacity: 75%; 
         margin-top: 80%;
-        margin-left: 50%;
+        margin-left: 15%;
         margin-bottom: 10%;
     }
 
-    .save_button {
+    .submit_button {
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -213,15 +218,39 @@
         font-family: Tamil MN;
         font-weight: bold;
         font-size: 15px;
-        padding: 10px 40px;
-        border-radius: 20px;
+        padding: 8px 20px;
+        border-radius: 17px;
         border: none;
-        opacity: 75%;
-        margin-top: 1.5%;
+        opacity: 75%; 
+        margin-top: 80%;
         margin-left: 20%;
+        margin-bottom: 10%;
     }
 
-    .dashboard_button {
+
+    .support_message {
+        width: 25%;
+        float: left;
+        padding-top: 3%;
+    }
+
+    .buttons {
+        margin-left: 10%;
+        margin-right: 5%;
+    }
+
+    .buttons .to_left {
+        float:left;
+        padding-top: 2%;
+    }
+
+    .buttons .to_right {
+        float:right;
+        padding-top: 2%;
+    }
+
+
+    .buttons .save_button {
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -229,15 +258,19 @@
         font-family: Tamil MN;
         font-weight: bold;
         font-size: 15px;
-        padding: 10px 40px;
+        padding: 15px 40px;
         border-radius: 20px;
         border: none;
         opacity: 75%;
-        margin-top: 1.5%;
+
         margin-left: 15%;
+        margin-top: 1.5%;
+
     }
 
-    .data_button {
+
+
+    .buttons .dashboard_button {
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -245,13 +278,104 @@
         font-family: Tamil MN;
         font-weight: bold;
         font-size: 15px;
-        padding: 10px 40px;
+        padding: 15px 40px;
         border-radius: 20px;
         border: none;
         opacity: 75%;
-        margin-top: 1.5%;
-        margin-left: 15%;
+
+        margin-left: 13%;
     }
+
+    .buttons .data_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 13%;
+    }
+
+    .back_button {
+        position: fixed;
+        bottom: 163px;
+        right: 185px;
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 10px 70px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 13%;
+    }
+
+    .rectangle {
+        position: fixed;
+        width: 360px;
+        height: 347px;
+        top: 361px;
+        left: 980px;
+        border-radius:20px;
+        border: solid 4px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        text-align: left;
+    }
+
+    .rectangle h4 {
+        font-family: Tamil MN;
+        font-size: 25px;
+        color: #303030;
+    }
+
+    .clinician_note_content {
+        position: fixed;
+        width: 360px;
+        height: 300px;
+        top: 361px;
+        left: 1455px;
+        border-radius:20px;
+        font-size: 25px;
+        border: solid 4px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        font-family: Tamil MN;
+        background-color: #FFFFFF;
+        line-break: auto;
+    }
+
+    .support_message_content {
+        position: fixed;
+        width: 360px;
+        height: 300px;
+        top: 361px;
+        left: 500px;
+        border-radius:20px;
+        font-size: 25px;
+        border: solid 4px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        font-family: Tamil MN;
+        background-color: #FFFFFF;
+    }
+
+    .data_image {
+        position: fixed;
+        width: 900px;
+        height: 550px;
+        top: 260px;
+        left: 920px;
+    }
+
 
 
 
