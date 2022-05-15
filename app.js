@@ -8,6 +8,7 @@ const mongooseClient = require('./models')
 const app = express()
 
 app.use(express.static('public'))
+app.use('/js', express.static(__dirname + './public/js'))
 
 app.engine(
     'hbs',
