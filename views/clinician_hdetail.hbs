@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>c historical detail</title>
         <link rel="icon" type="image/png" href="/images/logo.png">
-        <link rel="stylesheet" href="/css/c_patientdetail.css" />
+        <link rel="stylesheet" href="/css/c_patientdetail.css"/>
+        <script src="/js/buttonInteraction.js"></script>
     </head>
 
     <body>
@@ -35,10 +36,12 @@
 
                 <div class="support_message">
                     <h1>Send a support message:</h1>
-                    <button class="edit_button">EDIT</button>
-                    <button class="submit_button">SUBMIT</button>
+                    <textarea class="support_message_content" id="support-message-content"
+                        disabled="disabled">This is a message.</textarea>
+                    <button class="edit_button" onclick="changeEditable('true', 'support-message-content')">EDIT</button>
+                    <button class="submit_button" onclick="changeEditable('false', 'support-message-content')">SAVE</button>
                 </div>
-
+                <img class="data_image" src="/images/imgPlaceholder.jpg">
                 <button class="back_button" onclick="window.location.href='/c_patientdetail'">Go back</button>
             </div>
         </main>
