@@ -172,5 +172,43 @@
     .not_required {
         background-color: rgba(229, 229, 229, 0.62)
     }
+
+    .buttons {
+        margin-left: 10%;
+        margin-right: 5%;
+    }
+
+    .buttons .to_left {
+        float:left;
+        padding-top: 2%;
+        margin-top: -20px;
+    }
+
+    .buttons .to_right {
+        float:right;
+        padding-top: 2%;
+        margin-top: -20px;
+    }
+
+
+
+
+    .buttons .signup_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+        margin-left: 42.5%;
+        margin-top: 10px;
+    }
+
+
 }
 
