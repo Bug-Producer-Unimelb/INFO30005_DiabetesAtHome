@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Clinician Login</title>
+        <link rel="icon" type="image/png" href="/images/logo.png">
+        <link rel="stylesheet" href="/css/patient_signup.css" />
+    </head>
+    <body>
+        <main class="other_version">
+            <div id="slogan">
+                <p>We are supporting about 5000 diabetic patients and 100 clinicians in Victoria.</p>
+            </div>
+            <img id="doc_image" src="/images/doc_with_folder.png">
+            
+
+            <div class="login_field">
+                <h1>Diabetes@Home</h1>
+                <div class="login_fill">
+                    <form action="login" method="POST">
+                        <label for="first_name">First Name</label>
+                        <br/>
+                        <input class="twoInOne left" type="text" name="first_name"/>
+
+                        <label for="last_name" id="last_name">Last Name</label>
+                        <br/>
+                        <input class="twoInOne right" type="text" id="last_name_fill" name="last_name"/>
+                        <br/>
+
+                        <label for="screen_name">Screen Name</label>
+                        <br/>
+                        <input class="oneInOne" type="text" name="screen_name"/>
+                        <br/>
+
+                        <label for="DOB">Date of Birth</label>
+                        <br/>
+                        <input type="date" name="DOB" class="twoInOne left"/>
+                        <br/>
+
+                        <label for="gender">Gender</label>
+                        <br/>
+                        <select name="gender" class="twoInOne left">
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Others">Others</option>
+                        </select>
+                        <br/>
+
+                        <label for="username">Username</label>
+                        <br/>
+                        <input type="text" name="username" class="oneInOne"/>
+                        <br/>
+                        <label for="password">Password</label>
+                        <br/>
+                        <input type="password" name="password" class="oneInOne"/>
+                        <br/>
+                        <input type="submit" value="Sign In" />
+                    </form>
+                </div>
+            </div>
+            
+
+        </main>
+
+    </body>
+
+
+</html>

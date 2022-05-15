@@ -113,6 +113,11 @@ app.get('/cliniciancomment', isAuthenticated, hasRole('clinician'), async (req, 
 app.get('/c_patientdetail', (req, res) => {
     res.render('clinician_pdetail.hbs')
 })
+
+app.get('/signup', (req, res) => {
+    res.render('patient_signup.hbs')
+})
+
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
