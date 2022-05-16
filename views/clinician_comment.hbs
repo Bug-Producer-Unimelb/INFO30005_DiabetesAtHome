@@ -5,6 +5,7 @@
         <title>Comment List</title>
         <link rel="icon" type="image/png" href="/images/logo.png">
         <link rel="stylesheet" href="/css/clinician.css" />
+        <script src="/js/turnpages.js"></script>
     </head>
 
     <body>
@@ -14,7 +15,7 @@
                     <li><img src="/images/logo.png"></li>
                         <li><a href="/clinicianhome">DASHBOARD</a></li>
                         <li><a href="/c_patientdetail">PATIENT DETAILS</a></li>
-                        <li><b href="/cliniciancomment">COMMENT LIST</b></li>
+                        <li><b href="/comment">COMMENT LIST</b></li>
                         <ri><a href="/">Log out</a></ri>
                         <ri><a href="#">Chris</a></ri>
                         <ri><img id="clinicianImg" src="images/clinician_pic.jpg"  width="70" height="70"></ri>
@@ -47,16 +48,12 @@
                     {{/each}}
                 </table>
                 <div class="buttons">
-                    <form action="/comment/lastpage" method="POST">
-                        <input type="text" name="page_num" class="invisible">
-                        <input type="image" name="submit" class="to_left" src="/images/to_left.png">
-                    </form>
                     <button class="signup_button" onclick="window.location.href='/signup'">Sign Up</button>
-
-                    <form action="/comment/nextpage" method="POST">
-                        <input type="text" name="page_num" class="invisible">
-                        <input type="image" name="submit" class="to_right" src="/images/to_right.png">
+                    <form method="POST" action="/comment/page">
+                        <input id="page_num" type="number" name="page_num">
+                        <button id="submit_button" type="submit">Turn the Page</button>
                     </form>
+
                 </div>
 
             </div>

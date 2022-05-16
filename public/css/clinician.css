@@ -212,6 +212,37 @@
         margin-top: 10px;
     }
 
+    #submit_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+        margin-left: 65%;
+        margin-top: 10px;
+        position: absolute;
+        float: right bottom;
+        right: 4%;
+        bottom: 35px;
+    }
+
+    #page_num {
+        width: 55px;
+        height: 40px;
+        border-radius: 15px;
+        position: absolute;
+        float: right bottom;
+        right: 15%;
+        bottom: 36px;
+        text-align: center;
+    }
+
     .invisible {
         display: none;
     }
