@@ -179,15 +179,18 @@
     }
 
     .buttons .to_left {
-        float:left;
+        float: left;
         padding-top: 2%;
         margin-top: -20px;
     }
 
     .buttons .to_right {
-        float:right;
+        position: absolute;
+        float: right bottom;
         padding-top: 2%;
-        margin-top: -20px;
+        bottom: 45px;
+        right: 120px;
+        
     }
 
 
@@ -207,6 +210,10 @@
         opacity: 75%;
         margin-left: 42.5%;
         margin-top: 10px;
+    }
+
+    .invisible {
+        display: none;
     }
 
 
