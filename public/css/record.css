@@ -1,4 +1,6 @@
-
+#id_content {
+    display: none;
+}
 
 @media screen and (device-width: 1920px) and (device-height: 1080px){
     #phone_content {
@@ -39,16 +41,18 @@
     }
 
     header ri button {
-        outline: none;
-        background: #747bb7;
-        border-radius: 10px;
-        border: navajowhite;
-        width: 75px;
-        height: 30px;
-        color: #fff;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 25px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 25px;
+        color: #707070; 
+        padding: 25px;
+        border: none;
+        background-color: transparent;
     }
 
     header li {

@@ -9,7 +9,7 @@ patientRouter.get('/:patient_id', patientController.getDataById)
 
 patientRouter.get('/:patient_id/:data_name', patientController.getNewestComment)
 
-patientRouter.post('/', patientController.insertData)
+patientRouter.post('/signup', patientController.insertData)
 
 patientRouter.post('/record', patientController.updateData)
 

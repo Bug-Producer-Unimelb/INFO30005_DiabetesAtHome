@@ -3,7 +3,6 @@
         text-decoration: underline;
     }
 
-
     main {
         margin-top: 0;
         padding: 0;
@@ -61,42 +60,36 @@
         float: left;
         margin-left: 250px;
         width: 500px;
-        margin-top: 380px;
+        margin-top: 320px;
     }
 
     .login_fill {
         margin-right: 70px;
+        display: flex;
     }
-
-    
 
     .login_field label {
         color: #132086;
         font-family: Didot;
-        font-size: 30px;
+        font-size: 25px;
     }
 
-    .login_field input[type=text] {
-        margin-top: 5px;
-        margin-bottom: 50px;
-        width: 425px;
-        height: 61px;
-        font-size: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
-        border-radius: 20px;
-        border-color: #132086;
-        background-color: #EEEDF4;
+    #last_name {
+        position: absolute;
+        top: 320px;
+        left: 500px;
     }
-    .login_field input[type=password] {
-        margin-top: 5px;
+
+    .oneInOne {
+        margin-top: 8px;
         width: 425px;
-        height: 61px;
+        height: 40px;
         font-size: 20px;
         padding-left: 20px;
         padding-right: 20px;
-        border-radius: 20px;
+        border-radius: 12px;
         border-color: #132086;
+        border: 2px solid;
         background-color: #EEEDF4;
     }
     .login_field input[type=submit] {
@@ -109,6 +102,40 @@
         font-family: Arial;
         font-weight: bold;
         color: #132086;
+    }
+
+    .twoInOne.left{
+        margin-top: 8px;
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 12px;
+        border: 2px solid;
+        border-color: #132086;
+        background-color: #EEEDF4;
+    }
+
+    .twoInOne.right{
+        margin-top: 8px;
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 12px;
+        border: 2px solid;
+        border-color: #132086;
+        background-color: #EEEDF4;
+        float: right;
+    }
+
+
+    #last_name_fill {
+        position: absolute;
+        top: 352px;
+        left: 500px;
     }
 
     .role_selection a {
@@ -124,11 +151,6 @@
         margin-left: -80px;
     }
 
-    footer {
-        position: absolute;
-        bottom: 30px;
-        left: 30px;
-    }
     
     #links {
         text-align: center;

@@ -15,7 +15,9 @@
                         <li><a href="#">VIEW DATA</a></li>
                         <li><a href="/cliniciancomment">ACHIVEMENT</a></li>
                         <ri><form method="POST" action="/logout"><button>Logout</button></form></ri>
-                        <ri><a href="#">Pat Smith</a></ri>
+                        {{#with oneItem}}
+                            <ri><a>{{first_name}}</a></ri>
+                        {{/with}}
                         <ri><img id="clinicianImg" src="/images/clinician_pic.jpg"  width="70" height="70"></ri>
                 </ul>
             </nav>            
@@ -23,10 +25,15 @@
         <main id="phone_content">
                 <div id="user_info">
                     <img id="user_avatar" src="/images/avatar.png" >
-                    <h1 id="screen_name">Pat</h1>
+                    {{#with oneItem}}
+                        <h1 id="screen_name">{{screen_name}}</h1>
+                    {{/with}}
                 </div>
 
                 <form id="data_form" action="/patient/record" method="POST">
+                    {{#with oneItem}}
+                        <textarea name="pid" id="id_content">{{_id}}</textarea>
+                    {{/with}}
                     <div class="form_field"></div>
                             <input class="radio" type="radio" name="check_bg" />
                             <label class="form_label" id="bg_label">Blood Glucose Level</label>
@@ -47,7 +54,7 @@
                         </div>
                     </div>
                                 <div id="comment_form">
-                                    <p class="normal_text">Comment About Blood Glucose Level Data:</p>
+                                    <p class="normal_text">Comment About This Record:</p>
                                     <textarea name="content" id="comment_box" cols="35" rows="6"></textarea>
                                 </div>
                                 <input id="submit" type="submit" />
@@ -58,13 +65,18 @@
                     <div class="center_box">
                         <p class="title">Record your data</p>
                         <form id="data_form" action="/patient/record" method="POST">
+                            {{#with oneItem}}
+                                <textarea name="pid" id="id_content">{{_id}}</textarea>
+                            {{/with}}
                             <div class="form_head">
                                 <div class="form_part_one">
                                     <div class="form_part_one_left">
                                         <div class="form_name">
                                             <p class="title">Patient Information:</p>
                                             <img src="/images/info_avatar.png" id="avatar"/>
-                                            <p class="normal_text"> Patient Name: Pat</p>
+                                            {{#with oneItem}}
+                                                <p class="normal_text"> Patient Name: {{screen_name}}</p>
+                                            {{/with}}
                                         </div>
                                         <div class="form_info">
                                             <p class="title">Record Data:</p>
@@ -85,7 +97,7 @@
                                 </div>
                                 <div class="form_part_two">
                                     <div class="form_part_one_right">
-                                        <p class="normal_text">Comment About Your Blood Glucose Level Data</p>
+                                        <p class="normal_text">Comment About This Record</p>
                                         <textarea name="content" id="comment_box_for_other_device" cols="35" rows="8"> </textarea>
                                     </div>
                                 </div>
