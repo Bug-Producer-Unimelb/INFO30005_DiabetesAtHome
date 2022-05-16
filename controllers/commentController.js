@@ -6,10 +6,10 @@ const ObjectId = require('mongodb').ObjectId
 
 const getAllCommentsData = async (req, res, next) => {
     try {
-        const comments = await Comment.find().populate('patient_id').lean()
+        const comments = await Comment.find().populate('patient_id').limit(5).lean()
         console.log(comments)
 
-        return res.render('clinician_comment.hbs', { data: comments })
+        return res.render('clinician_comment.hbs', { data: comments, page_num: 0})
     } catch (err) {
         return next(err)
     }
@@ -53,6 +53,41 @@ const getData = async (req, res, next) => {
     }
 }
 
+const getPage = async (req, res, next) => {
+    try {
+        if(req.body.page_num < 1) {
+            return res.render('clinician_comment.hbs', { data: comments })
+        }
+        const comments = await Comment.find().populate('patient_id').skip(5*(req.body.page_num-1)).limit(5).lean()
+
+        return res.render('clinician_comment.hbs', { data: comments })
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const lastpage = async (req, res, next) => {
+    try {
+        const comments = await Comment.find().populate('patient_id').skip(5*req.body.page_num).limit(5).lean()
+        console.log(req.body)
+
+        return res.render('clinician_comment.hbs', { data: comments })
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const nextpage = async (req, res, next) => {
+    try {
+        const comments = await Comment.find().populate('patient_id').skip(5*req.body.page_num).limit(5).lean()
+        console.log(req.body)
+
+        return res.render('clinician_comment.hbs', { data: comments })
+    } catch (err) {
+        return next(err)
+    }
+}
+
 
 const insertData = async (req, res, next) => {
     try {
@@ -73,4 +108,7 @@ module.exports = {
     getAllCommentsData,
     getData,
     insertData,
+    getPage,
+    nextpage,
+    lastpage
 }
