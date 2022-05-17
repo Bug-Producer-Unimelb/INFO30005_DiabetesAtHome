@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>c historical detail</title>
+        <link rel="icon" type="image/png" href="/images/logo.png">
+        <link rel="stylesheet" href="/css/c_patientdetail.css"/>
+        <script src="/js/buttonInteraction.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav id='after_log_web_header'>
+                <ul>
+                    <li><img src="/images/logo.png"></li>
+                        <li><a href="/clinicianhome">DASHBOARD</a></li>
+                        <li><b href="/c_patientdetail">PATIENT DETAILS</b></li>
+                        <li><a href="/comment">COMMENT LIST</a></li>
+                        <ri><a href="/">Log out</a></ri>
+                        <ri><a href="#">Chris</a></ri>
+                        <ri><img id="clinicianImg" src="images/clinician_pic.jpg"  width="70" height="70"></ri>
+                </ul>
+            </nav>            
+        </header>
+
+        <main>
+            <div class="dashboard">
+                <h2>Working with individual patients</h2>
+
+                <div class="patient_info">
+                    <h1>Patient Informations:</h1>
+                    <img src="/images/info_avatar.png">
+                    <h3>Patient ID</h3>
+                    <h3>Patient Name</h3>
+                </div>
+
+                <div class="support_message">
+                    <h1>Send a support message:</h1>
+                    <textarea class="support_message_content" id="support-message-content"
+                        disabled="disabled">This is a message.</textarea>
+                    <button class="edit_button" onclick="changeEditable('true', 'support-message-content')">EDIT</button>
+                    <button class="submit_button" onclick="changeEditable('false', 'support-message-content')">SAVE</button>
+                </div>
+                <img class="data_image" src="/images/imgPlaceholder.jpg">
+                <button class="back_button" onclick="window.location.href='/c_patientdetail'">Go back</button>
+            </div>
+        </main>
+    </body>
+</html>

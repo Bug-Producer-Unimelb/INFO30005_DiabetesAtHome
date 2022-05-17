@@ -5,6 +5,7 @@
         <title>Comment List</title>
         <link rel="icon" type="image/png" href="/images/logo.png">
         <link rel="stylesheet" href="/css/clinician.css" />
+        <script src="/js/turnpages.js"></script>
     </head>
 
     <body>
@@ -13,8 +14,8 @@
                 <ul>
                     <li><img src="/images/logo.png"></li>
                         <li><a href="/clinicianhome">DASHBOARD</a></li>
-                        <li><a href="#">PATIENT DETAILS</a></li>
-                        <li><b href="/cliniciancomment">COMMENT LIST</b></li>
+                        <li><a href="/c_patientdetail">PATIENT DETAILS</a></li>
+                        <li><b href="/comment">COMMENT LIST</b></li>
                         <ri><a href="/">Log out</a></ri>
                         <ri><a href="#">Chris</a></ri>
                         <ri><img id="clinicianImg" src="images/clinician_pic.jpg"  width="70" height="70"></ri>
@@ -36,14 +37,24 @@
                         <th>Comment Date</th>
                         <th>Comments (click to see complete comment)</th>
                     </tr>
+                    {{#each data}}
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                            <td><a>{{this.patient_id._id}}</a></td>
+                            <td><a>{{this.patient_id.first_name}} {{this.last_name}}</a></td>
+                            <td><a>{{this.patient_id.gender}}</a></td>
+                            <td><a>{{this.timestamps}}</a></td>
+                            <td><a>{{this.content}}</a></td>
                     </tr>
+                    {{/each}}
                 </table>
+                <div class="buttons">
+                    <button class="signup_button" onclick="window.location.href='/signup'">Sign Up</button>
+                    <form method="POST" action="/comment/page">
+                        <input id="page_num" type="number" name="page_num">
+                        <button id="submit_button" type="submit">Turn the Page</button>
+                    </form>
+
+                </div>
 
             </div>
 

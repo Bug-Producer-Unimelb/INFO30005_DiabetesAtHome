@@ -2,14 +2,13 @@
 // const res = require('express/lib/response')
 const Patient = require('../models/patient')
 const Comment = require('../models/comment')
+const User = require('../models/user')
 const ObjectId = require('mongodb').ObjectId
 
 // handle request to get all data instances
 const getAllPatientsData = async (req, res, next) => {
     try {
         const patients = await Patient.find().lean()
-        let out_range = []
-        let required = []
         
         return res.render('clinician_home.hbs', { data: patients })
     } catch (err) {
@@ -26,7 +25,39 @@ const getDataById = async (req, res, next) => {
             return res.sendStatus(404)
         }
 
-        return res.render('clinician_home.hbs', { oneItem: patient })
+        return res.render('clinician_pdetail.hbs', { oneItem: patient })
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const reply = async (req, res, next) => {
+    try {
+        console.log(req.body);
+        const patient = await Patient.findByIdAndUpdate(ObjectId(req.body.pid), {note: req.body.note}, {new: true}).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        } 
+
+        res.render('clinician_pdetail.hbs', {oneItem: patient})
+
+        console.log(patient);
+
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const searchByUserId = async (req, res, next) => {
+    try {
+        const patient = await Patient.findOne({
+            user_id: req.user._id
+        }).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        }
+
+        return res.render('record.hbs', { oneItem: patient })
     } catch (err) {
         return next(err)
     }
@@ -50,7 +81,8 @@ const getNewestComment = async (req, res, next) => {
 
 const updateData = async (req, res, next) => {
     try {
-        pid = ObjectId('62623d0a745775707e941445')
+        pid = ObjectId(req.body.pid)
+        console.log(pid)
         const patient = await Patient.findByIdAndUpdate(pid, { blood_glucose_level: Number(req.body.data_content)}).lean()
         if (!patient) {
             return res.sendStatus(404)
@@ -73,9 +105,49 @@ const updateData = async (req, res, next) => {
 
 const insertData = async (req, res, next) => {
     try {
-        newPatient = new Patient(req.body)
+        User.create({ username: req.body.username, password: req.body.password, role: "patient", createdAt: Date.now(), secret: 'INFO30005' }, (err) => {
+            if (err) { console.log(err); return; }
+            console.log('Dummy user inserted')
+        })
+
+        const newUser = await User.findOne({}, {}, { sort: {'createdAt': -1 } }).lean()
+        console.log(newUser)
+
+        newPatient = new Patient({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            gender: req.body.gender,
+            DOB: req.body.DOB,
+            screen_name: req.body.screen_name,
+            user_id: newUser._id,
+        })
         await newPatient.save()
-        return res.redirect('/patient')
+
+
+        return res.redirect('/clinicianhome')
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const changePassword = async (req, res) => {
+    try {
+        const patient = await Patient.findOne({
+            user_id: req.user._id
+        }).lean()
+
+        console.log(req.body)
+        if (!patient) {
+            return res.sendStatus(404)
+        }
+
+        if (req.body.old_password==patient.password) {
+            patient.password = req.body.password
+            await patient.save()
+    
+            return res.render('record.hbs', { oneItem: patient })
+        }
+
     } catch (err) {
         return next(err)
     }
@@ -84,7 +156,10 @@ const insertData = async (req, res, next) => {
 module.exports = {
     getAllPatientsData,
     getNewestComment,
+    searchByUserId,
+    changePassword,
     updateData,
     getDataById,
     insertData,
+    reply,
 }

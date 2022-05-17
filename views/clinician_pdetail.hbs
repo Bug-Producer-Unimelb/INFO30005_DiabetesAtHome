@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>c patient detail</title>
+        <link rel="icon" type="image/png" href="/images/logo.png">
+        <link rel="stylesheet" href="/css/c_patientdetail.css" />
+        <script src="/js/buttonInteraction.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav id='after_log_web_header'>
+                <ul>
+                    <li><img src="/images/logo.png"></li>
+                        <li><a href="/clinicianhome">DASHBOARD</a></li>
+                        <li><b href="/c_patientdetail">PATIENT DETAILS</b></li>
+                        <li><a href="/comment">COMMENT LIST</a></li>
+                        <ri><a href="/">Log out</a></ri>
+                        <ri><a href="#">Chris</a></ri>
+                        <ri><img id="clinicianImg" src="images/clinician_pic.jpg"  width="70" height="70"></ri>
+                </ul>
+            </nav>            
+        </header>        
+        <main>
+            
+            <div class="dashboard">
+                <h2>Working with individual patients</h2>
+                {{#with oneItem}}
+                <div class="patient_info">
+                    <h1>Patient Informations:</h1>
+                    <img src="/images/info_avatar.png">
+                    <h3>Patient ID:  {{this._id}}</h3>
+                    <h3>Patient Name:  {{this.first_name}} {{this.last_name}}</h3>
+                    <h3>DOB:  {{this.DOB}}</h3>
+                    <h3>Gender:  {{this.gender}}</h3>
+                </div>
+                <div class="patient_data">
+                    <h1>Personalised for each patient:</h1>
+                    <input class="radio" type="radio" name="check_bg" />
+                    <label class="form_label" id="bg_label">Weight / Threshold</label>
+                    <img class="form_icon" src="/images/comment_icon.png">
+                    <h3></h3>
+                    <input class="radio" type="radio" name="check_bg" />
+                    <label class="form_label" id="bg_label">Blood Glucose Level / Threshold</label>
+                    <img class="form_icon" src="/images/comment_icon.png">
+                    <h3></h3>
+                    <input class="radio" type="radio" name="check_bg" />
+                    <label class="form_label" id="bg_label">Doses of insulin taken / Threshold</label>
+                    <img class="form_icon" src="/images/comment_icon.png">
+                    <h3></h3>
+                    <input class="radio" type="radio" name="check_bg" />
+                    <label class="form_label" id="bg_label">Exercise / Recommended Amount of Exercise</label>
+                    <img class="form_icon" src="/images/comment_icon.png">
+                </div>
+
+                <div class="patient_note">
+                    <h1>Patient notes:</h1>
+                    <div class="rectangle">
+                        <h4>Patient message</h4>
+                    </div>
+                </div>
+
+                <img class="separate_line" src="/images/separate_line.png">
+                
+                <div class="clinician_note">
+                    <form method="POST" action="/reply">
+                        <h1>Clinician notes:</h1>
+                        <textarea class="invisible" name="pid">{{this._id}}</textarea>
+                        <textarea class="clinician_note_content" name="note">{{this.note}}</textarea>
+                        <input class="submit_button" type="submit" value="SAVE"/>
+                    </form>
+                </div>
+                {{/with}}
+                <div class="buttons">
+                    <img class="to_left" src="/images/to_left.png">
+                    <button class="save_button">Save the changes</button>
+                    <button class="dashboard_button" onclick="window.location.href='/clinicianhome'">Go back to Dashboard</button>
+                    <button class="data_button" onclick="window.location.href='/c_historicaldetail'">Visualise Health data</button>
+                    <img class="to_right" src="/images/to_right.png">
+                </div>
+                
+
+
+            </div>
+        </main>
+        
+    </body>>
+</html>

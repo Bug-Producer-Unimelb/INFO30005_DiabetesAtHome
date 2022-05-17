@@ -8,6 +8,7 @@ const mongooseClient = require('./models')
 const app = express()
 
 app.use(express.static('public'))
+app.use('/js', express.static(__dirname + './public/js'))
 
 app.engine(
     'hbs',
@@ -45,14 +46,35 @@ if (app.get('env') === 'production') {
     app.set('trust proxy', 1); // Trust first proxy
 }
 
+const isAuthenticated = (req, res, next) => {
+    // If user is not authenticated via passport, redirect to login page
+    if (!req.isAuthenticated()) {
+        return res.redirect('/login')
+    }
+    // Otherwise, proceed to next middleware function
+    return next()
+}
+
+const hasRole = (thisRole) => {
+    return (req, res, next) => {
+        if (req.user.role == thisRole) 
+            return next()
+        else {
+            res.redirect('/')
+        }
+    }    
+}
+
 const passport = require('./passport')
 app.use(passport.authenticate('session'))
 const authRouter = require('./routes/auth')
 app.use(authRouter)
 
 const patientRouter = require('./routes/patientRouter')
+const patientController = require('./controllers/patientController')
 app.use('/patient', patientRouter)
-app.use('/clinicianhome', patientRouter)
+
+app.use('/clinician', patientRouter)
 
 const commentRouter = require('./routes/commentRouter')
 app.use('/comment', commentRouter)
@@ -62,6 +84,10 @@ require('./models/index.js')
 app.get('/', (req, res) => {
     res.render('index.hbs')
 })
+
+app.get("/achievement", async (req, res) => {
+    return res.render('achievement.hbs');
+});
 
 app.get('/aboutus', (req, res) => {
     res.render('about_us.hbs')
@@ -75,13 +101,41 @@ app.get('/record', (req, res) => {
     res.render('record.hbs')
 })
 
+app.get('/clinicianlogin', (req, res) => {
+    res.render('clinician_login.hbs')
+})
+
+app.post('/reply', patientController.reply)
+
+
 // clinician pages
-app.get('/clinicianhome', (req, res) => {
+app.get('/clinicianhome', isAuthenticated, hasRole('clinician'), async (req, res) => {
     res.render('clinician_home.hbs')
 })
 
-app.get('/cliniciancomment', (req, res) => {
+
+app.get('/cliniciancomment', isAuthenticated, hasRole('clinician'), async (req, res) => {
     res.render('clinician_comment.hbs')
+})
+
+app.get('/c_patientdetail', (req, res) => {
+    res.render('clinician_pdetail.hbs')
+})
+
+app.get('/signup', (req, res) => {
+    res.render('patient_signup.hbs')
+})
+
+app.get('/c_historicaldetail', (req, res) => {
+    res.render('clinician_hdetail.hbs')
+})
+
+app.get('/changepassword', (req, res) => {
+    res.render('changepassword.hbs')
+})
+
+app.get('/viewcomment', (req, res) => {
+    res.render('viewcomment.hbs')
 })
 
 const PORT = process.env.PORT || 3000

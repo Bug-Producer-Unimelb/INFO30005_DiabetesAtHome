@@ -1,0 +1,173 @@
+@media screen and (device-width: 1920px) and (device-height: 1080px) { 
+    .role_selection a:active {
+        text-decoration: underline;
+    }
+
+    main {
+        margin-top: 0;
+        padding: 0;
+    }
+    header {
+        display: none;
+    }
+
+    #doc_image {
+        position: absolute;
+        right: 100px;
+        top: 40px;
+    }
+
+    h1 {
+        font-family: Tamil MN;
+        font-size: 95px;
+        color: #4852CC;
+        text-shadow: 10px 10px 0px rgba(72, 82, 204, 0.24);
+        float: right;
+        position: absolute;
+        left: 150px;
+        top: 200px;
+    }
+
+    #slogan {
+        position: absolute;
+        width: 325px;
+        height: 100px;
+        top: 250px;
+        right: 50px;
+
+    }
+
+    #slogan p {
+        font-family: Myanmar MN;
+        font-size: 30px;
+        font-weight: bold;
+        color: #3F79D6;
+    }
+
+    footer h2, a {
+        font-family: Arial;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 25px;
+        color: #5686BF;
+    }
+
+    footer p {
+        font-family: Tamil MN;
+        font-size: 25px;
+    }
+    .login_field {
+        float: left;
+        margin-left: 250px;
+        width: 500px;
+        margin-top: 320px;
+    }
+
+    .login_fill {
+        margin-right: 70px;
+        display: flex;
+    }
+
+    .login_field label {
+        color: #132086;
+        font-family: Didot;
+        font-size: 25px;
+    }
+
+    #last_name {
+        position: absolute;
+        top: 320px;
+        left: 500px;
+    }
+
+    .oneInOne {
+        margin-top: 8px;
+        width: 425px;
+        height: 40px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 12px;
+        border-color: #132086;
+        border: 2px solid;
+        background-color: #EEEDF4;
+    }
+    .login_field input[type=submit] {
+        margin-top: 45px;
+        border-radius: 20px;
+        padding: 18px 0px;
+        width: 465px;
+        background-color: #CAC4ED;
+        font-size: 30px;
+        font-family: Arial;
+        font-weight: bold;
+        color: #132086;
+    }
+
+    .twoInOne.left{
+        margin-top: 8px;
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 12px;
+        border: 2px solid;
+        border-color: #132086;
+        background-color: #EEEDF4;
+    }
+
+    .twoInOne.right{
+        margin-top: 8px;
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 12px;
+        border: 2px solid;
+        border-color: #132086;
+        background-color: #EEEDF4;
+        float: right;
+    }
+
+
+    #last_name_fill {
+        position: absolute;
+        top: 352px;
+        left: 500px;
+    }
+
+    .role_selection a {
+        font-family: Arial;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-right: 25px;
+    }
+
+    .role_selection {
+        margin-bottom: 25px;
+        margin-left: -80px;
+    }
+
+    
+    #links {
+        text-align: center;
+    }
+
+    #links a {
+        margin-left: 100px;
+        margin-right: 10px;
+    }
+
+    #gmail_icon {
+        margin-bottom: -10px;
+    }
+
+    hr {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
