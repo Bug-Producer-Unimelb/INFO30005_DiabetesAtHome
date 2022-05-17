@@ -1,5 +1,14 @@
 
 
+#id_content {
+    display: none;
+}
+body{
+background-image:url(/images/background.png);
+background-size:100% 100%;
+background-repeat: no-repeat;
+
+}
 @media screen and (device-width: 1920px) and (device-height: 1080px){
     #phone_content {
         display: none;
@@ -29,12 +38,28 @@
         color: white;
         text-align: center;
         padding: 15px 15px;
+        margin-right: 10px;
         text-decoration: none;
         font-family: "Tamil MN";
         font-weight: normal;
         font-size: 25px;
         color: #707070; 
         padding: 25px;
+    }
+
+    header ri button {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 25px;
+        color: #707070; 
+        padding: 25px;
+        border: none;
+        background-color: transparent;
     }
 
     header li {
