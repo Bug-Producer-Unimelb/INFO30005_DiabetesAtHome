@@ -127,6 +127,10 @@ app.get('/changepassword', (req, res) => {
     res.render('changepassword.hbs')
 })
 
+app.get('/viewcomment', (req, res) => {
+    res.render('viewcomment.hbs')
+})
+
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {

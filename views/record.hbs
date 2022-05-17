@@ -11,9 +11,9 @@
             <nav id='after_log_web_header'>
                 <ul>
                     <li><img src="/images/logo.png"></li>
-                        <li><b href="/clinicianhome">DASHBOARD</b></li>
+                        <li><b href="/">DASHBOARD</b></li>
                         <li><a href="#">VIEW DATA</a></li>
-                        <li><a href="/cliniciancomment">ACHIVEMENT</a></li>
+                        <li><a href="#">ACHIVEMENT</a></li>
                         <ri><form method="POST" action="/logout"><button>Logout</button></form></ri>
                         {{#with oneItem}}
                             <ri><a>{{first_name}}</a></ri>
@@ -92,6 +92,15 @@
                                                     {{/if}}
                                                 {{/with}}
                                             </div>
+                                            <div id="note">
+                                                    <p class="title" id="note_title">Patient notes:</p>
+                                                    <div class="rectangle">
+                                                        {{#with oneItem}}
+                                                            {{this.note}}
+                                                        {{/with}}
+                                                    </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -109,9 +118,12 @@
                                         <input id="submit" type="submit" />
                                     </div>
                                     
-
-                                        
-                                    <div class="arror_right">                                
+                                    <div class="arror_center">
+                                        <a onclick="window.location.href='/viewcomment'">View Note</a>
+                                    </div>
+                 
+                                    <div class="arror_right">
+                                        <form method="POST" action="note/view"                         
                                         <a onclick="window.location.href='/changepassword'">Change Password</a>
                                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                     </div>

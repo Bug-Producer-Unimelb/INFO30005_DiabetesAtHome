@@ -61,6 +61,6 @@ router.post('/clinicianlogin',
 // Handle logout
 router.post('/logout', (req, res) => {
     req.logout()
-    res.redirect('/')
+    res.redirect('/login')
 })
 module.exports = router
