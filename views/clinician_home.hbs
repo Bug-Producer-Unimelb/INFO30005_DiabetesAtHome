@@ -39,6 +39,7 @@
                         <th>Weight/Threshold (kg)</th>
                         <th>Doses of insulin taken/Threshold (Number of doses)</th>
                         <th>Exercise/Recommended Amount of Exercise (step count)</th>
+                        <th>Action</th>
                     </tr>
                     
                     {{#each data}}
@@ -66,6 +67,9 @@
                                 <a>{{this.exercise}}</a></td>
                                 {{else}}<td class="not_required"><a>Not Required</a>
                             </td>{{/if}}
+                            <td>
+                                <a href="/patient/{{this._id}}" id="view_button">View Detail</a>
+                            </td>
                         </tr>
                     {{/each}}
                 </table>

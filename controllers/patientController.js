@@ -27,7 +27,24 @@ const getDataById = async (req, res, next) => {
             return res.sendStatus(404)
         }
 
-        return res.render('clinician_home.hbs', { oneItem: patient })
+        return res.render('clinician_pdetail.hbs', { oneItem: patient })
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const reply = async (req, res, next) => {
+    try {
+        console.log(req.body);
+        const patient = await Patient.findByIdAndUpdate(ObjectId(req.body.pid), {note: req.body.note}, {new: true}).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        } 
+
+        res.render('clinician_pdetail.hbs', {oneItem: patient})
+
+        console.log(patient);
+
     } catch (err) {
         return next(err)
     }
@@ -146,4 +163,5 @@ module.exports = {
     updateData,
     getDataById,
     insertData,
+    reply
 }

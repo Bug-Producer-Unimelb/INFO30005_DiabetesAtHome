@@ -71,6 +71,7 @@ const authRouter = require('./routes/auth')
 app.use(authRouter)
 
 const patientRouter = require('./routes/patientRouter')
+const patientController = require('./controllers/patientController')
 app.use('/patient', patientRouter)
 
 app.use('/clinician', patientRouter)
@@ -99,6 +100,8 @@ app.get('/record', (req, res) => {
 app.get('/clinicianlogin', (req, res) => {
     res.render('clinician_login.hbs')
 })
+
+app.post('/reply', patientController.reply)
 
 
 // clinician pages
