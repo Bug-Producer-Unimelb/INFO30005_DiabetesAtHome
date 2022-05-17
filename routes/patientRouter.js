@@ -13,5 +13,7 @@ patientRouter.post('/signup', patientController.insertData)
 
 patientRouter.post('/record', patientController.updateData)
 
+patientRouter.post('/changepassword', patientController.changePassword)
+
 // export the router
 module.exports = patientRouter

@@ -123,6 +123,10 @@ app.get('/c_historicaldetail', (req, res) => {
     res.render('clinician_hdetail.hbs')
 })
 
+app.get('/changepassword', (req, res) => {
+    res.render('changepassword.hbs')
+})
+
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
