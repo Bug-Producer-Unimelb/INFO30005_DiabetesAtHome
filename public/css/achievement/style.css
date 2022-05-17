@@ -61,7 +61,7 @@ body {
 }
 
 .heading_container h2 {
-  /* font-family: "SnellBT Regular", sans-serif; */
+
   position: relative;
   font-weight: bold;
   font-size: 1.4rem;
@@ -1046,7 +1046,7 @@ padding-left: 20px;padding-top: 10px;}
 
 
 
-/* footer section*/
+
 .footer_section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1070,4 +1070,4 @@ padding-left: 20px;padding-top: 10px;}
   color: inherit;
 }
 
-/*# sourceMappingURL=style.css.map */
+
