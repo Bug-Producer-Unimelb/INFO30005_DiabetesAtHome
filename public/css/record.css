@@ -40,6 +40,36 @@
         padding: 25px;
     }
 
+    #note_title {
+        color: #132086;
+    }
+
+    #note {
+        width: 24%;
+        position: absolute;
+        top: 3%;
+        right: 38%;
+    }
+
+    .rectangle {
+        padding: 20px 20px;
+        width: 250px;
+        height: 250px;
+        margin-top: 10px;
+        border-radius:20px;
+        border: solid 4px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        text-align: left;
+    }
+
+    .rectangle h4 {
+        font-family: Tamil MN;
+        font-size: 25px;
+        color: #303030;
+    }
+
+
+
     header ri button {
         display: block;
         color: white;
@@ -257,19 +287,37 @@
     .arror_left i,.arror_right i{
         font-size: 20px;
     }
+
+
+
     .arror_left button{
         outline: none;
             background: #747bb7;
             border-radius: 20px;
             border: navajowhite;
-            width: 150px;
+            width: 200px;
             height: 40px;
             color: #fff;
             margin-left: 60px;
     }
-    .arror_right button{
+
+    .arror_center a{
         outline: none;
             background: #747bb7;
+            padding: 11px 50px;
+            border-radius: 20px;
+            border: navajowhite;
+            width: 200px;
+            height: 40px;
+            color: #fff;
+            margin-right: 60px;
+
+    }
+
+    .arror_right a{
+        outline: none;
+            background: #747bb7;
+            padding: 11px;
             border-radius: 20px;
             border: navajowhite;
             width: 200px;
@@ -489,6 +537,9 @@
     .arror_left{
         margin-left: 20px;
     }
+    .arror_center{
+        margin-left: -60px;
+    }
     .arror_right{
         margin-right: 20px;
     }
@@ -500,11 +551,23 @@
             background: #747bb7;
             border-radius: 20px;
             border: navajowhite;
-            width: 150px;
+            width: 200px;
             height: 40px;
             color: #fff;
             margin-left: 60px;
     }
+
+    .arror_center button{
+        outline: none;
+            background: #747bb7;
+            border-radius: 20px;
+            border: navajowhite;
+            width: 200px;
+            height: 40px;
+            color: #fff;
+            margin-left: 60px;
+    }
+
     .arror_right button{
         outline: none;
             background: #747bb7;

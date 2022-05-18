@@ -71,6 +71,7 @@ const authRouter = require('./routes/auth')
 app.use(authRouter)
 
 const patientRouter = require('./routes/patientRouter')
+const patientController = require('./controllers/patientController')
 app.use('/patient', patientRouter)
 
 app.use('/clinician', patientRouter)
@@ -101,6 +102,10 @@ app.get('/clinicianlogin', (req, res) => {
     res.render('clinician_login.hbs')
 })
 
+app.post('/reply', patientController.reply)
+
+
+// clinician pages
 app.get('/clinicianhome', isAuthenticated, hasRole('clinician'), async (req, res) => {
     res.render('clinician_home.hbs')
 })
@@ -119,6 +124,14 @@ app.get('/signup', (req, res) => {
 
 app.get('/c_historicaldetail', (req, res) => {
     res.render('clinician_hdetail.hbs')
+})
+
+app.get('/changepassword', (req, res) => {
+    res.render('changepassword.hbs')
+})
+
+app.get('/viewcomment', (req, res) => {
+    res.render('viewcomment.hbs')
 })
 
 const PORT = process.env.PORT || 3000
