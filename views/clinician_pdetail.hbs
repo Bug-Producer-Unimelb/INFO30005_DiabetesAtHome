@@ -15,7 +15,7 @@
                     <li><img src="/images/logo.png"></li>
                         <li><a href="/clinicianhome">DASHBOARD</a></li>
                         <li><b href="/c_patientdetail">PATIENT DETAILS</b></li>
-                        <li><a href="/cliniciancomment">COMMENT LIST</a></li>
+                        <li><a href="/comment">COMMENT LIST</a></li>
                         <ri><a href="/">Log out</a></ri>
                         <ri><a href="#">Chris</a></ri>
                         <ri><img id="clinicianImg" src="images/clinician_pic.jpg"  width="70" height="70"></ri>
@@ -64,11 +64,13 @@
                 <img class="separate_line" src="/images/separate_line.png">
                 
                 <div class="clinician_note">
-                    <h1>Clinician notes:</h1>
-                    <textarea class="clinician_note_content" id="clinician-note-content"
-                        disabled="disabled">This is a message.</textarea>
-                    <button class="edit_button" onclick="changeEditable('true', 'clinician-note-content')">EDIT</button>
-                    <button class="submit_button" onclick="changeEditable('false', 'clinician-note-content')">SAVE</button>
+                    <form action="/comment/reply" method="POST"></form>
+                        <h1>Clinician notes:</h1>
+                        <textarea class="clinician_note_content" id="clinician-note-content"
+                            disabled="disabled">This is a message.</textarea>
+                        <button class="edit_button" onclick="changeEditable('true', 'clinician-note-content')">EDIT</button>
+                        <input class="submit_button" onclick="changeEditable('false', 'clinician-note-content')" type="submit" value="SAVE"/>
+                    </form>
                 </div>
 
                 <div class="buttons">

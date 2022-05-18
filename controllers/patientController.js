@@ -2,14 +2,13 @@
 // const res = require('express/lib/response')
 const Patient = require('../models/patient')
 const Comment = require('../models/comment')
+const User = require('../models/user')
 const ObjectId = require('mongodb').ObjectId
 
 // handle request to get all data instances
 const getAllPatientsData = async (req, res, next) => {
     try {
         const patients = await Patient.find().lean()
-        let out_range = []
-        let required = []
         
         return res.render('clinician_home.hbs', { data: patients })
     } catch (err) {
@@ -65,7 +64,8 @@ const getNewestComment = async (req, res, next) => {
 
 const updateData = async (req, res, next) => {
     try {
-        pid = ObjectId('62623d0a745775707e941445')
+        pid = ObjectId(req.body.pid)
+        console.log(pid)
         const patient = await Patient.findByIdAndUpdate(pid, { blood_glucose_level: Number(req.body.data_content)}).lean()
         if (!patient) {
             return res.sendStatus(404)
@@ -88,9 +88,28 @@ const updateData = async (req, res, next) => {
 
 const insertData = async (req, res, next) => {
     try {
-        newPatient = new Patient(req.body)
+        console.log(req.body)
+
+        User.create({ username: req.body.username, password: req.body.password, role: "patient", createdAt: Date.now(), secret: 'INFO30005' }, (err) => {
+            if (err) { console.log(err); return; }
+            console.log('Dummy user inserted')
+        })
+
+        const newUser = await User.findOne({}, {}, { sort: {'createdAt': -1 } }).lean()
+        console.log(newUser)
+
+        newPatient = new Patient({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            gender: req.body.gender,
+            DOB: req.body.DOB,
+            screen_name: req.body.screen_name,
+            user_id: newUser._id,
+        })
         await newPatient.save()
-        return res.redirect('/patient')
+
+
+        return res.redirect('/clinicianhome')
     } catch (err) {
         return next(err)
     }

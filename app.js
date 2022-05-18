@@ -115,6 +115,10 @@ app.get('/c_patientdetail', (req, res) => {
     res.render('clinician_pdetail.hbs')
 })
 
+app.get('/signup', (req, res) => {
+    res.render('patient_signup.hbs')
+})
+
 app.get('/c_historicaldetail', (req, res) => {
     res.render('clinician_hdetail.hbs')
 })

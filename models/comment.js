@@ -10,9 +10,8 @@ const schema = new mongoose.Schema({
         data_name: String,
         data_content: Number,
         content: String,
-    },
-    { timestamps: { createdAt: 'date', updatedAt: false } }
-)
+        createdAt: Date
+    })
 
 const Comment = mongoose.model('Comment', schema)
 module.exports = Comment
