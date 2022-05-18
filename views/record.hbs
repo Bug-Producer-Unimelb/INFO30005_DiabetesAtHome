@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>About This Website</title>
+        <title>Patient Record</title>
         <link rel="icon" type="image/png" href="/images/logo.png">
         <link rel="stylesheet" href="/css/record.css" />
     </head>
@@ -11,14 +11,14 @@
             <nav id='after_log_web_header'>
                 <ul>
                     <li><img src="/images/logo.png"></li>
-                        <li><b href="/clinicianhome">DASHBOARD</b></li>
+                        <li><b href="/record">DASHBOARD</b></li>
                         <li><a href="#">VIEW DATA</a></li>
-                        <li><a href="/cliniciancomment">ACHIVEMENT</a></li>
+                        <li><a href="#">ACHIVEMENT</a></li>
                         <ri><form method="POST" action="/logout"><button>Logout</button></form></ri>
                         {{#with oneItem}}
                             <ri><a>{{first_name}}</a></ri>
                         {{/with}}
-                        <ri><img id="clinicianImg" src="/images/clinician_pic.jpg"  width="70" height="70"></ri>
+                        <ri><img id="patientImg" src="/images/patient_pic.jpg"  width="70" height="70"></ri>
                 </ul>
             </nav>            
         </header>     

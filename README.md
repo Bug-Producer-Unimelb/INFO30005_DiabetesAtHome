@@ -1,6 +1,21 @@
 **The University of Melbourne**
 # INFO30005 - DiabetesAtHome - Bug Producer
 
+
+| Need to fix (before login) | State |
+| :----------------------------| :---- |
+| color change to distinguish patient and clinician login page ||
+| 'home' button not working for both 'about us' and 'about diabetes' page ||
+
+
+| Need to fix (clinician part) | State |
+| :----------------------------| :---- |
+| cannot change table pages ||
+| could add a return button for patient sign up page ||
+| comment box is not fixed| ✅ |
+
+
+
 ## Team Members and Contributions
 
 | Name         | Contributions                                                                             | State |
@@ -10,6 +25,8 @@
 | Jiayi Wu     | UI Design | ✅    |
 | Bowen Yu     | UI Design | ✅    |
 | Wuge Liu     | UI Design | ✅    |
+
+
 
 ## Reference
 

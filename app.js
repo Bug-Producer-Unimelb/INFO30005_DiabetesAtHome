@@ -96,16 +96,14 @@ app.get('/record', (req, res) => {
     res.render('record.hbs')
 })
 
+// clinician pages
 app.get('/clinicianlogin', (req, res) => {
     res.render('clinician_login.hbs')
 })
 
-
-// clinician pages
 app.get('/clinicianhome', isAuthenticated, hasRole('clinician'), async (req, res) => {
     res.render('clinician_home.hbs')
 })
-
 
 app.get('/cliniciancomment', isAuthenticated, hasRole('clinician'), async (req, res) => {
     res.render('clinician_comment.hbs')
