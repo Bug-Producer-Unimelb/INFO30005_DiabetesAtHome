@@ -120,7 +120,7 @@
     .dashboard h3 {
         padding-left: 6%;
         font-family: Tamil MN;
-        font-size: 30px;
+        font-size: 35px;
         color: #132086;
     }
 
@@ -155,6 +155,10 @@
         float: left;
         padding-top: 4%;
     }
+
+
+
+    
 
 
     .patient_data {

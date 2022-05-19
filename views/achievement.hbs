@@ -38,39 +38,20 @@
 					</div>
 
 					<div class="achieved">
-						<h3>YOU DID IT!</h3>
+						<div class="engagement">
+							<h3>You did it! Your engagement is over {{rate}}%</h3>
+						</div>
+						<div class="days">
+							<img  src="/images/doc.jpg" alt="" srcset="">
+							
+							<img width="200"  src="/images/one.jpg">
+						</div>
 					</div>
-
 				</div>
 
 		</main>
 
 	<div class="container">
-		{{!-- <div class="header">
-			<div class="head_left">
-				<a href="javascript:;">
-					<img src="./images/logo.png" style="width: 80px;" />
-				</a>
-				<a href="javascript:;">
-					DASHBOARD
-				</a>
-				<a href="javascript:;">
-				PATIENT DETAILS
-				</a>
-				<a href="javascript:;">
-				COMMENT LIST
-				</a>
-			</div>
-			<div class="head_right">
-				<a href="javascript:;">
-					<img src="./images/login_avatar.png" />
-					&nbsp;&nbsp;jone
-				</a>
-				<a href="javascript:;">
-				Log out
-				</a>
-			</div>
-		</div> --}}
 		<div class="content">
 			
 			<div class="center_box">
@@ -78,27 +59,7 @@
 				<div>
 					<div class="form_head">
 						<div class="form_part_one">
-							<div class="form_part_one_left">
-								<div class="form_name">
-									<p class="title">personal Information:</p>
-									<img src="/images/info_avatar.png" />
-									{{#with oneItem}}
-										<p> Patient Name &nbsp;&nbsp;{{first_name}} {{last_name}}</p>
-								</div>
-								<div class="form_info">
-									<div class="form_info_head">
-										<h1>You Did It !</h1>
-										<p>Your engagement is over {{rate}}%</p>
-									</div>
-									{{/with}}
-									<div class="form_info_foot">
-										<img  src="/images/doc.jpg" alt="" srcset="">
-										
-										<img width="200"  src="/images/one.jpg" alt="" srcset="">
-										
-									</div>
-								</div>
-							</div>
+
 							<div class="form_part_one_foot">
 								<div class="form_part_one_foot_text">
 									{{#with oneItem}}
