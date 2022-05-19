@@ -15,13 +15,13 @@ const schema = new mongoose.Schema({
     note: String,
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "user",
-        required: true
+        ref: "User",
+        required: false
     },
     dataset: [{
         comment_id: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "comment",
+            ref: "Comment",
             required: true
         }
     }],

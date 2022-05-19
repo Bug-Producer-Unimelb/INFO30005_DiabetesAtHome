@@ -81,12 +81,85 @@ app.use('/comment', commentRouter)
 
 require('./models/index.js')
 
+const Record = require('./models/record')
+const Patient = require('./models/patient')
+const User = require('./models/user')
+// const ObjectId = require('mongodb').ObjectId
+
 app.get('/', (req, res) => {
+    console.log("index page...");
     res.render('index.hbs')
 })
 
-app.get("/achievement", async (req, res) => {
-    return res.render('achievement.hbs');
+/**
+ * Calculate the encoragement rate and return it
+ * @param {*} record 
+ */
+const calculateEncoragement = (record) => {
+    let rate = 0.0;
+    if (record) {
+        rate = parseFloat((record.current_record_quantity * 1.0 / record.total_quantity).toFixed(3));
+    }
+    return rate;
+};
+
+app.get("/patients/:id/achievement", async (req, res) => {
+    const patientId = req.params.id;
+    // console.log("patient id is: ", patientId);
+    const record = await Record.findOne({'patient_id': patientId});
+    const currentUser = await Patient.findOne({ _id: record.patient_id }).populate("user_id");
+    const currentUserName = currentUser.user_id.username;
+    console.log("current user is: ", currentUser);
+    const records = await Record.find();
+    // console.log("all records are: ", records);
+    let allRankInfo = [];
+    // get all the encoragement rate of all the patients
+    if (records && records.length > 0) {
+        for (const r of records) {
+            allRankInfo.push({
+                patient_id: r.patient_id,
+                rate: calculateEncoragement(r)
+            });
+        }
+    }
+    // sort the allRankInfo array above
+    allRankInfo.sort((a, b) => {
+        return -1 * (a.rate - b.rate);
+    });
+    let patientIds = [];
+    for (let i = 0; i < allRankInfo.length; ++i) {
+        patientIds.push(allRankInfo[i].patient_id);
+    }
+
+    const patients = await Patient.find({'_id': {$in: patientIds}}).limit(5);
+    // console.log("all patients are: ", patients);
+    let userIds = [];
+    if (patients && patients.length > 0) {
+        for (const p of patients) {
+            // console.log(typeof p.user_id);
+            userIds.push(p.user_id._id);
+        }
+    }
+
+    // console.log("all user ids are: ", userIds);
+    const users = await User.find({ _id: { $in: userIds }});
+    // console.log("all user are: ", users);
+    let top5Users = [];
+    if (users && users.length > 0) {
+        for (const user of users) {
+            top5Users.push({
+                username: user.username
+            });
+        }
+    }
+    console.log("all user names are: ", top5Users);
+
+    // query all the patient information according to the patient id
+    let rate = 82.1;
+    if (record) {
+        rate = calculateEncoragement(record);
+    }
+    return res.render("achievement.hbs", {currentUserName: currentUserName, rate: rate, top5Users: top5Users});
 });
 
 app.get('/aboutus', (req, res) => {
