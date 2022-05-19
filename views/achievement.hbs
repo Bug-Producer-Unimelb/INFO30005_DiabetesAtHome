@@ -64,20 +64,17 @@
 								<div class="form_name">
 									<p class="title">personal Information:</p>
 									<img src="/images/info_avatar.png" />
-
 									<p> Patient Name &nbsp;&nbsp;Jone</p>
 									
-
-									{{#with oneItem}}
-										<p> Patient Name &nbsp;&nbsp;{{first_name}} {{last_name}}</p>
-
 								</div>
 								<div class="form_info">
 									<div class="form_info_head">
+										{{#if show}}
+										<img class="star" src="/images/info_bg.jpg" alt="">
+										{{/if}}
 										<h1>You Did It !</h1>
-										<p>Your engagement is over {{rate}}%</p>
+										<p>Your engagement is over {{ rate }}%</p>
 									</div>
-									{{/with}}
 									<div class="form_info_foot">
 										<img  src="/images/doc.jpg" alt="" srcset="">
 										
@@ -88,9 +85,14 @@
 							</div>
 							<div class="form_part_one_foot">
 								<div class="form_part_one_foot_text">
-									{{#with oneItem}}
-									<p>{{support_message}}</p>
-									{{/with}}
+									{{!-- <p>
+										Good day!<br/>
+										
+										[Doctor’s Comment with motivation]                          
+									</p>
+									<p>
+										— from Doctor Mario
+									  </p> --}}
 								</div>
 								<img src="/images/two.jpg" alt="">
 							</div>
