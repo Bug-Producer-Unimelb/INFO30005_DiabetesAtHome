@@ -50,6 +50,23 @@ const reply = async (req, res, next) => {
     }
 }
 
+const sendSupportMessage = async (req, res, next) => {
+    try {
+        console.log(req.body);
+        const patient = await Patient.findByIdAndUpdate(ObjectId(req.body.pid), {support_message: req.body.support_message}, {new: true}).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        } 
+
+        res.render('clinician_pdetail.hbs', {oneItem: patient})
+
+        console.log(patient);
+
+    } catch (err) {
+        return next(err)
+    }
+}
+
 const searchByUserId = async (req, res, next) => {
     try {
         const patient = await Patient.findOne({
@@ -60,6 +77,21 @@ const searchByUserId = async (req, res, next) => {
         }
 
         return res.render('record.hbs', { oneItem: patient })
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const renderAchievement = async (req, res, next) => {
+    try {
+        const patient = await Patient.findOne({
+            user_id: req.user._id
+        }).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        }
+
+        return res.render('achievement.hbs', { oneItem: patient })
     } catch (err) {
         return next(err)
     }
@@ -156,7 +188,9 @@ const changePassword = async (req, res) => {
 }
 
 module.exports = {
+    sendSupportMessage,
     getAllPatientsData,
+    renderAchievement,
     getNewestComment,
     searchByUserId,
     changePassword,

@@ -162,6 +162,21 @@ app.get("/patients/:id/achievement", async (req, res) => {
     return res.render("achievement.hbs", {currentUserName: currentUserName, rate: rate, top5Users: top5Users});
 });
 
+const searchByUserId = async (userId) => {
+    try {
+        const patient = await Patient.findOne({
+            user_id: userId
+        }).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        }
+
+        return patient._id
+    } catch (err) {
+        return next(err)
+    }
+}
+
 app.get('/aboutus', (req, res) => {
     res.render('about_us.hbs')
 })
@@ -210,6 +225,8 @@ app.get('/changepassword', (req, res) => {
 app.get('/viewcomment', (req, res) => {
     res.render('viewcomment.hbs')
 })
+
+app.get('/achievement', patientController.renderAchievement)
 
 const PORT = process.env.PORT || 3000
 
