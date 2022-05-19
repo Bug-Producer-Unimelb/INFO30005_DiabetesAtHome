@@ -2,11 +2,6 @@
 # INFO30005 - DiabetesAtHome - Bug Producer
 
 
-| Need to fix (before login) | State |
-| :----------------------------| :---- |
-| color change to distinguish patient and clinician login page ||
-| 'home' button not working for both 'about us' and 'about diabetes' page ||
-
 
 | Need to fix (clinician part) | State |
 | :----------------------------| :---- |
@@ -20,11 +15,11 @@
 
 | Name         | Contributions                                                                             | State |
 | :----------- | :---------------------------------------------------------------------------------------- | :---- |
-| Zheng Li     | UI Design | ✅    |
-| Lujia Yang   | UI Design | ✅    |
-| Jiayi Wu     | UI Design | ✅    |
-| Bowen Yu     | UI Design | ✅    |
-| Wuge Liu     | UI Design | ✅    |
+| Zheng Li     | UI Design, clinician back end, patient back end, login and security | ✅    |
+| Lujia Yang   | UI Design, patient front end (phone), patient back end, clinician back end  | ✅    |
+| Jiayi Wu     | UI Design, clinician front end, patient front end (web, ipad) | ✅    |
+| Bowen Yu     | UI Design, Patient front end (web) | ✅    |
+| Wuge Liu     | UI Design, clinician front end, patient front end (web, ipad) | ✅    |
 
 
 
