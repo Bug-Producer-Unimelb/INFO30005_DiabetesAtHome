@@ -247,291 +247,257 @@
     }
 }
 
-@media screen and (device-width: 1024px) and (device-height: 768px){    #phone_content {
-    display: none;
-}
-
-#after_log_web_header {
-    display: inherit;
-}
-
-header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #F2F1F7;
-    position: fixed;
-    top: 0%;
-    height: 8%;
-    width: 100%;
-}
-
-header ri {
-    float: right;
-}
-
-header ri a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 15px;
-    margin-right: 10px;
-    text-decoration: none;
-    font-family: "Tamil MN";
-    font-weight: normal;
-    font-size: 17px;
-    color: #707070; 
-    padding: 25px;
-}
-
-header ri button {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-    font-family: "Tamil MN";
-    font-weight: normal;
-    font-size: 17px;
-    color: #707070; 
-    padding: 25px;
-    border: none;
-    background-color: transparent;
-}
-
-header li {
-    float: left;
-}
-
-header li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 15px;
-    color: rgba(29, 32, 134, 0.65); 
-    padding: 25px;
-}
-
-header li b {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 15px;
-    color: rgba(29, 32, 134, 1); 
-    padding: 25px;
-}
-
-header li a:active {
-    color: rgba(29, 32, 134, 1); 
-}
-
-main {
-    margin-top: 0;
-    padding: 0;
-}
-
-.dashboard {
-    background-image:url(/images/bg_ipad.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
-
-.dashboard h1 {
-    padding-top: 8%;
-    padding-left: 6%;
-    font-family: Tamil MN;
-    font-size: 15px;
-    color: #132086;
-}
-
-.dashboard h2 {
-    padding-top: 9%;
-    padding-left: 6%;
-    font-family: Tamil MN;
-    font-size: 25px;
-    color: #132086;
-}
-
-.patient_info {
-    width: 50%;
-    height: 30%;
-    float: left;
-
-}
-
-.patient_info h1 {
-    padding-left: 40%;
-}
-
-.patient_info img {
-    padding-top: 5%;
-    padding-left: 45%;
-    height: 80px;
-    width: 80px;
-}
-
-.info_text {
-    font-family: Tamil MN;
-    font-size: 10px;
-    font-weight: bold;
-    color: #303030;
-
-    padding-top: 5%;
-    padding-left: 10%;
-    text-align: center;
-}
-
-.patient_data {
-    width: 50%;
-    height: 30%;
-    float: right;
-}
-
-.patient_data h2 {
-    padding-top: 4%;
-}
-
-.record_text {
-    font-family: Tamil MN;
-    font-size: 10px;
-    font-weight: bold;
-    color: #303030;
-
-    padding-top: 10%;
-    text-align: right;
-}
-
-
-
-.patient_note {
-    width: 50%;
-    height: 36%;
-    float: left;
-}
-
-.patient_note h1 {
-    text-align: center;
-}
-
-.clinician_note {
-    width: 50%;
-    height: 36%;
-    float: right;
-}
-
-.clinician_note h1 {
-    padding-left: 15%;
-
-}
-
-
-.buttons {
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.buttons .to_left {
-    float:left;
-    padding-top: 2%;
-}
-
-.buttons .to_right {
-    float:right;
-    padding-top: 2%;
-}
-
-
-.buttons .save_button {
-    text-decoration: none;
-    text-align: center;
-    background: #132086;
-    color: white;
-    font-family: Tamil MN;
-    font-weight: bold;
-    font-size: 10px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    opacity: 75%;
-
-    margin-left: 15%;
-    margin-top: 1.5%;
-}
-.buttons .history_button {
-    text-decoration: none;
-    text-align: center;
-    background: #132086;
-    color: white;
-    font-family: Tamil MN;
-    font-weight: bold;
-    font-size: 10px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    opacity: 75%;
-
-    margin-left: 15%;
-}
-
-.buttons .achievement_button {
-    text-decoration: none;
-    text-align: center;
-    background: #132086;
-    color: white;
-    font-family: Tamil MN;
-    font-weight: bold;
-    font-size: 10px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    opacity: 75%;
-
-    margin-left: 15%;
-}
+@media screen and (device-width: 1024px) and (device-height: 768px){
+    #phone_content {
+        display: none;
     }
 
-    @media (max-width:1024px) {
-        .head_left{
-            padding-left:0px
-        }
-        .center_box{
-            width:80%
-        }
+    #after_log_web_header {
+        display: inherit;
+    }
 
-        .form_name p,.form_info{
-            font-size:12px;
-        }
-        .form_part_one_left{
-            display: flex;
-            justify-content: space-between;
-            
-        }
-        .form_name, .form_info{
-            padding: 10px;
-            padding-top:26px
-        }
-        .form_part_two{
-            padding-top:26px
-        }
-        .form_name>.title, .form_info>.title{
-            font-size: 14px;
-        }
-        .form_part_one_right>p{
-            font-size:14px;
-        }
-        .formbox{
-            top: 36px;
-        }
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #F2F1F7;
+        position: fixed;
+        top: 0%;
+        height: 8%;
+        width: 100%;
+    }
+
+    header ri {
+        float: right;
+    }
+
+    header ri a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        margin-right: 10px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 17px;
+        color: #707070; 
+        padding: 25px;
+    }
+
+    header ri button {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 17px;
+        color: #707070; 
+        padding: 25px;
+        border: none;
+        background-color: transparent;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgba(29, 32, 134, 0.65); 
+        padding: 25px;
+    }
+
+    header li b {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgba(29, 32, 134, 1); 
+        padding: 25px;
+    }
+
+    header li a:active {
+        color: rgba(29, 32, 134, 1); 
+    }
+
+    main {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .dashboard {
+        background-image:url(/images/bg_ipad.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .dashboard h1 {
+        padding-top: 8%;
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 15px;
+        color: #132086;
+    }
+
+    .dashboard h2 {
+        padding-top: 9%;
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 25px;
+        color: #132086;
+    }
+
+    .patient_info {
+        width: 50%;
+        height: 30%;
+        float: left;
+
+    }
+
+    .patient_info h1 {
+        padding-left: 40%;
+    }
+
+    .patient_info img {
+        padding-top: 5%;
+        padding-left: 45%;
+        height: 80px;
+        width: 80px;
+    }
+
+    .info_text {
+        font-family: Tamil MN;
+        font-size: 10px;
+        font-weight: bold;
+        color: #303030;
+
+        padding-top: 5%;
+        padding-left: 10%;
+        text-align: center;
+    }
+
+    .patient_data {
+        width: 50%;
+        height: 30%;
+        float: right;
+    }
+
+    .patient_data h2 {
+        padding-top: 4%;
+    }
+
+    .record_text {
+        font-family: Tamil MN;
+        font-size: 10px;
+        font-weight: bold;
+        color: #303030;
+
+        padding-top: 10%;
+        text-align: right;
+    }
+
+
+
+    .patient_note {
+        width: 50%;
+        height: 36%;
+        float: left;
+    }
+
+    .patient_note h1 {
+        text-align: center;
+    }
+
+    .clinician_note {
+        width: 50%;
+        height: 36%;
+        float: right;
+    }
+
+    .clinician_note h1 {
+        padding-left: 15%;
+
+    }
+
+
+    .buttons {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .buttons .to_left {
+        float:left;
+        padding-top: 2%;
+    }
+
+    .buttons .to_right {
+        float:right;
+        padding-top: 2%;
+    }
+
+
+    .buttons .save_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 15%;
+        margin-top: 1.5%;
+    }
+    .buttons .history_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 15%;
+    }
+
+    .buttons .achievement_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 15%;
     }
 }
 
