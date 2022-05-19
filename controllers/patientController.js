@@ -5,6 +5,8 @@ const Comment = require('../models/comment')
 const User = require('../models/user')
 const ObjectId = require('mongodb').ObjectId
 
+
+
 // handle request to get all data instances
 const getAllPatientsData = async (req, res, next) => {
     try {
@@ -25,7 +27,41 @@ const getDataById = async (req, res, next) => {
             return res.sendStatus(404)
         }
 
-        return res.render('clinician_home.hbs', { oneItem: patient })
+        return res.render('clinician_pdetail.hbs', { oneItem: patient })
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const reply = async (req, res, next) => {
+    try {
+        console.log(req.body);
+        const patient = await Patient.findByIdAndUpdate(ObjectId(req.body.pid), {note: req.body.note}, {new: true}).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        } 
+
+        res.render('clinician_pdetail.hbs', {oneItem: patient})
+
+        console.log(patient);
+
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const sendSupportMessage = async (req, res, next) => {
+    try {
+        console.log(req.body);
+        const patient = await Patient.findByIdAndUpdate(ObjectId(req.body.pid), {support_message: req.body.support_message}, {new: true}).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        } 
+
+        res.render('clinician_pdetail.hbs', {oneItem: patient})
+
+        console.log(patient);
+
     } catch (err) {
         return next(err)
     }
@@ -41,6 +77,21 @@ const searchByUserId = async (req, res, next) => {
         }
 
         return res.render('record.hbs', { oneItem: patient })
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const renderAchievement = async (req, res, next) => {
+    try {
+        const patient = await Patient.findOne({
+            user_id: req.user._id
+        }).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        }
+
+        return res.render('achievement.hbs', { oneItem: patient })
     } catch (err) {
         return next(err)
     }
@@ -88,8 +139,6 @@ const updateData = async (req, res, next) => {
 
 const insertData = async (req, res, next) => {
     try {
-        console.log(req.body)
-
         User.create({ username: req.body.username, password: req.body.password, role: "patient", createdAt: Date.now(), secret: 'INFO30005' }, (err) => {
             if (err) { console.log(err); return; }
             console.log('Dummy user inserted')
@@ -115,11 +164,38 @@ const insertData = async (req, res, next) => {
     }
 }
 
+const changePassword = async (req, res) => {
+    try {
+        const patient = await Patient.findOne({
+            user_id: req.user._id
+        }).lean()
+
+        console.log(req.body)
+        if (!patient) {
+            return res.sendStatus(404)
+        }
+
+        if (req.body.old_password==patient.password) {
+            patient.password = req.body.password
+            await patient.save()
+    
+            return res.render('record.hbs', { oneItem: patient })
+        }
+
+    } catch (err) {
+        return next(err)
+    }
+}
+
 module.exports = {
+    sendSupportMessage,
     getAllPatientsData,
+    renderAchievement,
     getNewestComment,
     searchByUserId,
+    changePassword,
     updateData,
     getDataById,
     insertData,
+    reply
 }

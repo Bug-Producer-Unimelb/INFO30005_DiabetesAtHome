@@ -1,3 +1,7 @@
+#id_content {
+    display: none;
+}
+
 @media screen and (device-width: 1920px) and (device-height: 1080px){
 
     #after_log_web_header {
@@ -34,6 +38,21 @@
 
     header li {
         float: left;
+    }
+
+    header ri button {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 25px;
+        color: #707070; 
+        padding: 25px;
+        border: none;
+        background-color: transparent;
     }
 
     header li a {
@@ -130,12 +149,14 @@
 
     .patient_info h3 {
         padding-top: 7%;
-        padding-left: 40%;
+        padding-right: 35%;
 
-        text-align: left;
+        text-align: right;
     }
 
     
+
+
 
     .patient_data {
         width: 25%;
@@ -220,8 +241,8 @@
         border-radius: 17px;
         border: none;
         opacity: 75%; 
-        margin-top: 83%;
-        margin-left: 66%;
+        margin-top: 80%;
+        margin-left: 20%;
         margin-bottom: 10%;
     }
 
@@ -319,10 +340,6 @@
         margin-left: 13%;
     }
 
-    .invisible {
-        display: none;
-    }
-
     .rectangle {
         position: fixed;
         width: 360px;
@@ -333,11 +350,6 @@
         border: solid 4px rgba(112, 112, 112, 0.65);
         overflow-y: scroll;
         text-align: left;
-        padding: 10px;
-    }
-
-    textarea {
-        padding: 10px;
     }
 
     .rectangle h4 {
@@ -388,3 +400,157 @@
 
 }
 
+@media screen and (device-width: 375px) and (device-height: 812px){
+    #other_content {
+        display: none;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    #user_info {
+        padding-bottom: 115px;
+        background-image: url(/images/rec.png);
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    #user_avatar {
+        position: inherit;
+        padding: 30px;
+    }
+
+    #screen_name {
+        font-size: 15px;
+        font-family: Tamil MN;
+        color: #303030;
+    }
+
+    .radio{
+        width: 20px;
+        height: 20px;
+        appearance: none;
+        position: relative;
+    }
+    .radio:before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 1px solid #7d7d7d;
+        display: inline-block;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    .radio:checked:before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 2px solid #132086;
+        display: inline-block;
+        border-radius: 50%;
+        vertical-align: middle;
+     }
+     .radio:checked:after{
+        content: '';
+        width: 12px;
+        height: 12px;
+        text-align: center;
+        background:#132086;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+     }
+
+    .comment_icon {
+         background-image: url(/images/comment_icon.png) center no-repeat;
+         font-size: 16px;
+         background-size: cover;
+     }
+
+    #data_form {
+        padding-left: 35px;
+    }
+
+    .form_label {
+         padding-left: 22px;
+         font-family: Tamil MN;
+         font-weight: bold;
+         color: #303030;
+     }
+
+    .form_icon {
+         padding-left: 20px;
+     }
+
+
+    .form_info {
+         float: right;
+         padding:20px;
+    }
+
+    .form_unit {
+        font-family: Tamil MN;
+        font-weight: bold;
+        color: #303030;
+    }
+
+    .form_input {
+        border: none;
+        border-bottom: 1px solid #303030;
+        width: 68px;
+        text-align: center;
+    }
+
+    .form_digit {
+        font-family: Tamil MN;
+        font-weight: bold;
+        text-align: right;
+        color:#7d7d7d;
+        font-size: 10px;
+    }
+
+    #comment_form {
+        margin-top: 80px;
+        text-align: center;
+        border: 2px solid #303030;
+        border-radius: 10px;
+        padding: 5px;
+        margin-left: -25px;
+        margin-right: 10px;
+    }
+
+    #comment_box {
+        border-radius:10px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .normal_text {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: Tamil MN;
+        font-weight: bold;
+        color: #303030;
+    }
+
+    #submit {
+        width: 92px;
+        height: 36px;
+        background: #6470C7;
+        border: none;
+        border-radius: 35px;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: 600;
+        font-size: 15px;
+        position: fixed;
+        right: 25px;
+        bottom: 50px;
+    }
+
+
+}
