@@ -13,15 +13,16 @@ const schema = new mongoose.Schema({
     Doses: Number,
     Exercise: Number,
     note: String,
+    support_message: String,
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-        required: false
+        ref: "user",
+        required: true
     },
     dataset: [{
         comment_id: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Comment",
+            ref: "comment",
             required: true
         }
     }],
