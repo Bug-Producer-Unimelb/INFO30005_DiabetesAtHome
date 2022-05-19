@@ -130,37 +130,19 @@
 
                 <img class="separate_line" src="/images/separate_line.png">
 
+                <div class="patient_note">
+                    <form action="/comment/reply" method="POST"></form>
+                        <h1>Patient notes:</h1>
 
+                    </form>
+                </div>
 
+                <div class="buttons">
+                    <button class="save_button">Save the changes</button>
+                    <button class="achievement_button" onclick="window.location.href='/achievement'">View achievement</button>
 
-                        <form id="data_form" action="/patient/record" method="POST">
-                            {{#with oneItem}}
-                                <textarea name="pid" id="id_content">{{_id}}</textarea>
-                            {{/with}}
-                            <div class="form_head">
+                </div>
 
-                                <div class="form_part_two">
-                                    <div class="form_part_one_right">
-                                        <p class="normal_text">Comment About This Record</p>
-                                        <textarea name="content" id="comment_box_for_other_device" cols="35" rows="8"> </textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form_foot">
-                                <div class="formbox">
-                                    <div class="arror_left">
-                                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                                        <input id="submit" type="submit" />
-                                    </div>
-                                    
-                                    <div class="arror_right">
-                                        
-                                        <button> Back to Homepage</button>
-                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
             </div>
         </main>
     </body>

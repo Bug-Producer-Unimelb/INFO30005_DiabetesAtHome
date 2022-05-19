@@ -118,7 +118,7 @@
     }
 
     .patient_info {
-        width: 33%;
+        width: 30%;
         float: left;
         padding-top: 3%;
     }
@@ -144,7 +144,7 @@
     }
 
     .patient_data {
-        width: 33%;
+        width: 30%;
         float: left;
         padding-top: 3%;
     }
@@ -167,189 +167,60 @@
         padding-top: 2%;
     }
 
+    .patient_note {
+        width: 33%;
+        float: right;
+        padding-top: 3%;
+    }
 
+    .buttons {
+        margin-left: 10%;
+        margin-right: 5%;
+    }
 
+    .buttons .to_left {
+        float:left;
+        padding-top: 2%;
+    }
 
-
-
-    #comment_box_for_other_device {
-        border-radius:10px;
-        font-size: 15px;
+    .buttons .to_right {
+        float:right;
+        padding-top: 2%;
     }
 
 
-    .form_digit {
+    .buttons .save_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
         font-family: Tamil MN;
         font-weight: bold;
-        text-align: right;
-        color:#7d7d7d;
-        font-size: 10px;
-    }
-
-    a{
-        text-decoration:none
-    }
-
-    html{
-        height: 100%;
-        background:url(../img/ttt.png) no-repeat;
-        background-size: cover;
-    
-        
-    }
-
-
-
-    .center_box{
-        width: 70%;
-        margin:  0 auto;
-        background-color: #fff;
-          height: 60vh;
-        margin-top: 200px;
-        border: 3px solid #747bb7;
-        border-radius: 14px;
-        
-        position: relative;
-           
-    }
-
-    .form_input {
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
         border: none;
-        border-bottom: 1px solid #303030;
-        width: 68px;
+        opacity: 75%;
+
+        margin-left: 15%;
+        margin-top: 1.5%;
+    }
+
+    .buttons .achievement_button {
+        text-decoration: none;
         text-align: center;
-    }
-
-    .center_box::before{
-        content: '';
-            display: block;
-            height: 60vh;
-            width: 100%;
-            top: -32px;
-            left: -36px;
-            opacity: 0.5;
-            position: absolute;
-            border-radius: 40px;
-            z-index: -1;
-            background: #e0e0e0;
-    }
-    .center_box>.title{
-        color: #132086;
-        opacity: 0.65;
-        position: absolute;
-        top: -83px;
-        font-size: 20px;
-    }
-    form{
-        display: flex;
-            flex-direction: column;
-                height: 100%;
-    }
-    .form_head{
-            display: flex;
-            justify-content: space-around;
-            height: 80%;
-    }
-    .form_part_one{
-            width: 60%;
-            border-right: 2px solid;
-    }
-    .form_part_one_left{
-        display: flex;
-    }
-    .form_name,.form_info{
-        padding: 20px;
-    }
-    
-    .form_name>.title,.form_info>.title{
-        color: #132086;
-            opacity: 0.65;
-            font-size: 16px;
-    }
-    .form_info>.title{
-        margin-bottom: 50px;
-    }
-    
-    .form_foot{
-        border-top: 2px solid;
-        padding: 0 10px;
-        display: flex;
-        height: 100px;
-        justify-content: space-between;
-        padding-top: 40px;
-        position: relative;
-    }
-
-    .title {
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
         font-weight: bold;
-    }
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
 
-    .formbox{
-        position: absolute;
-        top: 20px;
-        display: flex;
-        width: 98%;
-        justify-content: space-between;
+        margin-left: 13%;
     }
-    .form_part_one_right{
-        color: #132086;
-        opacity: 0.65;
-        padding-top: 20px;
-        padding-right: 30px;
-    }
-    .form_part_one_right>p{
-        margin-bottom: 40px;
-    }
-    .form_part_one_right>div{
-        border-bottom:1px solid #bcbcbc ;
-        margin-bottom: 40px;
-    }
-    .arror_left{
-        margin-left: 20px;
-    }
-    .arror_right{
-        margin-right: 20px;
-    }
-    .arror_left i,.arror_right i{
-        font-size: 20px;
-    }
-    .arror_left button{
-        outline: none;
-            background: #747bb7;
-            border-radius: 20px;
-            border: navajowhite;
-            width: 150px;
-            height: 40px;
-            color: #fff;
-            margin-left: 60px;
-    }
-    .arror_right button{
-        outline: none;
-            background: #747bb7;
-            border-radius: 20px;
-            border: navajowhite;
-            width: 200px;
-            height: 40px;
-            color: #fff;
-            margin-right: 60px;
-    }
-
-    #avatar {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    #submit {
-        outline: none;
-            background: #747bb7;
-            border-radius: 20px;
-            border: navajowhite;
-            width: 150px;
-            height: 40px;
-            color: #fff;
-            margin-left: 60px;
-    }
-
 }
 
 @media screen and (device-width: 1024px) and (device-height: 768px){
