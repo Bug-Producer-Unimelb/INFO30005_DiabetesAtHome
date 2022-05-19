@@ -55,6 +55,14 @@
         background-color: transparent;
     }
 
+    header ri img {
+        height: 70px;
+        width: 70px;
+        position: fixed;
+        top: 6px;
+        right: 235px;
+    }
+
     header li {
         float: left;
     }
@@ -119,6 +127,7 @@
 
     .patient_info {
         width: 25%;
+        height: 52.5%;
         float: left;
         padding-top: 4%;
     }
@@ -145,6 +154,7 @@
 
     .patient_data {
         width: 25%;
+        height: 52.5%;
         float: left;
         padding-top: 4%;
     }
@@ -167,6 +177,7 @@
 
     .patient_note {
         width: 25%;
+        height: 52.5%;
         float: left;
         padding-top: 4%;
     }
@@ -177,6 +188,7 @@
 
     .clinician_note {
         width: 25%;
+        height: 52.5%;
         float: right;
         padding-top: 4%;
     }
@@ -245,99 +257,150 @@
 
         margin-left: 17%;
     }
+
+    .patient_note_content {
+        position: absolute;
+        width: 360px;
+        height: 347px;
+        top: 361px;
+        left: 980px;
+        border-radius:20px;
+        font-size: 25px;
+        border: solid 4px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        font-family: Tamil MN;
+        background-color: #FFFFFF;
+        line-break: auto;
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    .rectangle {
+        position: absolute;
+        width: 360px;
+        height: 300px;
+        top: 361px;
+        left: 1455px;
+        border-radius:20px;
+        border: solid 4px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        text-align: left;
+        padding: 10px;
+    }
+
+    textarea {
+        padding: 10px;
+    }
+
+    .rectangle h4 {
+        font-family: Tamil MN;
+        font-size: 25px;
+        color: #303030;
+    }
 }
 
-@media screen and (device-width: 1024px) and (device-height: 768px){    #phone_content {
+@media screen and (device-width: 1024px) and (device-height: 768px){    
+    #phone_content {
     display: none;
-}
+    }
 
-#after_log_web_header {
+    #after_log_web_header {
     display: inherit;
-}
+    }
 
-header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #F2F1F7;
-    position: fixed;
-    top: 0%;
-    height: 8%;
-    width: 100%;
-}
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #F2F1F7;
+        position: fixed;
+        top: 0%;
+        height: 8%;
+        width: 100%;
+    }
 
-header ri {
-    float: right;
-}
+    header ri {
+        float: right;
+    }
 
-header ri a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 15px;
-    margin-right: 10px;
-    text-decoration: none;
-    font-family: "Tamil MN";
-    font-weight: normal;
-    font-size: 17px;
-    color: #707070; 
-    padding: 25px;
-}
+    header ri a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        margin-right: 10px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 15px;
+        color: #707070; 
+        padding: 20px;
+    }
 
-header ri button {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-    font-family: "Tamil MN";
-    font-weight: normal;
-    font-size: 17px;
-    color: #707070; 
-    padding: 25px;
-    border: none;
-    background-color: transparent;
-}
+    header ri button {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 15px;
+        color: #707070; 
+        padding: 20px;
+        border: none;
+        background-color: transparent;
+    }
 
-header li {
-    float: left;
-}
+    header ri img {
+        width: 45px;
+        height: 45px;
+        position: fixed;
+        top: 10px;
+        right: 180px;
+    }
 
-header li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 15px;
-    color: rgba(29, 32, 134, 0.65); 
-    padding: 25px;
-}
+    header li {
+        float: left;
+    }
 
-header li b {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 15px;
-    color: rgba(29, 32, 134, 1); 
-    padding: 25px;
-}
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgba(29, 32, 134, 0.65); 
+        padding: 20px;
+    }
 
-header li a:active {
-    color: rgba(29, 32, 134, 1); 
-}
+    header li b {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgba(29, 32, 134, 1); 
+        padding: 20px;
+    }
 
-main {
-    margin-top: 0;
-    padding: 0;
-}
+    header li a:active {
+        color: rgba(29, 32, 134, 1); 
+    }
+
+    main {
+        margin-top: 0;
+        padding: 0;
+    }
 
 .dashboard {
     background-image:url(/images/bg_ipad.jpg);
@@ -498,7 +561,49 @@ main {
 
     margin-left: 15%;
 }
-    }
+
+.patient_note_content {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    top: 430px;
+    left: 163px;
+    border-radius:20px;
+    font-size: 15px;
+    border: solid 4px rgba(112, 112, 112, 0.65);
+    overflow-y: scroll;
+    font-family: Tamil MN;
+    background-color: #FFFFFF;
+    line-break: auto;
+}
+
+.invisible {
+    display: none;
+}
+
+.rectangle {
+    position: absolute;
+    width: 300px;
+    height: 120px;
+    top: 430px;
+    left: 515px;
+    border-radius:20px;
+    border: solid 4px rgba(112, 112, 112, 0.65);
+    overflow-y: scroll;
+    text-align: left;
+    padding: 10px;
+}
+
+textarea {
+    padding: 10px;
+}
+
+.rectangle h4 {
+    font-family: Tamil MN;
+    font-size: 15px;
+    color: #303030;
+}
+}
 
     @media (max-width:1024px) {
         .head_left{
@@ -532,7 +637,6 @@ main {
         .formbox{
             top: 36px;
         }
-    }
 }
 
 @media screen and (device-width: 375px) and (device-height: 812px){
