@@ -54,11 +54,11 @@
 
                         </div>
                     </div>
-                                <div id="comment_form">
-                                    <p class="normal_text">Comment About This Record:</p>
-                                    <textarea name="content" id="comment_box" cols="35" rows="6"></textarea>
-                                </div>
-                                <input id="submit" type="submit" />
+                    <div id="comment_form">
+                        <p class="normal_text">Comment About This Record:</p>
+                        <textarea name="content" id="comment_box" cols="35" rows="6"></textarea>
+                    </div>
+                    <input id="submit" type="submit" />
 
                 </form>
         </main>
@@ -132,16 +132,18 @@
                 <div class="patient_note">
                     <form action="/comment/reply" method="POST"></form>
                         <h1>Patient notes:</h1>
-
+                        <textarea class="invisible" name="pid">{{this._id}}</textarea>
+                        <textarea class="patient_note_content" name="note">{{this.note}}</textarea>
                     </form>
                 </div>
 
 
 
                 <div class="clinician_note">
-
                     <h1>Clinician notes:</h1>
-
+                    <div class="rectangle">
+                        <h4>Patient message</h4>
+                    </div>
                 </div>
 
                 <div class="buttons">

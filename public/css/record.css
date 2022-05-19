@@ -245,6 +245,48 @@
 
         margin-left: 17%;
     }
+
+    .patient_note_content {
+        position: absolute;
+        width: 360px;
+        height: 347px;
+        top: 361px;
+        left: 980px;
+        border-radius:20px;
+        font-size: 25px;
+        border: solid 4px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        font-family: Tamil MN;
+        background-color: #FFFFFF;
+        line-break: auto;
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    .rectangle {
+        position: absolute;
+        width: 360px;
+        height: 300px;
+        top: 361px;
+        left: 1455px;
+        border-radius:20px;
+        border: solid 4px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        text-align: left;
+        padding: 10px;
+    }
+
+    textarea {
+        padding: 10px;
+    }
+
+    .rectangle h4 {
+        font-family: Tamil MN;
+        font-size: 25px;
+        color: #303030;
+    }
 }
 
 @media screen and (device-width: 1024px) and (device-height: 768px){    #phone_content {
@@ -532,7 +574,6 @@ main {
         .formbox{
             top: 36px;
         }
-    }
 }
 
 @media screen and (device-width: 375px) and (device-height: 812px){
