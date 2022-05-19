@@ -324,7 +324,7 @@
     }
 
     .rectangle {
-        position: absolute;
+        position: fixed;
         width: 360px;
         height: 347px;
         top: 361px;
@@ -347,7 +347,7 @@
     }
 
     .clinician_note_content {
-        position: absolute;
+        position: fixed;
         width: 360px;
         height: 300px;
         top: 361px;
@@ -362,7 +362,7 @@
     }
 
     .support_message_content {
-        position: absolute;
+        position: fixed;
         width: 360px;
         height: 300px;
         top: 361px;
@@ -376,7 +376,7 @@
     }
 
     .data_image {
-        position: absolute;
+        position: fixed;
         width: 900px;
         height: 550px;
         top: 260px;
