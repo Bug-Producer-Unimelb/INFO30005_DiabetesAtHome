@@ -4,9 +4,13 @@ const flash = require('express-flash')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const mongooseClient = require('./models')
+const mongoose = require('mongoose')
+const moment = require('moment')
+
+const Comment = require('./models/comment')
 
 const app = express()
-
+// {patient_id:"62623d0a745775707e941445"} Comment
 app.use(express.static('public'))
 app.use('/js', express.static(__dirname + './public/js'))
 
@@ -106,11 +110,13 @@ const calculateEncoragement = (record) => {
 app.get("/patients/:id/achievement", async (req, res) => {
     const patientId = req.params.id;
     // console.log("patient id is: ", patientId);
-    const record = await Record.findOne({'patient_id': patientId});
-    const currentUser = await Patient.findOne({ _id: record.patient_id }).populate("user_id");
-    const currentUserName = currentUser.user_id.username;
+    // const record = await Record.findOne({'patient_id': patientId});
+    // const currentUser = await Patient.findOne({ _id: record.patient_id }).populate("user_id");
+    // const currentUserName = currentUser.user_id.username;
+    const currentUser = "sdsd"
     console.log("current user is: ", currentUser);
-    const records = await Record.find();
+    // const records = await Record.find();
+    const records = []
     // console.log("all records are: ", records);
     let allRankInfo = [];
     // get all the encoragement rate of all the patients
@@ -155,11 +161,55 @@ app.get("/patients/:id/achievement", async (req, res) => {
     console.log("all user names are: ", top5Users);
 
     // query all the patient information according to the patient id
-    let rate = 82.1;
-    if (record) {
-        rate = calculateEncoragement(record);
+
+    const user = await User.findById(patientId)
+
+    console.log('user')
+    let joined = user.createdAt
+    let today = new Date()
+    let n = moment(today).diff(joined, 'days')
+
+    console.log(n)
+
+   const comments = await Comment.aggregate([
+        { $match: { "patient_id":mongoose.Types.ObjectId(patientId) } },
+        {
+            $project: {
+                time: { $dateToString: { format: "%Y-%m-%d", date: "$date" } },
+            }
+        },
+        { $group: { _id: "$time", count: { $sum: 1 } } },
+    
+        
+      ])
+
+
+      console.log(comments)
+
+
+    // console.log(user.createdAt)
+
+
+    let rate = parseInt((comments.length / n) * 100);
+
+    // let rate = 89
+
+    let show = false
+
+    if(rate>=80)
+    {
+        show = true
+    }else{
+        show = false
     }
-    return res.render("achievement.hbs", {currentUserName: currentUserName, rate: rate, top5Users: top5Users});
+
+
+
+    console.log(rate)
+    // if (record) {
+    //     rate = calculateEncoragement(record);
+    // }
+    return res.render("achievement.hbs", {currentUserName: "currentUserName",show:show, rate: rate, top5Users: top5Users});
 });
 
 app.get('/aboutus', (req, res) => {
@@ -210,6 +260,21 @@ app.get('/changepassword', (req, res) => {
 app.get('/viewcomment', (req, res) => {
     res.render('viewcomment.hbs')
 })
+
+
+
+// {patient_id:"62623d0a745775707e941445"} Comment
+
+// Comment.find({"patient_id":"626a25d61cbdb0dc91178f2f"}, function (err, docs) { 
+//     if (err){ 
+//         console.log(err); 
+//     } 
+//     else{ 
+//         console.log("Result:", docs); 
+//     } 
+// })
+
+
 
 const PORT = process.env.PORT || 3000
 
