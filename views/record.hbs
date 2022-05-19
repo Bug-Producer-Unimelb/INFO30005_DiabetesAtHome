@@ -60,10 +60,30 @@
                                 <input id="submit" type="submit" />
 
                 </form>
-            </main>
-            <main id="other_content">
-                    <div class="center_box">
-                        <p class="title">Record your data</p>
+        </main>
+        <main id="other_content">
+            <div class="dashboard">
+                <h2>Record your health data</h2>
+
+                <div class="patient_info">
+                    <h1>Patient Informations:</h1>
+                    <img src="/images/info_avatar.png">
+                    {{#with oneItem}}
+                        <p class="info_text"> Patient ID: {{_id}}</p>
+                    {{/with}}
+                    {{#with oneItem}}
+                        <p class="info_text"> Patient Name: {{screen_name}}</p>
+                    {{/with}}
+                </div>
+
+                <div class="patient_data">
+                    <h1>Record data:</h1>
+                    <input type="radio" checked="checked" name="info"/>
+                    <label class="record_text" id="bg_label">Blood Glucose Level:</label>
+
+
+                </div>
+
                         <form id="data_form" action="/patient/record" method="POST">
                             {{#with oneItem}}
                                 <textarea name="pid" id="id_content">{{_id}}</textarea>
@@ -71,18 +91,15 @@
                             <div class="form_head">
                                 <div class="form_part_one">
                                     <div class="form_part_one_left">
-                                        <div class="form_name">
-                                            <p class="title">Patient Information:</p>
-                                            <img src="/images/info_avatar.png" id="avatar"/>
-                                            {{#with oneItem}}
-                                                <p class="normal_text"> Patient Name: {{screen_name}}</p>
-                                            {{/with}}
-                                        </div>
+
+
                                         <div class="form_info">
-                                            <p class="title">Record Data:</p>
                                             <input type="radio" checked="checked" name="info"/>
                                             <p class="normal_text">Blood Glucose Level</p>
+
+
                                             <div class="input_field">
+
                                                 <input type="number" class="form_input" name="data_content" />
                                                 <label class="normal_text">nmol/L</label>
                                                 {{#with oneItem}}
@@ -93,6 +110,12 @@
                                                 {{/with}}
                                             </div>
                                         </div>
+
+
+
+
+
+
                                     </div>
                                 </div>
                                 <div class="form_part_two">
@@ -117,7 +140,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+            </div>
         </main>
     </body>
 
