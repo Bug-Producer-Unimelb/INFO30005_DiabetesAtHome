@@ -228,6 +228,8 @@ app.get('/viewcomment', (req, res) => {
 
 app.get('/achievement', patientController.renderAchievement)
 
+app.post('/changepassword', patientController.changePassword)
+
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {

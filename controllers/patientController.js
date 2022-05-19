@@ -166,21 +166,21 @@ const insertData = async (req, res, next) => {
 
 const changePassword = async (req, res) => {
     try {
-        const patient = await Patient.findOne({
-            user_id: req.user._id
-        }).lean()
+        const user = await User.findByIdAndUpdate(req.user._id,
+            {
+                password: req.body.password,
+                secret: 'INFO30005'
+            }).lean()
 
-        console.log(req.body)
-        if (!patient) {
+        
+        if (!user) {
             return res.sendStatus(404)
         }
 
-        if (req.body.old_password==patient.password) {
-            patient.password = req.body.password
-            await patient.save()
+        console.log(user.password)
+
     
-            return res.render('record.hbs', { oneItem: patient })
-        }
+        return res.render('record.hbs', { oneItem: user })
 
     } catch (err) {
         return next(err)
