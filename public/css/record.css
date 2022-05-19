@@ -119,6 +119,7 @@
 
     .patient_info {
         width: 25%;
+        height: 52.5%;
         float: left;
         padding-top: 4%;
     }
@@ -145,6 +146,7 @@
 
     .patient_data {
         width: 25%;
+        height: 52.5%;
         float: left;
         padding-top: 4%;
     }
@@ -167,6 +169,7 @@
 
     .patient_note {
         width: 25%;
+        height: 52.5%;
         float: left;
         padding-top: 4%;
     }
@@ -177,6 +180,7 @@
 
     .clinician_note {
         width: 25%;
+        height: 52.5%;
         float: right;
         padding-top: 4%;
     }
