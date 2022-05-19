@@ -12,6 +12,9 @@
                 <ul>
                     <li><img src="/images/logo.png"></li>
                         <li><b href="/record">DASHBOARD</b></li>
+                        <li><a href="/aboutus">ABOUT US</a></li>
+                        <li><a href="/aboutdiabetes">ABOUT DIABETES</a></li>
+                        <li><a href="/#">SWITCH MODE</a></li>
                         <ri><form method="POST" action="/logout"><button>Logout</button></form></ri>
                         {{#with oneItem}}
                             <ri><a>{{first_name}}</a></ri>
@@ -126,8 +129,6 @@
                     {{/with}}
                 </div>
 
-                <img class="separate_line" src="/images/separate_line.png">
-
                 <div class="patient_note">
                     <form action="/comment/reply" method="POST"></form>
                         <h1>Patient notes:</h1>
@@ -135,8 +136,17 @@
                     </form>
                 </div>
 
+
+
+                <div class="clinician_note">
+
+                    <h1>Clinician notes:</h1>
+
+                </div>
+
                 <div class="buttons">
                     <button class="save_button">Save the changes</button>
+                    <button class="history_button" onclick="window.location.href='/patient_hdetail'">View data</button>
                     <button class="achievement_button" onclick="window.location.href='/achievement'">View achievement</button>
 
                 </div>
