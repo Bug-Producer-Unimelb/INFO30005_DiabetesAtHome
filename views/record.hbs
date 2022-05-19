@@ -78,46 +78,67 @@
 
                 <div class="patient_data">
                     <h1>Record data:</h1>
+
+                    <h2></h2>
                     <input type="radio" checked="checked" name="info"/>
-                    <label class="record_text" id="bg_label">Blood Glucose Level:</label>
+                    <label class="record_text">Weight:</label>
+                    <input type="number" class="form_input" name="data_content" />
+                    <label class="record_text">kg</label>
+                    {{#with oneItem}}
+                        {{#if this.weight}}
+                        <br/>
+                        <label class="form_digit">Last Record: {{this.weight}}</label>
+                        {{/if}}
+                    {{/with}}
 
+                    <h2></h2>
+                    <input type="radio" checked="checked" name="info"/>
+                    <label class="record_text">Blood Glucose Level:</label>
+                    <input type="number" class="form_input" name="data_content" />
+                    <label class="record_text">nmol/L</label>
+                    {{#with oneItem}}
+                        {{#if this.blood_glucose_level}}
+                        <br/>
+                        <label class="form_digit">Last Record: {{this.blood_glucose_level}}</label>
+                        {{/if}}
+                    {{/with}}
 
+                    <h2></h2>
+                    <input type="radio" checked="checked" name="info"/>
+                    <label class="record_text">Doses of insulin taken:</label>
+                    <input type="number" class="form_input" name="data_content" />
+                    <label class="record_text">Doses</label>
+                    {{#with oneItem}}
+                        {{#if this.doses}}
+                        <br/>
+                        <label class="form_digit">Last Record: {{this.doses}}</label>
+                        {{/if}}
+                    {{/with}}
+
+                    <h2></h2>
+                    <input type="radio" checked="checked" name="info"/>
+                    <label class="record_text">Exercise:</label>
+                    <input type="number" class="form_input" name="data_content" />
+                    <label class="record_text">Steps</label>
+                    {{#with oneItem}}
+                        {{#if this.exercise}}
+                        <br/>
+                        <label class="form_digit">Last Record: {{this.exercise}}</label>
+                        {{/if}}
+                    {{/with}}
                 </div>
+
+                <img class="separate_line" src="/images/separate_line.png">
+
+
+
 
                         <form id="data_form" action="/patient/record" method="POST">
                             {{#with oneItem}}
                                 <textarea name="pid" id="id_content">{{_id}}</textarea>
                             {{/with}}
                             <div class="form_head">
-                                <div class="form_part_one">
-                                    <div class="form_part_one_left">
 
-
-                                        <div class="form_info">
-                                            <input type="radio" checked="checked" name="info"/>
-                                            <p class="normal_text">Blood Glucose Level</p>
-
-
-                                            <div class="input_field">
-
-                                                <input type="number" class="form_input" name="data_content" />
-                                                <label class="normal_text">nmol/L</label>
-                                                {{#with oneItem}}
-                                                    {{#if this.blood_glucose_level}}
-                                                    <br/>
-                                                    <label class="form_digit">Last Record: {{this.blood_glucose_level}}</label>
-                                                    {{/if}}
-                                                {{/with}}
-                                            </div>
-                                        </div>
-
-
-
-
-
-
-                                    </div>
-                                </div>
                                 <div class="form_part_two">
                                     <div class="form_part_one_right">
                                         <p class="normal_text">Comment About This Record</p>

@@ -117,14 +117,8 @@
         color: #132086;
     }
 
-    .dashboard h3 {
-        font-family: Tamil MN;
-        font-size: 15px;
-        color: #303030;
-    }
-
     .patient_info {
-        width: 25%;
+        width: 33%;
         float: left;
         padding-top: 3%;
     }
@@ -134,15 +128,8 @@
     }
 
     .patient_info img {
-        padding-top: 12%;
+        padding-top: 10%;
         padding-left: 55%;
-    }
-
-    .patient_info h3 {
-        padding-top: 7%;
-        padding-right: 35%;
-
-        text-align: right;
     }
 
     .info_text {
@@ -151,15 +138,19 @@
         font-weight: bold;
         color: #303030;
 
-        padding-top: 12%;
+        padding-top: 10%;
         padding-left: 30%;
         text-align: center;
     }
 
     .patient_data {
-        width: 25%;
+        width: 33%;
         float: left;
         padding-top: 3%;
+    }
+
+    .patient_data h2 {
+        padding-top: 12%;
     }
 
     .record_text {
@@ -168,8 +159,12 @@
         font-weight: bold;
         color: #303030;
 
-        padding-left: 10%;
+        padding-top: 10%;
         text-align: left;
+    }
+
+    .separate_line {
+        padding-top: 2%;
     }
 
 
