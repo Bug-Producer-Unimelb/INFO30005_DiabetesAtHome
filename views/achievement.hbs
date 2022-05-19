@@ -19,7 +19,7 @@
 							{{#with oneItem}}
 								<ri><a>{{first_name}}</a></ri>
 							{{/with}}
-							<ri><img id="patientImg" src="/images/patient_pic.jpg"  width="70" height="70"></ri>
+							<ri><img id="patientImg" src="/images/patient.png"  width="70" height="70"></ri>
 					</ul>
 				</nav>            
 			</header>
@@ -31,23 +31,18 @@
 					<h2>View your achievements</h2>
 					<div class="patient_info">
 						<h1>Patient Informations:</h1>
-						<img src="/images/info_avatar.png">
+						<img src="/images/patient.png">
 						{{#with oneItem}}
 							<p class="info_text"> Patient Name: {{screen_name}}</p>
 						{{/with}}
 					</div>
 
 					<div class="achieved">
-						<h1>Patient Informations:</h1>
+						<h3>YOU DID IT!</h3>
 					</div>
 
 				</div>
-				<div class="buttons">
-					<button class="save_button">Save the changes</button>
-					<button class="history_button" onclick="window.location.href='/patient_hdetail'">View data</button>
-					<button class="achievement_button" onclick="window.location.href='/achievement'">View achievement</button>
 
-				</div>
 		</main>
 
 	<div class="container">
