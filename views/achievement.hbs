@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="/css/achievement/normalize.css" rel="stylesheet" />
+	<link href="/css/achievement/index.css" rel="stylesheet" />
+
+	<title></title>
+</head>
+<body>
+
+
+	<header>
+            <nav id='after_log_web_header'>
+                <ul>
+                    <li><img src="/images/logo.png"></li>
+                        <li><b href="/">DASHBOARD</b></li>
+                        <li><a href="#">VIEW DATA</a></li>
+                        <li><a href="#">ACHIVEMENT</a></li>
+                        <li style="float: right;"><form method="POST" action="/logout"><button class="logout">Logout</button></form></li>
+                        {{#with oneItem}}
+                            <li ><a>{{first_name}}</a></li>
+                        {{/with}}
+                        <li style="float: right;"><img id="clinicianImg" src="/images/clinician_pic.jpg"  width="70" height="70"></li>
+                </ul>
+            </nav>            
+        </header>  
+
+		
+	<div class="container">
+		{{!-- <div class="header">
+			<div class="head_left">
+				<a href="javascript:;">
+					<img src="./images/logo.png" style="width: 80px;" />
+				</a>
+				<a href="javascript:;">
+					DASHBOARD
+				</a>
+				<a href="javascript:;">
+				PATIENT DETAILS
+				</a>
+				<a href="javascript:;">
+				COMMENT LIST
+				</a>
+			</div>
+			<div class="head_right">
+				<a href="javascript:;">
+					<img src="./images/login_avatar.png" />
+					&nbsp;&nbsp;jone
+				</a>
+				<a href="javascript:;">
+				Log out
+				</a>
+			</div>
+		</div> --}}
+		<div class="content">
+			
+			<div class="center_box">
+				<p class="title">Great to see you for</p>
+				<div>
+					<div class="form_head">
+						<div class="form_part_one">
+							<div class="form_part_one_left">
+								<div class="form_name">
+									<p class="title">personal Information:</p>
+									<img src="/images/info_avatar.png" />
+									<p> Patient Name &nbsp;&nbsp;{{ currentUserName }}</p>
+									
+								</div>
+								<div class="form_info">
+									<div class="form_info_head">
+										<h1>You Did It !</h1>
+										<p>Your engagement is over {{ rate }}%</p>
+									</div>
+									<div class="form_info_foot">
+										<img  src="/images/doc.jpg" alt="" srcset="">
+										
+										<img width="200"  src="/images/one.jpg" alt="" srcset="">
+										
+									</div>
+								</div>
+							</div>
+							<div class="form_part_one_foot">
+								<div class="form_part_one_foot_text">
+									{{!-- <p>
+										Good day!<br/>
+										
+										[Doctor’s Comment with motivation]                          
+									</p>
+									<p>
+										— from Doctor Mario
+									  </p> --}}
+								</div>
+								<img src="/images/two.jpg" alt="">
+							</div>
+						</div>
+						<div class="form_part_two">
+							<div class="form_part_one_right">
+								<p >Who is the most<br/> engaging Person?</p>
+                                {{#each top5Users }}
+                                    <p>{{ @index }}. {{ this.username }}</p>
+                                {{/each }}
+								<span class="line"></span>
+								<h1>
+									You are here! Keep working!
+								</h1>
+							</div>
+						</div>
+					</div>
+					<div class="form_foot">
+						<div class="formbox">
+							<div class="arror_left">
+								<i class="fa fa-arrow-left" aria-hidden="true"></i>
+								<button> view detail</button>
+							</div>
+							<div class="arror_right">
+								
+								<button> Go back to Dashboard</button>
+								<i class="fa fa-arrow-right" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img src="/images/modal.png" alt="">
+			</div>
+		
+		</div>
+	</div>
+</body>
+</html>
