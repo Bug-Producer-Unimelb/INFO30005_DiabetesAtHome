@@ -12,6 +12,8 @@ const schema = new mongoose.Schema({
     Weight: Number,
     Doses: Number,
     Exercise: Number,
+    note: String,
+    support_message: String,
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "user",

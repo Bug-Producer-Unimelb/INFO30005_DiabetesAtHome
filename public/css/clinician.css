@@ -4,6 +4,15 @@
         display: inherit;
     }
 
+    #view_button {
+
+        border-radius: 20px;
+        width: 200px;
+        height: 40px;
+        color: #747bb7;
+        text-decoration: none;
+    }
+
     header ul {
         list-style-type: none;
         margin: 0;
