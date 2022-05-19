@@ -117,7 +117,7 @@
     }
 
     .dashboard {
-        background-image:url(/images/patient_bg.png);
+        background-image: url(/images/patient_bg.png);
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
@@ -899,10 +899,17 @@ textarea {
         font-family: Arial;
         font-weight: bold;
         font-size: 20px;
-        color: rgba(29, 32, 134, 0.65); 
+        color: rgba(255, 255, 255, 0.65); 
         border: none;
         background-color: transparent;
         padding: 25px;
+    }
+
+    .darkmode .dashboard {
+        background-image: url(/images/background_dark.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
     }
 
     .darkmode .dashboard h1 {
