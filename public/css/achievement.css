@@ -126,12 +126,14 @@
 
     .patient_info {
         width: 25%;
+        height: 60%;
         float: left;
         padding-top: 4%;
     }
 
     .patient_info h1 {
         padding-left: 50%;
+        padding-top: 25%;
     }
 
     .patient_info img {
@@ -151,72 +153,84 @@
     }
 
     .achieved {
-        width: 50%;
+        width: 45%;
         float: left;
-        padding-top: 4%;
+        padding-top: 6%;
+        
     }
 
-
-
-    
-
-
-    .patient_data {
-        width: 25%;
-        float: left;
+    .days {
         padding-top: 4%;
+        padding-left: 7%;
+        position: relative;
+        height: 60%;
     }
 
-    .patient_data h2 {
-        padding-top: 12%;
+    .days .image {
+        padding-left: 5%;
     }
 
     .record_text {
         font-family: Tamil MN;
-        font-size: 15px;
+        font-size: 30px;
         font-weight: bold;
-        color: #303030;
-
-        padding-top: 10%;
+        color: #132086;
         text-align: left;
+
+        padding-top: 3%;
+        padding-left: 10%;
+        position: absolute;
+
     }
 
-    
+    .form_input {
+        font-family: Tamil MN;
+        font-size: 30px;
+        font-weight: bold;
+        color: #132086;
+        text-align: center;
 
-    .patient_note {
-        width: 25%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        margin-top: 9%;
+        margin-left: 56.5%;
+    }
+
+    .comment {
+        size: 120%;
+    }
+
+    .ranking {
+        width: 30%;
+        height: 60%;
         float: left;
-        padding-top: 4%;
+        padding-top: 3%;
+
+        position: relative;
     }
 
-    .separate_line {
-        padding-top: 2%;
+    .ranking h1 {
+        padding-top: 10%;
+        position: absolute;
     }
 
-    .clinician_note {
-        width: 25%;
-        float: right;
-        padding-top: 4%;
+    .ranking .image {
+        height: 100px;
+        width: 150px;
+        padding-left: 65%;
     }
+
+
+
 
 
     .buttons {
-        margin-left: 10%;
         margin-right: 5%;
     }
 
-    .buttons .to_left {
-        float:left;
-        padding-top: 2%;
-    }
 
-    .buttons .to_right {
-        float:right;
-        padding-top: 2%;
-    }
-
-
-    .buttons .save_button {
+    .buttons .record_button {
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -229,8 +243,7 @@
         border: none;
         opacity: 75%;
 
-        margin-left: 15%;
-        margin-top: 1.5%;
+        margin-top: 0.5%;
     }
     .buttons .history_button {
         text-decoration: none;
@@ -245,22 +258,7 @@
         border: none;
         opacity: 75%;
 
-        margin-left: 17%;
+        margin-left: 40%;
     }
 
-    .buttons .achievement_button {
-        text-decoration: none;
-        text-align: center;
-        background: #132086;
-        color: white;
-        font-family: Tamil MN;
-        font-weight: bold;
-        font-size: 15px;
-        padding: 15px 40px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
-
-        margin-left: 17%;
-    }
 }

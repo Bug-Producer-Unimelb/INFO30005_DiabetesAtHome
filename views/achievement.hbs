@@ -27,79 +27,49 @@
 		<main id="phone_content"></main>
 
 		<main id="other_content">
-				<div class="dashboard">
-					<h2>View your achievements</h2>
-					<div class="patient_info">
-						<h1>Patient Informations:</h1>
-						<img src="/images/patient.png">
-						{{#with oneItem}}
-							<p class="info_text"> Patient Name: {{screen_name}}</p>
-						{{/with}}
-					</div>
+			<div class="dashboard">
+				<h2></h2>
+				<div class="patient_info">
+					<h1>Patient Informations:</h1>
+					<img src="/images/patient.png">
+					{{#with oneItem}}
+						<p class="info_text"> Patient Name: {{screen_name}}</p>
+					{{/with}}
+				</div>
 
-					<div class="achieved">
-						<div class="engagement">
-							<h3>You did it! Your engagement is over {{rate}}%</h3>
-						</div>
-						<div class="days">
-							<img  src="/images/doc.jpg" alt="" srcset="">
-							
-							<img width="200"  src="/images/one.jpg">
-						</div>
+				<div class="achieved">
+					<div class="engagement">
+						<h3>You did it! Your engagement is over {{rate}}%</h3>
+					</div>
+					<div class="days">
+						<label class="record_text">Great to see you for</label>
+						
+						<input type="number" class="form_input" name="data_content" />
+						{{#with oneItem}}
+							{{#if this.blood_glucose_level}}
+							<br/>
+							<label class="form_digit">Last Record: {{this.blood_glucose_level}}</label>
+							{{/if}}
+						{{/with}}
+
+						<img class="image" src="/images/day.jpg">
 					</div>
 				</div>
+				<div class="ranking">
+					<h1>Who is the most engaging person?</h1>
+					<img class="image" src="/images/medal.png">
+				</div>
+				<div class="buttons">
+				<button class="record_button" onclick="window.location.href='/record'">Record data</button>
+				<button class="history_button" onclick="window.location.href='/patient_hdetail'">View data</button>
+
+			</div>
+			</div>
+
+			
+		
 
 		</main>
 
-	<div class="container">
-		<div class="content">
-			
-			<div class="center_box">
-				<p class="title">Great to see you for</p>
-				<div>
-					<div class="form_head">
-						<div class="form_part_one">
-
-							<div class="form_part_one_foot">
-								<div class="form_part_one_foot_text">
-									{{#with oneItem}}
-									<p>{{support_message}}</p>
-									{{/with}}
-								</div>
-								<img src="/images/two.jpg" alt="">
-							</div>
-						</div>
-						<div class="form_part_two">
-							<div class="form_part_one_right">
-								<p >Who is the most<br/> engaging Person?</p>
-                                {{#each top5Users }}
-                                    <p>{{ @index }}. {{ this.username }}</p>
-                                {{/each }}
-								<span class="line"></span>
-								<h1>
-									You are here! Keep working!
-								</h1>
-							</div>
-						</div>
-					</div>
-					<div class="form_foot">
-						<div class="formbox">
-							<div class="arror_left">
-								<i class="fa fa-arrow-left" aria-hidden="true"></i>
-								<button> view detail</button>
-							</div>
-							<div class="arror_right">
-								
-								<button> Go back to Dashboard</button>
-								<i class="fa fa-arrow-right" aria-hidden="true"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-				<img src="/images/modal.png" alt="">
-			</div>
-		
-		</div>
-	</div>
-</body>
+	</body>
 </html>
