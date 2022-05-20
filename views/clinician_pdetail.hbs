@@ -70,10 +70,10 @@
                         <textarea class="clinician_note_content" name="note">{{this.note}}</textarea>
                         <input class="submit_button" type="submit" value="SAVE"/>
                     </form>
-                    <form method="POST" action="/reply">
+                    <form method="POST" action="/sendSupportMessage">
                         <h1 id="support_title">Support Message:</h1>
                         <textarea class="invisible" name="pid">{{this._id}}</textarea>
-                        <textarea class="support_message_content" name="note">{{this.support_message}}</textarea>
+                        <textarea class="support_message_content" name="support_message">{{this.support_message}}</textarea>
                         <input class="submit_button" id="for_support" type="submit" value="SAVE"/>
                     </form>
                 </div>

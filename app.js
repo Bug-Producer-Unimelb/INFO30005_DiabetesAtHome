@@ -229,6 +229,7 @@ app.get('/clinicianlogin', (req, res) => {
 })
 
 app.post('/reply', patientController.reply)
+app.post('/sendSupportMessage', patientController.sendSupportMessage)
 
 
 // clinician pages
