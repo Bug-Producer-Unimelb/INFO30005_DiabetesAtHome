@@ -262,20 +262,6 @@ app.get('/viewcomment', (req, res) => {
 })
 
 
-
-// {patient_id:"62623d0a745775707e941445"} Comment
-
-// Comment.find({"patient_id":"626a25d61cbdb0dc91178f2f"}, function (err, docs) { 
-//     if (err){ 
-//         console.log(err); 
-//     } 
-//     else{ 
-//         console.log("Result:", docs); 
-//     } 
-// })
-
-
-
 app.post('/changepassword', patientController.changePassword)
 
 const PORT = process.env.PORT || 3000
