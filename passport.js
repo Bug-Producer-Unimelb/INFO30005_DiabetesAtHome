@@ -6,7 +6,7 @@ const LocalStrategy = require('passport-local').Strategy
 passport.serializeUser((user, done) => {
     done(undefined, user._id)
 })
-    
+
 passport.deserializeUser((userId, done) => {
     User.findById(userId, { password: 0 }, (err, user) => {
         if (err) {
@@ -22,30 +22,30 @@ passport.use(
         // User.create({ username: 'user', password: 'hashed!', secret: 'INFO30005' })
 
         User.findOne({ username: username }, {}, {}, (err, user) => {
-        if (err) {
-            return done(undefined, false, {
-                message: 'Unknown error has occurred'
-            })
-        }
-        if (!user) {
-            return done(undefined, false, {
-                message: 'Incorrect username or password',
-            })
-        }
-    // Check password
-        user.verifyPassword(password, (err, valid) => {
             if (err) {
                 return done(undefined, false, {
-                    message: 'Unknown error has occurred'
+                    message: 'Unknown error has occurred',
                 })
             }
-            if (!valid) {
+            if (!user) {
                 return done(undefined, false, {
                     message: 'Incorrect username or password',
                 })
             }
-            // If user exists and password matches the hash in the database
-            return done(undefined, user)
+            // Check password
+            user.verifyPassword(password, (err, valid) => {
+                if (err) {
+                    return done(undefined, false, {
+                        message: 'Unknown error has occurred',
+                    })
+                }
+                if (!valid) {
+                    return done(undefined, false, {
+                        message: 'Incorrect username or password',
+                    })
+                }
+                // If user exists and password matches the hash in the database
+                return done(undefined, user)
             })
         })
     })

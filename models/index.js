@@ -8,8 +8,8 @@ const mongoose = require('mongoose')
 // We've also used Heroku CLI to set MONGO_URL for our Heroku app before.
 
 const mongooseClient = mongoose
-.connect(process.env.MONGO_URL || 'mongodb://127.0.0.1:27017', {
-        dbName: 'diabete@home'
+    .connect(process.env.MONGO_URL || 'mongodb://127.0.0.1:27017', {
+        dbName: 'diabete@home',
     })
     .then((m) => m.connection.getClient())
 

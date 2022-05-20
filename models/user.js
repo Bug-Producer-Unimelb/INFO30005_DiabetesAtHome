@@ -4,10 +4,10 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
 const userSchema = new mongoose.Schema({
-    username: {type: String, required: true, unique: true},
-    password: {type: String, required: true},
-    role: {type: String},
-    createdAt: { type: Date, default: Date.now }
+    username: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    role: { type: String },
+    createdAt: { type: Date, default: Date.now },
 })
 
 // password comparison function
@@ -21,7 +21,7 @@ const SALT_FACTOR = 10
 
 // hash password before saving
 userSchema.pre('save', function save(next) {
-    const user = this// go to next if password field has not been modified
+    const user = this // go to next if password field has not been modified
     if (!user.isModified('password')) {
         return next()
     }
@@ -36,7 +36,6 @@ userSchema.pre('save', function save(next) {
         next()
     })
 })
-
 
 const User = mongoose.model('User', userSchema)
 module.exports = User

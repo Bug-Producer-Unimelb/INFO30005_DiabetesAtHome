@@ -5,10 +5,9 @@ const schema = new mongoose.Schema({
     last_name: String,
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-        required: true
+        ref: 'User',
+        required: true,
     },
-
 })
 
 const Clinician = mongoose.model('Clinician', schema)

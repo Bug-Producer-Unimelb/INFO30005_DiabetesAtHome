@@ -20,8 +20,8 @@ app.engine(
         defaultlayout: 'main',
         extname: 'hbs',
         helpers: {
-            isSafe: x => x > 115
-        }
+            isSafe: (x) => x > 115,
+        },
     })
 )
 app.set('view engine', 'hbs')
@@ -40,14 +40,14 @@ app.use(
         cookie: {
             sameSite: 'strict',
             httpOnly: true,
-            secure: app.get('env') === 'production'
+            secure: app.get('env') === 'production',
         },
         store: MongoStore.create({ clientPromise: mongooseClient }),
-        })
+    })
 )
 
 if (app.get('env') === 'production') {
-    app.set('trust proxy', 1); // Trust first proxy
+    app.set('trust proxy', 1) // Trust first proxy
 }
 
 const isAuthenticated = (req, res, next) => {
@@ -61,12 +61,11 @@ const isAuthenticated = (req, res, next) => {
 
 const hasRole = (thisRole) => {
     return (req, res, next) => {
-        if (req.user.role == thisRole) 
-            return next()
+        if (req.user.role == thisRole) return next()
         else {
             res.redirect('/')
         }
-    }    
+    }
 }
 
 const passport = require('./passport')
@@ -91,74 +90,79 @@ const User = require('./models/user')
 // const ObjectId = require('mongodb').ObjectId
 
 app.get('/', (req, res) => {
-    console.log("index page...");
+    console.log('index page...')
     res.render('index.hbs')
 })
 
 /**
  * Calculate the encoragement rate and return it
- * @param {*} record 
+ * @param {*} record
  */
 const calculateEncoragement = (record) => {
-    let rate = 0.0;
+    let rate = 0.0
     if (record) {
-        rate = parseFloat((record.current_record_quantity * 1.0 / record.total_quantity).toFixed(3));
+        rate = parseFloat(
+            (
+                (record.current_record_quantity * 1.0) /
+                record.total_quantity
+            ).toFixed(3)
+        )
     }
-    return rate;
-};
+    return rate
+}
 
-app.get("/patients/:id/achievement", async (req, res) => {
-    const patientId = req.params.id;
+app.get('/patients/:id/achievement', async (req, res) => {
+    const patientId = req.params.id
     // console.log("patient id is: ", patientId);
     // const record = await Record.findOne({'patient_id': patientId});
     // const currentUser = await Patient.findOne({ _id: record.patient_id }).populate("user_id");
     // const currentUserName = currentUser.user_id.username;
-    const currentUser = "sdsd"
-    console.log("current user is: ", currentUser);
+    const currentUser = 'sdsd'
+    console.log('current user is: ', currentUser)
     // const records = await Record.find();
     const records = []
     // console.log("all records are: ", records);
-    let allRankInfo = [];
+    let allRankInfo = []
     // get all the encoragement rate of all the patients
     if (records && records.length > 0) {
         for (const r of records) {
             allRankInfo.push({
                 patient_id: r.patient_id,
-                rate: calculateEncoragement(r)
-            });
+                rate: calculateEncoragement(r),
+            })
         }
     }
     // sort the allRankInfo array above
     allRankInfo.sort((a, b) => {
-        return -1 * (a.rate - b.rate);
-    });
-    let patientIds = [];
+        return -1 * (a.rate - b.rate)
+    })
+    let patientIds = []
     for (let i = 0; i < allRankInfo.length; ++i) {
-        patientIds.push(allRankInfo[i].patient_id);
+        patientIds.push(allRankInfo[i].patient_id)
     }
 
-    const patients = await Patient.find({'_id': {$in: patientIds}}).limit(5);
+    const patients = await Patient.find({ _id: { $in: patientIds } }).limit(5)
     // console.log("all patients are: ", patients);
-    let userIds = [];
+    let userIds = []
     if (patients && patients.length > 0) {
         for (const p of patients) {
             // console.log(typeof p.user_id);
-            userIds.push(p.user_id._id);
+            userIds.push(p.user_id._id)
         }
     }
 
     // console.log("all user ids are: ", userIds);
-    const users = await User.find({ _id: { $in: userIds }});
+    const users = await User.find({ _id: { $in: userIds } })
     // console.log("all user are: ", users);
-    let top5Users = [];
+    let top5Users = []
     if (users && users.length > 0) {
         for (const user of users) {
             top5Users.push({
-                username: user.username
-            });
+                username: user.username,
+            })
         }
     }
-    console.log("all user names are: ", top5Users);
+    console.log('all user names are: ', top5Users)
 
     // query all the patient information according to the patient id
 
@@ -171,46 +175,43 @@ app.get("/patients/:id/achievement", async (req, res) => {
 
     console.log(n)
 
-   const comments = await Comment.aggregate([
-        { $match: { "patient_id":mongoose.Types.ObjectId(patientId) } },
+    const comments = await Comment.aggregate([
+        { $match: { patient_id: mongoose.Types.ObjectId(patientId) } },
         {
             $project: {
-                time: { $dateToString: { format: "%Y-%m-%d", date: "$date" } },
-            }
+                time: { $dateToString: { format: '%Y-%m-%d', date: '$date' } },
+            },
         },
-        { $group: { _id: "$time", count: { $sum: 1 } } },
-    
-        
-      ])
+        { $group: { _id: '$time', count: { $sum: 1 } } },
+    ])
 
-
-      console.log(comments)
-
+    console.log(comments)
 
     // console.log(user.createdAt)
 
-
-    let rate = parseInt((comments.length / n) * 100);
+    let rate = parseInt((comments.length / n) * 100)
 
     // let rate = 89
 
     let show = false
 
-    if(rate>=80)
-    {
+    if (rate >= 80) {
         show = true
-    }else{
+    } else {
         show = false
     }
-
-
 
     console.log(rate)
     // if (record) {
     //     rate = calculateEncoragement(record);
     // }
-    return res.render("achievement.hbs", {currentUserName: "currentUserName",show:show, rate: rate, top5Users: top5Users});
-});
+    return res.render('achievement.hbs', {
+        currentUserName: 'currentUserName',
+        show: show,
+        rate: rate,
+        top5Users: top5Users,
+    })
+})
 
 app.get('/aboutus', (req, res) => {
     res.render('about_us.hbs')
@@ -231,16 +232,24 @@ app.get('/clinicianlogin', (req, res) => {
 app.post('/reply', patientController.reply)
 app.post('/sendSupportMessage', patientController.sendSupportMessage)
 
-
 // clinician pages
-app.get('/clinicianhome', isAuthenticated, hasRole('clinician'), async (req, res) => {
-    res.render('clinician_home.hbs')
-})
+app.get(
+    '/clinicianhome',
+    isAuthenticated,
+    hasRole('clinician'),
+    async (req, res) => {
+        res.render('clinician_home.hbs')
+    }
+)
 
-
-app.get('/cliniciancomment', isAuthenticated, hasRole('clinician'), async (req, res) => {
-    res.render('clinician_comment.hbs')
-})
+app.get(
+    '/cliniciancomment',
+    isAuthenticated,
+    hasRole('clinician'),
+    async (req, res) => {
+        res.render('clinician_comment.hbs')
+    }
+)
 
 app.get('/c_patientdetail', (req, res) => {
     res.render('clinician_pdetail.hbs')
@@ -261,7 +270,6 @@ app.get('/changepassword', (req, res) => {
 app.get('/viewcomment', (req, res) => {
     res.render('viewcomment.hbs')
 })
-
 
 app.post('/changepassword', patientController.changePassword)
 

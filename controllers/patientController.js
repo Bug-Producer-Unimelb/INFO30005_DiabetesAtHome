@@ -6,13 +6,11 @@ const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const ObjectId = require('mongodb').ObjectId
 
-
-
 // handle request to get all data instances
 const getAllPatientsData = async (req, res, next) => {
     try {
         const patients = await Patient.find().lean()
-        
+
         return res.render('clinician_home.hbs', { data: patients })
     } catch (err) {
         return next(err)
@@ -36,16 +34,19 @@ const getDataById = async (req, res, next) => {
 
 const reply = async (req, res, next) => {
     try {
-        console.log(req.body);
-        const patient = await Patient.findByIdAndUpdate(ObjectId(req.body.pid), {note: req.body.note}, {new: true}).lean()
+        console.log(req.body)
+        const patient = await Patient.findByIdAndUpdate(
+            ObjectId(req.body.pid),
+            { note: req.body.note },
+            { new: true }
+        ).lean()
         if (!patient) {
             return res.sendStatus(404)
-        } 
+        }
 
-        res.render('clinician_pdetail.hbs', {oneItem: patient})
+        res.render('clinician_pdetail.hbs', { oneItem: patient })
 
-        console.log(patient);
-
+        console.log(patient)
     } catch (err) {
         return next(err)
     }
@@ -53,16 +54,19 @@ const reply = async (req, res, next) => {
 
 const sendSupportMessage = async (req, res, next) => {
     try {
-        console.log(req.body);
-        const patient = await Patient.findByIdAndUpdate(ObjectId(req.body.pid), {support_message: req.body.support_message}, {new: true}).lean()
+        console.log(req.body)
+        const patient = await Patient.findByIdAndUpdate(
+            ObjectId(req.body.pid),
+            { support_message: req.body.support_message },
+            { new: true }
+        ).lean()
         if (!patient) {
             return res.sendStatus(404)
-        } 
+        }
 
-        res.render('clinician_pdetail.hbs', {oneItem: patient})
+        res.render('clinician_pdetail.hbs', { oneItem: patient })
 
-        console.log(patient);
-
+        console.log(patient)
     } catch (err) {
         return next(err)
     }
@@ -71,7 +75,7 @@ const sendSupportMessage = async (req, res, next) => {
 const searchByUserId = async (req, res, next) => {
     try {
         const patient = await Patient.findOne({
-            user_id: req.user._id
+            user_id: req.user._id,
         }).lean()
         if (!patient) {
             return res.sendStatus(404)
@@ -86,7 +90,7 @@ const searchByUserId = async (req, res, next) => {
 const renderAchievement = async (req, res, next) => {
     try {
         const patient = await Patient.findOne({
-            user_id: req.user._id
+            user_id: req.user._id,
         }).lean()
         if (!patient) {
             return res.sendStatus(404)
@@ -109,7 +113,7 @@ const getNewestComment = async (req, res, next) => {
         }
 
         return res.render('clinician_home.hbs', { oneItem: comment })
-    } catch (err){
+    } catch (err) {
         return next(err)
     }
 }
@@ -118,7 +122,9 @@ const updateData = async (req, res, next) => {
     try {
         pid = ObjectId(req.body.pid)
         console.log(pid)
-        const patient = await Patient.findByIdAndUpdate(pid, { blood_glucose_level: Number(req.body.data_content)}).lean()
+        const patient = await Patient.findByIdAndUpdate(pid, {
+            blood_glucose_level: Number(req.body.data_content),
+        }).lean()
         if (!patient) {
             return res.sendStatus(404)
         }
@@ -127,7 +133,7 @@ const updateData = async (req, res, next) => {
             newComment = new Comment(req.body)
             newComment.patient_id = pid
             newComment.data_name = 'Blood Glucose Level'
-    
+
             await newComment.save()
         } catch (err) {
             return next(err)
@@ -140,12 +146,28 @@ const updateData = async (req, res, next) => {
 
 const insertData = async (req, res, next) => {
     try {
-        User.create({ username: req.body.username, password: req.body.password, role: "patient", createdAt: Date.now(), secret: 'INFO30005' }, (err) => {
-            if (err) { console.log(err); return; }
-            console.log('Dummy user inserted')
-        })
+        User.create(
+            {
+                username: req.body.username,
+                password: req.body.password,
+                role: 'patient',
+                createdAt: Date.now(),
+                secret: 'INFO30005',
+            },
+            (err) => {
+                if (err) {
+                    console.log(err)
+                    return
+                }
+                console.log('Dummy user inserted')
+            }
+        )
 
-        const newUser = await User.findOne({}, {}, { sort: {'createdAt': -1 } }).lean()
+        const newUser = await User.findOne(
+            {},
+            {},
+            { sort: { createdAt: -1 } }
+        ).lean()
         console.log(newUser)
 
         newPatient = new Patient({
@@ -158,7 +180,6 @@ const insertData = async (req, res, next) => {
         })
         await newPatient.save()
 
-
         return res.redirect('/clinicianhome')
     } catch (err) {
         return next(err)
@@ -168,26 +189,25 @@ const insertData = async (req, res, next) => {
 const changePassword = async (req, res, next) => {
     try {
         const user = await User.findByIdAndUpdate(req.user._id, {
-            password: hash_password(req.body.password)
+            password: hash_password(req.body.password),
         }).lean()
-        
+
         if (!user) {
             return res.sendStatus(404)
         }
 
         try {
             const patient = await Patient.findOne({
-                user_id: req.user._id
+                user_id: req.user._id,
             }).lean()
             if (!patient) {
                 return res.sendStatus(404)
             }
-    
+
             return res.render('record.hbs', { oneItem: patient })
         } catch (err) {
             return next(err)
         }
-
     } catch (err) {
         return next(err)
     }
@@ -209,5 +229,5 @@ module.exports = {
     updateData,
     getDataById,
     insertData,
-    reply
+    reply,
 }
