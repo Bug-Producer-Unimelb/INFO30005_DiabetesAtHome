@@ -3,6 +3,7 @@
 const Patient = require('../models/patient')
 const Comment = require('../models/comment')
 const User = require('../models/user')
+const bcrypt = require('bcrypt')
 const ObjectId = require('mongodb').ObjectId
 
 
@@ -164,27 +165,38 @@ const insertData = async (req, res, next) => {
     }
 }
 
-const changePassword = async (req, res) => {
+const changePassword = async (req, res, next) => {
     try {
-        const user = await User.findByIdAndUpdate(req.user._id,
-            {
-                password: req.body.password,
-                secret: 'INFO30005'
-            }).lean()
-
+        const user = await User.findByIdAndUpdate(req.user._id, {
+            password: hash_password(req.body.password)
+        }).lean()
         
         if (!user) {
             return res.sendStatus(404)
         }
 
-        console.log(user.password)
-
+        try {
+            const patient = await Patient.findOne({
+                user_id: req.user._id
+            }).lean()
+            if (!patient) {
+                return res.sendStatus(404)
+            }
     
-        return res.render('record.hbs', { oneItem: user })
+            return res.render('record.hbs', { oneItem: patient })
+        } catch (err) {
+            return next(err)
+        }
 
     } catch (err) {
         return next(err)
     }
+}
+
+const hash_password = function (password) {
+    const SALT_FACTOR = 10
+    let hash = bcrypt.hashSync(password, SALT_FACTOR)
+    return hash
 }
 
 module.exports = {

@@ -31,6 +31,7 @@
                     {{#with oneItem}}
                         <h1 id="screen_name">{{screen_name}}</h1>
                     {{/with}}
+                    <a class="change_password"onclick="window.location.href='/changepassword'">Change Password</a>
                 </div>
 
                 <form id="data_form" action="/patient/record" method="POST">
@@ -77,6 +78,7 @@
                     {{#with oneItem}}
                         <p class="info_text"> Patient Name: {{screen_name}}</p>
                     {{/with}}
+                    <a class="change_password"onclick="window.location.href='/changepassword'">Change Password</a>
                 </div>
 
                 <div class="patient_data">
