@@ -90,10 +90,10 @@
         color: rgba(29, 32, 134, 1); 
     }
 
-    #clinicianImg {
+    .clinicianImg {
         position: fixed;
-        top: 6px;
-        right: 235px;
+        top: 30px;
+        right: 255px;
     }
 
     main {
