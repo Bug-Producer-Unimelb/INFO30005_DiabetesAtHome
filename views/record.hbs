@@ -137,7 +137,8 @@
                 <div class="patient_note">
                     <form action="/comment/reply" method="POST"></form>
                         <h1>Patient notes:</h1>
-
+                        <textarea class="invisible" name="pid">{{this._id}}</textarea>
+                        <textarea class="patient_note_content" name="note">{{this.note}}</textarea>
                     </form>
                 </div>
 

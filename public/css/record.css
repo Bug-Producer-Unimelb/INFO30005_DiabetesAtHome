@@ -238,8 +238,6 @@
         float:right;
         padding-top: 2%;
     }
-
-
     .buttons .save_button {
         text-decoration: none;
         text-align: center;
@@ -252,6 +250,10 @@
         border-radius: 20px;
         border: none;
         opacity: 75%;
+
+        position:absolute;
+        left: 100px;
+        bottom: 160px;
 
         margin-left: 15%;
         margin-top: 1.5%;
@@ -269,6 +271,10 @@
         border: none;
         opacity: 75%;
 
+        position:absolute;
+        left: 600px;
+        bottom: 160px;
+
         margin-left: 17%;
     }
 
@@ -285,8 +291,13 @@
         border: none;
         opacity: 75%;
 
+        position:absolute;
+        left: 1100px;
+        bottom: 160px;
+
         margin-left: 17%;
     }
+
 
     .patient_note_content {
         position: absolute;
