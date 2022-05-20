@@ -59,6 +59,11 @@
                         <input type="password" name="password" class="oneInOne"/>
                         <br/>
                         <input type="submit" value="Sign Up" />
+                        {{#if errors}}
+                            <div class="alert alert-error">
+                                <strong>Error submitting the form.</strong> Please correct the errors below.
+                            </div>
+                        {{/if}}
                     </form>
                 </div>
             </div>
