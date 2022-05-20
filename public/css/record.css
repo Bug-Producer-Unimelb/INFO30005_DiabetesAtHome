@@ -745,6 +745,7 @@
         .formbox{
             top: 36px;
         }
+    }
 }
 
 @media screen and (device-width: 375px) and (device-height: 812px){
@@ -956,6 +957,7 @@
         color: rgba(255, 255, 255, 1); 
     }
 
+
     .darkmode header li button {
         display: block;
         color: white;
@@ -1096,7 +1098,7 @@
     .darkmode .rectangle {
         position: absolute;
         width: 360px;
-        height: 300px;
+        height: 150px;
         top: 361px;
         left: 1455px;
         border-radius:20px;
@@ -1111,9 +1113,15 @@
         font-size: 25px;
         color: #FFFFFF;
     }
+
+    .rectangle_2 h4 {
+        font-family: Tamil MN;
+        font-size: 25px;
+        color: #FFFFFF;
+    }
 }
 
-  
+@media screen and (device-width: 1024px) and (device-height: 768px){  
     #phone_content {
     display: none;
     }
@@ -1648,8 +1656,6 @@
         border-radius: 20px;
         border: none;
         opacity: 75%;
-
-
     }
 
 }

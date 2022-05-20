@@ -14,6 +14,7 @@ function changeEditable(editable, contentID) {
 // Change to dark mode. 
 function changeDarkmode() {
   var currElement = document.body;
+  console.log(currElement.classList);
   if (currElement.classList.contains('darkmode')) {
     currElement.classList.remove('darkmode');
   }
