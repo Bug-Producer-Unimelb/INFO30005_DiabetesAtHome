@@ -21,7 +21,7 @@
     "flash": "^1.1.0",
     "handlebar": "^1.0.0",
     "moment": "^2.29.3",
-    "mongoose": "^6.3.3",
+    "mongoose": "^6.3.4",
     "node": "^17.7.2",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0"
