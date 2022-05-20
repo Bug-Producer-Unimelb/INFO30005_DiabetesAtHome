@@ -146,7 +146,9 @@
                 <div class="clinician_note">
                     <h1>Clinician notes:</h1>
                     <div class="rectangle">
-                        <h4>Patient message</h4>
+                        {{#with oneItem}}
+                            <h4>{{this.note}}</h4>
+                        {{/with}}
                     </div>
                 </div>
 
