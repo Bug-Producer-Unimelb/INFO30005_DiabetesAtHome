@@ -161,7 +161,6 @@
 
     .patient_info {
         width: 25%;
-        height: 52.5%;
         float: left;
         padding-top: 4%;
     }
@@ -188,7 +187,6 @@
 
     .patient_data {
         width: 25%;
-        height: 52.5%;
         float: left;
         padding-top: 4%;
     }
@@ -211,7 +209,6 @@
 
     .patient_note {
         width: 25%;
-        height: 52.5%;
         float: left;
         padding-top: 4%;
     }
@@ -222,7 +219,6 @@
 
     .clinician_note {
         width: 25%;
-        height: 52.5%;
         float: right;
         padding-top: 4%;
     }
@@ -360,13 +356,13 @@
     }
 }
 
-@media screen and (device-width: 1024px) and (device-height: 768px){    
+@media screen and (device-width: 1024px) and (device-height: 768px){
     #phone_content {
-    display: none;
+        display: none;
     }
 
     #after_log_web_header {
-    display: inherit;
+        display: inherit;
     }
 
     .change_password {
@@ -413,9 +409,9 @@
         text-decoration: none;
         font-family: "Tamil MN";
         font-weight: normal;
-        font-size: 15px;
+        font-size: 17px;
         color: #707070; 
-        padding: 20px;
+        padding: 25px;
     }
 
     header ri button {
@@ -426,19 +422,11 @@
         text-decoration: none;
         font-family: "Tamil MN";
         font-weight: normal;
-        font-size: 15px;
+        font-size: 17px;
         color: #707070; 
-        padding: 20px;
+        padding: 25px;
         border: none;
         background-color: transparent;
-    }
-
-    header ri img {
-        width: 45px;
-        height: 45px;
-        position: fixed;
-        top: 10px;
-        right: 180px;
     }
 
     header li {
@@ -455,7 +443,7 @@
         font-weight: bold;
         font-size: 15px;
         color: rgba(29, 32, 134, 0.65); 
-        padding: 20px;
+        padding: 25px;
     }
 
     header li b {
@@ -468,7 +456,7 @@
         font-weight: bold;
         font-size: 15px;
         color: rgba(29, 32, 134, 1); 
-        padding: 20px;
+        padding: 25px;
     }
 
     header li a:active {
@@ -595,17 +583,6 @@
         margin-right: 5%;
     }
 
-    .buttons .to_left {
-        float:left;
-        padding-top: 2%;
-    }
-
-    .buttons .to_right {
-        float:right;
-        padding-top: 2%;
-    }
-
-
     .buttons .save_button {
         text-decoration: none;
         text-align: center;
@@ -638,7 +615,19 @@
         margin-left: 15%;
     }
 
-    .buttons .achievement_button {
+
+    .buttons .to_left {
+        float:left;
+        padding-top: 2%;
+    }
+
+    .buttons .to_right {
+        float:right;
+        padding-top: 2%;
+    }
+
+
+    .buttons .save_button {
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -1433,6 +1422,38 @@
         .formbox{
             top: 36px;
         }
+
+    }
+    .buttons .history_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 15%;
+    }
+
+    .buttons .achievement_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 15%;
     }
 }
 
