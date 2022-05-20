@@ -233,6 +233,7 @@
 
 
     .support_message {
+        position: absolute;
         width: 25%;
         float: left;
         padding-top: 3%;
@@ -330,7 +331,7 @@
     }
 
     .rectangle {
-        position: fixed;
+        position: absolute;
         width: 360px;
         height: 347px;
         top: 361px;
@@ -354,13 +355,12 @@
 
     #support_title {
         position: absolute;
-
         top: 400px;
         right: 270px;
     }
 
     .clinician_note_content {
-        position: fixed;
+        position: absolute;
         width: 360px;
         height: 130px;
         top: 340px;
@@ -375,7 +375,7 @@
     }
 
     .support_message_content {
-        position: fixed;
+        position: absolute;
         width: 360px;
         height: 130px;
         top: 600px;
