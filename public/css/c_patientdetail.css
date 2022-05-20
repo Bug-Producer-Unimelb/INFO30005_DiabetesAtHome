@@ -137,8 +137,6 @@
 
     
 
-
-
     .patient_data {
         width: 25%;
         float: left;
@@ -326,7 +324,7 @@
     }
 
     .rectangle {
-        position: fixed;
+        position: absolute;
         width: 360px;
         height: 347px;
         top: 361px;
@@ -349,7 +347,7 @@
     }
 
     .clinician_note_content {
-        position: fixed;
+        position: absolute;
         width: 360px;
         height: 300px;
         top: 361px;
@@ -364,7 +362,7 @@
     }
 
     .support_message_content {
-        position: fixed;
+        position: absolute;
         width: 360px;
         height: 300px;
         top: 361px;
@@ -378,7 +376,7 @@
     }
 
     .data_image {
-        position: fixed;
+        position: absolute;
         width: 900px;
         height: 550px;
         top: 260px;
