@@ -314,7 +314,7 @@
     .rectangle {
         position: absolute;
         width: 360px;
-        height: 300px;
+        height: 150px;
         top: 361px;
         left: 1455px;
         border-radius:20px;
@@ -324,11 +324,36 @@
         padding: 10px;
     }
 
+    .rectangle_2 {
+        position: absolute;
+        width: 360px;
+        height: 150px;
+        top: 600px;
+        left: 1455px;
+        border-radius:20px;
+        border: solid 4px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        text-align: left;
+        padding: 10px;
+    }
+
+    #sm {
+        right: 285px;
+        position: absolute;
+        top: 410px;
+    }
+
+
     textarea {
         padding: 10px;
     }
 
     .rectangle h4 {
+        font-family: Tamil MN;
+        font-size: 25px;
+        color: #303030;
+    }
+    .rectangle_2 h4 {
         font-family: Tamil MN;
         font-size: 25px;
         color: #303030;
