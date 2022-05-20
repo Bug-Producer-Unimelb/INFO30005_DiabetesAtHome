@@ -220,9 +220,15 @@
         border-radius: 17px;
         border: none;
         opacity: 75%; 
-        margin-top: 83%;
-        margin-left: 66%;
-        margin-bottom: 10%;
+        position:absolute;
+        right: 100px;
+        top: 520px;
+    }
+
+    #for_support {
+        position:absolute;
+        right: 100px;
+        top: 780px;
     }
 
 
@@ -346,11 +352,18 @@
         color: #303030;
     }
 
+    #support_title {
+        position: absolute;
+
+        top: 400px;
+        right: 270px;
+    }
+
     .clinician_note_content {
         position: absolute;
         width: 360px;
-        height: 300px;
-        top: 361px;
+        height: 130px;
+        top: 340px;
         left: 1455px;
         border-radius:20px;
         font-size: 25px;
@@ -364,15 +377,16 @@
     .support_message_content {
         position: absolute;
         width: 360px;
-        height: 300px;
-        top: 361px;
-        left: 500px;
+        height: 130px;
+        top: 600px;
+        left: 1455px;
         border-radius:20px;
         font-size: 25px;
         border: solid 4px rgba(112, 112, 112, 0.65);
         overflow-y: scroll;
         font-family: Tamil MN;
         background-color: #FFFFFF;
+        line-break: auto;
     }
 
     .data_image {

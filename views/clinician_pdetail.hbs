@@ -65,10 +65,16 @@
                 
                 <div class="clinician_note">
                     <form method="POST" action="/reply">
-                        <h1>Clinician notes:</h1>
+                        <h1>Clinician Notes:</h1>
                         <textarea class="invisible" name="pid">{{this._id}}</textarea>
                         <textarea class="clinician_note_content" name="note">{{this.note}}</textarea>
                         <input class="submit_button" type="submit" value="SAVE"/>
+                    </form>
+                    <form method="POST" action="/reply">
+                        <h1 id="support_title">Support Message:</h1>
+                        <textarea class="invisible" name="pid">{{this._id}}</textarea>
+                        <textarea class="support_message_content" name="note">{{this.support_message}}</textarea>
+                        <input class="submit_button" id="for_support" type="submit" value="SAVE"/>
                     </form>
                 </div>
                 {{/with}}
