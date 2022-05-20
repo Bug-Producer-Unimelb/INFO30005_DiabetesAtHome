@@ -116,21 +116,13 @@ form {
 }
 
 .form_info .form_info_head {
-	/* background: url('../../images/info_bg.jpg') no-repeat; */
-    position: relative;
+	background: url('../../images/info_bg.jpg') no-repeat;
 	color: #132086;
 	padding: 10px 6px;
 	box-shadow: 1px 2px 8px 1px #dbdbdb;
 	background-size: contain;
 	background-position: right;
 	margin-bottom: 30px;
-    height: 120px;
-}
-
-.form_info .form_info_head  .star{
-    position: absolute;
-    width: 90px;
-    right: 10px;
 }
 
 .form_info_head h1 {

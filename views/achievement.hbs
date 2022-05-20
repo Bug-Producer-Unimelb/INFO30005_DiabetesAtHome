@@ -4,8 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="/css/achievement.css" rel="stylesheet" /> 
-	<title>achievement</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="/css/achievement/normalize.css" rel="stylesheet" />
+	<link href="/css/achievement/index.css" rel="stylesheet" />
+
+	<title></title>
 </head>
 <body>
 
@@ -64,17 +67,15 @@
 								<div class="form_name">
 									<p class="title">personal Information:</p>
 									<img src="/images/info_avatar.png" />
-									<p> Patient Name &nbsp;&nbsp;Jone</p>
-									
+									{{#with oneItem}}
+										<p> Patient Name &nbsp;&nbsp;{{first_name}} {{last_name}}</p>
 								</div>
 								<div class="form_info">
 									<div class="form_info_head">
-										{{#if show}}
-										<img class="star" src="/images/info_bg.jpg" alt="">
-										{{/if}}
 										<h1>You Did It !</h1>
-										<p>Your engagement is over {{ rate }}%</p>
+										<p>Your engagement is over {{rate}}%</p>
 									</div>
+									{{/with}}
 									<div class="form_info_foot">
 										<img  src="/images/doc.jpg" alt="" srcset="">
 										
@@ -85,14 +86,9 @@
 							</div>
 							<div class="form_part_one_foot">
 								<div class="form_part_one_foot_text">
-									{{!-- <p>
-										Good day!<br/>
-										
-										[Doctor’s Comment with motivation]                          
-									</p>
-									<p>
-										— from Doctor Mario
-									  </p> --}}
+									{{#with oneItem}}
+									<p>{{support_message}}</p>
+									{{/with}}
 								</div>
 								<img src="/images/two.jpg" alt="">
 							</div>
@@ -100,21 +96,9 @@
 						<div class="form_part_two">
 							<div class="form_part_one_right">
 								<p >Who is the most<br/> engaging Person?</p>
-								<p>
-									1. Pat
-								</p>
-								<p>
-									2. Makka Pakka
-								</p>
-								<p>
-									3. Sunflower
-								</p>
-								<p>
-									4. Snowman
-								</p>
-								<p>
-									5. Batman
-								</p>
+                                {{#each top5Users }}
+                                    <p>{{ @index }}. {{ this.username }}</p>
+                                {{/each }}
 								<span class="line"></span>
 								<h1>
 									You are here! Keep working!
@@ -125,11 +109,13 @@
 					<div class="form_foot">
 						<div class="formbox">
 							<div class="arror_left">
+								<i class="fa fa-arrow-left" aria-hidden="true"></i>
 								<button> view detail</button>
 							</div>
 							<div class="arror_right">
 								
 								<button> Go back to Dashboard</button>
+								<i class="fa fa-arrow-right" aria-hidden="true"></i>
 							</div>
 						</div>
 					</div>
