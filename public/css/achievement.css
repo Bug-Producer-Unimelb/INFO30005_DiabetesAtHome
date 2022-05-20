@@ -1,369 +1,6 @@
-a {
-	text-decoration: none
+#id_content {
+    display: none;
 }
-
-
-html {
-	height: 100%;
-	background: url(../../images/ttt.png) no-repeat;
-	background-size: cover;
-
-
-}
-
-.header {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 78px;
-	display: flex;
-	justify-content: space-between;
-	background-color: #F2F1F7;
-}
-
-.head_left,
-.head_right {
-	padding-left: 40px;
-	display: flex;
-
-}
-
-.head_left a,
-.head_right a {
-	color: #132086;
-	opacity: 0.65;
-	line-height: 78px;
-	padding-left: 40px;
-}
-
-.head_right a {
-	padding-right: 40px;
-
-}
-
-.head_right a img {
-	vertical-align: middle;
-}
-
-.center_box {
-	width: 70%;
-	margin: 0 auto;
-	background-color: #fff;
-	/* height: 60vh; */
-	margin-top: 200px;
-	border: 3px solid #747bb7;
-	border-radius: 14px;
-
-	position: relative;
-
-	min-height: 510px;
-}
-
-.center_box::before {
-	content: '';
-	display: block;
-	height: 50vh;
-	width: 100%;
-	top: -32px;
-	left: -36px;
-	opacity: 0.5;
-	position: absolute;
-	border-radius: 40px;
-	z-index: -1;
-	background: #e0e0e0;
-}
-
-.center_box>.title {
-	color: #132086;
-	/* opacity: 0.65; */
-	position: absolute;
-	top: -83px;
-	font-size: 20px;
-}
-.center_box>img{
-	position: absolute;
-right: 0;top: -70px;}
-form {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}
-
-.form_head {
-	display: flex;
-	justify-content: space-around;
-	/* height: 95%; */
-}
-
-.form_part_one {
-	flex: 2;
-	border-right: 2px solid;
-}
-
-.form_part_one_left {
-	display: flex;
-
-
-}
-
-.form_name,
-.form_info {
-	padding: 20px;
-}
-
-.form_info {
-	flex: 2
-}
-
-.form_info .form_info_head {
-	/* background: url('../../images/info_bg.jpg') no-repeat; */
-    position: relative;
-	color: #132086;
-	padding: 10px 6px;
-	box-shadow: 1px 2px 8px 1px #dbdbdb;
-	background-size: contain;
-	background-position: right;
-	margin-bottom: 30px;
-    height: 120px;
-}
-
-.form_info .form_info_head  .star{
-    position: absolute;
-    width: 90px;
-    right: 10px;
-}
-
-.form_info_head h1 {
-	margin: 0;
-}
-
-.form_info_head p {
-	font-size: 20px;
-	margin: 0;
-	margin-top: 20px;
-}
-
-.form_info_foot {
-	display: flex;
-}
-
-.form_info_foot>img {
-	max-width: 100%;
-	height: auto;
-}
-
-.form_doc {
-	background: url('../../images/doc.jpg') no-repeat;
-	width: 100%;
-	height: 290px;
-	background-size: contain;
-}
-
-.form_name>.title,
-.form_info>.title {
-	color: #132086;
-	opacity: 0.65;
-	font-size: 16px;
-}
-
-.form_info>.title {
-	margin-bottom: 90px;
-}
-
-.form_foot {
-	border-top: 2px solid;
-	padding: 0 10px;
-	display: flex;
-	min-height: 80px;
-	justify-content: space-between;
-	/* padding-top: 40px; */
-	position: relative;
-}
-
-.formbox {
-	position: absolute;
-	top: calc(50% - 20px);
-	display: flex;
-	width: 98%;
-	justify-content: space-between;
-}
-
-.form_part_one_right {
-	color: #132086;
-	/* opacity: 0.65; */
-
-}
-
-.form_part_one_right>p {
-	/* margin-bottom: 40px; */
-}
-
-.form_part_one_right>div {
-	border-bottom: 1px solid #bcbcbc;
-	margin-bottom: 40px;
-}
-
-.arror_left {
-	margin-left: 20px;
-}
-
-.arror_right {
-	margin-right: 20px;
-}
-
-.arror_left i,
-.arror_right i {
-	font-size: 20px;
-}
-
-.arror_left button {
-	outline: none;
-	background: #747bb7;
-	border-radius: 20px;
-	border: navajowhite;
-	width: 150px;
-	height: 40px;
-	color: #fff;
-	margin-left: 60px;
-}
-
-.arror_right button {
-	outline: none;
-	background: #747bb7;
-	border-radius: 20px;
-	border: navajowhite;
-	width: 200px;
-	height: 40px;
-	color: #fff;
-	margin-right: 60px;
-}
-
-textarea {
-	/* background: url(../img/line.png) repeat-y; */
-}
-
-.form_part_two {
-	width: 400px;
-}
-
-.form_part_one_right>p {
-	color: #303030;
-	font-size: 22px;
-	padding-left: 20px;
-}
-
-.form_part_one_right>p:first-child {
-	font-size: 16px;
-
-
-}
-
-.form_part_one_right .line {
-	height: 3px;
-	width: 100%;
-	display: block;
-	background: black;
-}
-.form_part_one_right h1{
-	color: #303030;
-	padding-left: 20px;
-}
-.form_info_foot img{
-	display: none;
-}
-.form_info_foot img:first-child{
-	display: block;
-}
-.form_part_one_foot img{
-	display: none;
-}
-@media (max-width:1024px) {
-	.head_left {
-		padding-left: 0px
-	}
-	.formbox{
-		top: 20px;
-	}
-	.center_box {
-		width: 80%
-	}
-
-	.form_name {}
-
-	.form_name p,
-	.form_info {
-		font-size: 12px;
-	}
-
-	.form_part_one_left {
-		display: flex;
-		justify-content: space-between;
-
-	}
-
-	.form_name,
-	.form_info {
-		padding: 10px;
-		padding-top: 26px
-	}
-
-	.form_part_two {
-		padding-top: 26px
-	}
-
-	.form_name>.title,
-	.form_info>.title {
-		font-size: 14px;
-	}
-
-	.form_part_one_right>p {
-		font-size: 14px;
-
-	}
-
-	.formbox {
-		top: 36px;
-	}
-}
-@media (max-width:1600px){
-	.form_info_foot img{
-		display: block;
-	}
-	.form_info_foot img:first-child{
-		display: none;
-	}
-}
-@media (max-width:992px){
-	.form_info_head h1{
-		font-size: 20px;
-	}
-	.form_part_two{
-		width: 340px;
-		
-	}
-	.form_info .form_info_head{
-		background-size: 30%;
-	}
-	.form_info_head p{
-		font-size: 14px;
-	}
-	.form_part_one_foot img{
-		display: block;
-	}
-	.formbox{
-		top: 21px;
-	}
-	.form_part_one_foot img{
-		width: 330px;
-	}
-	.form_part_one_foot{
-		position: relative;
-	}
-	.form_part_one_foot_text{
-		position: absolute;
-	}
-}
-
 
 @media screen and (device-width: 1920px) and (device-height: 1080px){
     #phone_content {
@@ -402,36 +39,6 @@ textarea {
         color: #707070; 
         padding: 25px;
     }
-
-    #note_title {
-        color: #132086;
-    }
-
-    #note {
-        width: 24%;
-        position: absolute;
-        top: 3%;
-        right: 38%;
-    }
-
-    .rectangle {
-        padding: 20px 20px;
-        width: 250px;
-        height: 250px;
-        margin-top: 10px;
-        border-radius:20px;
-        border: solid 4px rgba(112, 112, 112, 0.65);
-        overflow-y: scroll;
-        text-align: left;
-    }
-
-    .rectangle h4 {
-        font-family: Tamil MN;
-        font-size: 25px;
-        color: #303030;
-    }
-
-
 
     header ri button {
         display: block;
@@ -482,261 +89,176 @@ textarea {
         color: rgba(29, 32, 134, 1); 
     }
 
-    #comment_box_for_other_device {
-        border-radius:10px;
-        font-size: 15px;
+    main {
+        margin-top: 0;
+        padding: 0;
     }
 
-
-    .form_digit {
-        font-family: Tamil MN;
-        font-weight: bold;
-        text-align: right;
-        color:#7d7d7d;
-        font-size: 10px;
-    }
-
-    a{
-        text-decoration:none
-    }
-
-    html{
-        height: 100%;
-        background:url(../img/ttt.png) no-repeat;
+    .dashboard {
+        background-image:url(/images/patient_bg.png);
         background-size: cover;
-    
-        
+        background-repeat: no-repeat;
+        height: 100vh;
     }
 
-
-
-    .header{
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 78px;
-        display: flex;
-        justify-content: space-between;
-        background-color: #F2F1F7;
-    }
-    .head_left,.head_right{
-        padding-left: 40px;
-        display: flex;
-        
-    }
-    .head_left a,.head_right a{
+    .dashboard h1 {
+        padding-top: 8%;
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 20px;
         color: #132086;
-        opacity: 0.65;
-        line-height: 78px;
-        padding-left: 40px;	
-    }
-    .head_right a{
-        padding-right: 40px;
-        
-    }
-    .head_right a img{
-        vertical-align: middle;
-    }
-    .center_box{
-        width: 70%;
-        margin:  0 auto;
-        background-color: #fff;
-          height: 60vh;
-        margin-top: 200px;
-        border: 3px solid #747bb7;
-        border-radius: 14px;
-        
-        position: relative;
-           
     }
 
-    .form_input {
-        border: none;
-        border-bottom: 1px solid #303030;
-        width: 68px;
+    .dashboard h2 {
+        padding-top: 8%;
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 40px;
+        color: #132086;
+    }
+
+    .dashboard h3 {
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 35px;
+        color: #132086;
+    }
+
+    .patient_info {
+        width: 25%;
+        height: 60%;
+        float: left;
+        padding-top: 4%;
+    }
+
+    .patient_info h1 {
+        padding-left: 50%;
+        padding-top: 25%;
+    }
+
+    .patient_info img {
+        padding-top: 10%;
+        padding-left: 55%;
+    }
+
+    .info_text {
+        font-family: Tamil MN;
+        font-size: 15px;
+        font-weight: bold;
+        color: #303030;
+
+        padding-top: 10%;
+        padding-left: 36%;
         text-align: center;
     }
 
-    .center_box::before{
-        content: '';
-            display: block;
-            height: 60vh;
-            width: 100%;
-            top: -32px;
-            left: -36px;
-            opacity: 0.5;
-            position: absolute;
-            border-radius: 40px;
-            z-index: -1;
-            background: #e0e0e0;
+    .achieved {
+        width: 45%;
+        float: left;
+        padding-top: 6%;
+        
     }
-    .center_box>.title{
+
+    .days {
+        padding-top: 4%;
+        padding-left: 7%;
+        position: relative;
+        height: 60%;
+    }
+
+    .days .image {
+        padding-left: 5%;
+    }
+
+    .record_text {
+        font-family: Tamil MN;
+        font-size: 30px;
+        font-weight: bold;
         color: #132086;
-        opacity: 0.65;
+        text-align: left;
+
+        padding-top: 3%;
+        padding-left: 10%;
         position: absolute;
-        top: -83px;
-        font-size: 20px;
+
     }
-    form{
-        display: flex;
-            flex-direction: column;
-                height: 100%;
-    }
-    .form_head{
-            display: flex;
-            justify-content: space-around;
-            height: 80%;
-    }
-    .form_part_one{
-            width: 60%;
-            border-right: 2px solid;
-    }
-    .form_part_one_left{
-        display: flex;
-    }
-    .form_name,.form_info{
-        padding: 20px;
-    }
-    
-    .form_name>.title,.form_info>.title{
+
+    .form_input {
+        font-family: Tamil MN;
+        font-size: 30px;
+        font-weight: bold;
         color: #132086;
-            opacity: 0.65;
-            font-size: 16px;
+        text-align: center;
+
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        margin-top: 9%;
+        margin-left: 56.5%;
     }
-    .form_info>.title{
-        margin-bottom: 50px;
+
+    .comment {
+        size: 120%;
     }
-    
-    .form_foot{
-        border-top: 2px solid;
-        padding: 0 10px;
-        display: flex;
-        height: 100px;
-        justify-content: space-between;
-        padding-top: 40px;
+
+    .ranking {
+        width: 30%;
+        height: 60%;
+        float: left;
+        padding-top: 3%;
+
         position: relative;
     }
 
-    .title {
-        font-weight: bold;
-    }
-
-    .formbox{
+    .ranking h1 {
+        padding-top: 10%;
         position: absolute;
-        top: 20px;
-        display: flex;
-        width: 98%;
-        justify-content: space-between;
     }
-    .form_part_one_right{
-        color: #132086;
-        opacity: 0.65;
-        padding-top: 20px;
-        padding-right: 30px;
-    }
-    .form_part_one_right>p{
-        margin-bottom: 40px;
-    }
-    .form_part_one_right>div{
-        border-bottom:1px solid #bcbcbc ;
-        margin-bottom: 40px;
-    }
-    .arror_left{
-        margin-left: 20px;
-    }
-    .arror_right{
-        margin-right: 20px;
-    }
-    .arror_left i,.arror_right i{
-        font-size: 20px;
+
+    .ranking .image {
+        height: 100px;
+        width: 150px;
+        padding-left: 65%;
     }
 
 
 
-    .arror_left button{
-        outline: none;
-            background: #747bb7;
-            border-radius: 20px;
-            border: navajowhite;
-            width: 200px;
-            height: 40px;
-            color: #fff;
-            margin-left: 60px;
+
+
+    .buttons {
+        margin-right: 5%;
     }
 
-    .arror_center a{
-        outline: none;
-            background: #747bb7;
-            padding: 11px 50px;
-            border-radius: 20px;
-            border: navajowhite;
-            width: 200px;
-            height: 40px;
-            color: #fff;
-            margin-right: 60px;
 
-    }
-
-    .arror_right a{
-        outline: none;
-            background: #747bb7;
-            padding: 11px;
-            border-radius: 20px;
-            border: navajowhite;
-            width: 200px;
-            height: 40px;
-            color: #fff;
-            margin-right: 60px;
-    }
-    .normal_text{
+    .buttons .record_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
         font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-top: 0.5%;
     }
+    .buttons .history_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
 
-    #avatar {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        margin-left: 40%;
     }
-
-    #submit {
-        outline: none;
-            background: #747bb7;
-            border-radius: 20px;
-            border: navajowhite;
-            width: 150px;
-            height: 40px;
-            color: #fff;
-            margin-left: 60px;
-    }
-
-}
-
-
-@media screen and (device-width: 1920px) and (device-height: 1080px)
-{
-	form {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-	}
-
-	.logout {
-		display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-    font-family: "Tamil MN";
-    font-weight: normal;
-    font-size: 25px;
-    color: #707070;
-    padding: 25px;
-    border: none;
-    background-color: transparent;
-	}
-
-	#clinicianImg{
-		width: 70px;
-	}
-
 
 }
