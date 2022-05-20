@@ -89,7 +89,7 @@
 
     .dashboard h1 {
         padding-top: 8%;
-        padding-left: 6%;
+        padding-left: 15%;
         font-family: Tamil MN;
         font-size: 20px;
         color: #132086;
@@ -203,7 +203,7 @@
         border-radius: 17px;
         border: none;
         opacity: 75%; 
-        margin-top: 80%;
+        margin-top: 15%;
         margin-left: 15%;
         margin-bottom: 10%;
     }
@@ -220,7 +220,6 @@
         border-radius: 17px;
         border: none;
         opacity: 75%; 
-        position:absolute;
         right: 100px;
         top: 520px;
     }
@@ -233,7 +232,6 @@
 
 
     .support_message {
-        position: absolute;
         width: 25%;
         float: left;
         padding-top: 3%;
@@ -375,11 +373,9 @@
     }
 
     .support_message_content {
-        position: absolute;
         width: 360px;
         height: 130px;
-        top: 600px;
-        left: 1455px;
+        margin-top: 10%;
         border-radius:20px;
         font-size: 25px;
         border: solid 4px rgba(112, 112, 112, 0.65);

@@ -165,7 +165,7 @@ app.get("/patients/:id/achievement", async (req, res) => {
     const user = await User.findById(patientId)
 
     console.log('user')
-    let joined = user.createdAt
+    // let joined = user.createdAt
     let today = new Date()
     let n = moment(today).diff(joined, 'days')
 
@@ -228,8 +228,14 @@ app.get('/clinicianlogin', (req, res) => {
     res.render('clinician_login.hbs')
 })
 
+app.get('/p_historicaldetail', (req, res) => {
+    res.render('patient_hdetail.hbs')
+})
+
 app.post('/reply', patientController.reply)
 app.post('/sendSupportMessage', patientController.sendSupportMessage)
+
+
 
 
 // clinician pages
