@@ -597,39 +597,6 @@
         margin-right: 5%;
     }
 
-    .buttons .save_button {
-        text-decoration: none;
-        text-align: center;
-        background: #132086;
-        color: white;
-        font-family: Tamil MN;
-        font-weight: bold;
-        font-size: 10px;
-        padding: 10px 20px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
-
-        margin-left: 15%;
-        margin-top: 1.5%;
-    }
-
-    .buttons .history_button {
-        text-decoration: none;
-        text-align: center;
-        background: #132086;
-        color: white;
-        font-family: Tamil MN;
-        font-weight: bold;
-        font-size: 10px;
-        padding: 10px 20px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
-
-        margin-left: 15%;
-    }
-
 
     .buttons .to_left {
         float:left;
@@ -639,23 +606,6 @@
     .buttons .to_right {
         float:right;
         padding-top: 2%;
-    }
-
-
-    .buttons .save_button {
-        text-decoration: none;
-        text-align: center;
-        background: #132086;
-        color: white;
-        font-family: Tamil MN;
-        font-weight: bold;
-        font-size: 10px;
-        padding: 10px 20px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
-
-        margin-left: 15%;
     }
 
     .patient_note_content {
@@ -680,9 +630,9 @@
     .rectangle {
         position: absolute;
         width: 300px;
-        height: 45px;
+        height: 135px;
         top: 443px;
-        left: 515px;
+        left: 120px;
         border-radius:20px;
         border: solid 4px rgba(112, 112, 112, 0.65);
         overflow-y: scroll;
@@ -693,17 +643,13 @@
     .rectangle_2 {
         position: absolute;
         width: 300px;
-        height: 45px;
-        top: 533px;
-        left: 515px;
+        height: 135px;
+        top: 443px;
+        right: 180px;
         border-radius:20px;
         border: solid 4px rgba(112, 112, 112, 0.65);
         overflow-y: scroll;
         text-align: left;
-        padding: 10px;
-    }
-
-    textarea {
         padding: 10px;
     }
 
@@ -720,6 +666,9 @@
     }
 
     .buttons .achievement_button {
+        position: fixed;
+        bottom: 80px;
+        right: 200px;
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -731,8 +680,23 @@
         border-radius: 20px;
         border: none;
         opacity: 75%;
+    }
 
-        margin-left: 15%;
+    .buttons .back_button {
+        position: fixed;
+        bottom: 80px;
+        left: 200px;
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
     }
 
 
