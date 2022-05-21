@@ -292,8 +292,8 @@
 
     .p_hdetail_submit_button {
         position: fixed;
-        top: 520px;
-        left: 800px;
+        top: 650px;
+        left: 760px;
         text-decoration: none;
         text-align: center;
         background: #132086;
@@ -426,8 +426,8 @@
     }
 
     .p_hdetail_support_message_content {
-        width: 360px;
-        height: 130px;
+        width: 280px;
+        height: 230px;
         margin-top: 10%;
         border-radius:20px;
         font-size: 25px;
@@ -438,7 +438,7 @@
         line-break: auto;
 
         position: absolute;
-        top: 150px;
+        top: 175px;
         left: 550px;
     }
 
