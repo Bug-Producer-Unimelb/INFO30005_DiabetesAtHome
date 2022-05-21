@@ -2,9 +2,9 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>c historical detail</title>
+        <title>p historical detail</title>
         <link rel="icon" type="image/png" href="/images/logo.png">
-        <link rel="stylesheet" href="/css/c_patientdetail.css"/>
+        <link rel="stylesheet" href="/css/patientdetail.css"/>
         <script src="/js/buttonInteraction.js"></script>
     </head>
 
@@ -13,19 +13,23 @@
             <nav id='after_log_web_header'>
                 <ul>
                     <li><img src="/images/logo.png"></li>
-                        <li><a href="/clinicianhome">DASHBOARD</a></li>
-                        <li><b>PATIENT DETAILS</b></li>
-                        <li><a href="/comment">COMMENT LIST</a></li>
+                        <li><b href="/record">DASHBOARD</b></li>
+                        <li><a href="/aboutus">ABOUT US</a></li>
+                        <li><a href="/aboutdiabetes">ABOUT DIABETES</a></li>
+                        <li><button class="header_button" 
+                            onclick="changeDarkmode()">SWITCH MODE</button></li>
                         <ri><form method="POST" action="/logout"><button>Logout</button></form></ri>
-                        <ri><a href="#">Chris</a></ri>
-                        <ri><img id="clinicianImg" src="/images/clinician_pic.jpg"  width="70" height="70"></ri>
+                        {{#with oneItem}}
+                            <ri><a>{{first_name}}</a></ri>
+                        {{/with}}
+                        <ri><img class="patient_img" src="/images/patient.png"></ri>
                 </ul>
             </nav>            
         </header>
 
         <main>
             <div class="dashboard">
-                <h2>Working with individual patients</h2>
+                <h2>View your historical data!</h2>
 
                 <div class="patient_info">
                     <h1>Patient Informations:</h1>
@@ -42,7 +46,7 @@
                     <button class="submit_button" onclick="changeEditable('false', 'support-message-content')">SAVE</button>
                 </div>
                 <img class="data_image" src="/images/imgPlaceholder.jpg">
-                <button class="back_button" onclick="window.location.href='/c_patientdetail'">Go back</button>
+                <button class="back_button" onclick="window.location.href='/record'">Go back</button>
             </div>
         </main>
     </body>

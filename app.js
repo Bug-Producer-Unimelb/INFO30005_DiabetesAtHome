@@ -110,6 +110,10 @@ app.get('/clinicianlogin', (req, res) => {
     res.render('clinician_login.hbs')
 })
 
+app.get('/p_historicaldetail', (req, res) => {
+    res.render('patient_hdetail.hbs')
+})
+
 app.post('/reply', patientController.reply)
 app.post('/sendSupportMessage', patientController.sendSupportMessage)
 

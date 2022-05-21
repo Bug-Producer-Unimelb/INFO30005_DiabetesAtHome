@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Patient Record</title>
         <link rel="icon" type="image/png" href="/images/logo.png">
-        <link rel="stylesheet" href="/css/record.css" />
+        <link rel="stylesheet" href="/css/patientdetail.css" />
         <script src="/js/buttonInteraction.js"></script>
     </head>
     <body class="">
@@ -20,7 +20,7 @@
                         {{#with oneItem}}
                             <ri><a>{{first_name}}</a></ri>
                         {{/with}}
-                        <ri><img id="patientImg" src="/images/patient.png"  width="70" height="70"></ri>
+                        <ri><img class="patient_img" src="/images/patient.png"></ri>
                 </ul>
             </nav>            
         </header>     
@@ -161,7 +161,7 @@
 
                 <div class="buttons">
                     <input class="save_button" type="submit" value="Save the Change"/>
-                    <button class="history_button" onclick="window.location.href='/patient_hdetail'">View Data</button>
+                    <button class="history_button" onclick="window.location.href='p_historicaldetail'">View Data</button>
                         {{#with oneItem}}
                             <button class="achievement_button" type="submit" onclick="window.location.href='/patients/{{this._id}}/achievement'" >View Achievement</button>
                         {{/with}}
