@@ -183,7 +183,7 @@
 
     #doc_image {
         position: absolute;
-        width: 500px;
+        width: 600px;
         left: -60px;
         bottom: 0px;
     }
@@ -231,6 +231,10 @@
         margin-right: 50px;
         width: 500px;
         margin-top: 150px;
+    }
+
+    .login_field h1 {
+        font-size: 50px;
     }
 
     .login_fill {

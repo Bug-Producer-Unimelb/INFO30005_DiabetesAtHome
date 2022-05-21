@@ -412,6 +412,23 @@
         margin-top: 5%;
         margin-bottom: 10%;
     }
+
+    .diabetes_try_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 25px;
+        padding: 8px 40px;
+        border-radius: 17px;
+        border: none;
+        opacity: 75%; 
+        margin-top: 5%;
+        margin-bottom: 10%;
+        margin-right: 30%;
+    }
     
     .important {
         gap: 10px;
@@ -445,6 +462,16 @@
         font-weight: bold;
         color: #132086;
         text-align: center;
+    }
+
+    .diabetes_note {
+        font-family: Bangla MN;
+        margin-top: 8%;
+        font-size: 15px;
+        font-weight: bold;
+        color: #132086;
+        text-align: center;
+        margin-right: 25%;
     }
     
     .right_column {
