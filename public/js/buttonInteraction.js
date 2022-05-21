@@ -9,17 +9,6 @@ function changeEditable(editable, contentID) {
       elem.disabled = editable
       elem.style.backgroundColor = "#FFFFFF";
     }  
-}
-
-// Change to dark mode. 
-function changeDarkmode() {
-  var currElement = document.body;
-  if (currElement.classList.contains('darkmode')) {
-    currElement.classList.remove('darkmode');
   }
-  else {
-    currElement.classList.add('darkmode');
-  }
-}
 
 
