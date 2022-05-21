@@ -318,7 +318,7 @@
     .patient_note_content {
         position: absolute;
         width: 360px;
-        height: 347px;
+        height: 390px;
         top: 361px;
         left: 980px;
         border-radius:20px;
@@ -823,6 +823,7 @@
         appearance: none;
         position: relative;
     }
+
     .radio:before{
         content: '';
         width: 20px;
@@ -842,6 +843,7 @@
         border-radius: 50%;
         vertical-align: middle;
      }
+
      .radio:checked:after{
         content: '';
         width: 12px;

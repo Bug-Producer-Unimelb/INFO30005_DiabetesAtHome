@@ -89,6 +89,20 @@
         color: rgba(29, 32, 134, 1); 
     }
 
+    button.header_button {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgba(29, 32, 134, 0.65); 
+        border: none;
+        background-color: transparent;
+        padding: 25px;
+    }
+
     main {
         margin-top: 0;
         padding: 0;
@@ -221,10 +235,6 @@
         padding-left: 65%;
     }
 
-
-
-
-
     .buttons {
         margin-right: 5%;
     }
@@ -251,6 +261,189 @@
         background: #132086;
         color: white;
         font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 40%;
+    }
+
+}
+
+@media screen and (device-width: 1920px) and (device-height: 1080px){
+
+    .darkmode header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #282939;
+        position: fixed;
+        top: 0%;
+        width: 100%;
+    }
+
+    .darkmode header ri a {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        margin-right: 10px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 25px;
+        color: #d0d0d0; 
+        padding: 25px;
+    }
+
+    .darkmode header li a {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgba(208, 208, 208, 0.65); 
+        padding: 25px;
+    }
+
+    .darkmode header li b {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgba(208, 208, 208, 1); 
+        padding: 25px;
+    }
+
+    .darkmode header li a:active {
+        color: rgba(208, 208, 208, 1); 
+    }
+
+
+    .darkmode header li button {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 25px;
+        color: #d0d0d0; 
+        padding: 25px;
+        border: none;
+        background-color: transparent;
+    }
+
+    .darkmode button.header_button {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgba(208, 208, 208, 0.65); 
+        border: none;
+        background-color: transparent;
+        padding: 25px;
+    }
+
+    .darkmode .dashboard {
+        background-image:url(/images/background_dark.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .darkmode .dashboard h1 {
+        font-family: "Tamil MN";
+        font-size: 20px;
+        color: #d0d0d0;
+    }
+
+    .darkmode .dashboard h2 {
+        padding-top: 8%;
+        padding-left: 6%;
+        font-family: "Tamil MN";
+        font-size: 40px;
+        color: #d0d0d0;
+    }
+
+    .darkmode .dashboard h3 {
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 35px;
+        color: #d0d0d0;
+    }
+
+    .darkmode .info_text {
+        font-family: Tamil MN;
+        font-size: 15px;
+        font-weight: bold;
+        color: #d0d0d0;
+
+        padding-top: 10%;
+        padding-left: 36%;
+        text-align: center;
+    }
+
+    .darkmode .record_text {
+        font-family: Tamil MN;
+        font-size: 30px;
+        font-weight: bold;
+        color: #d0d0d0;
+        text-align: left;
+
+        padding-top: 3%;
+        padding-left: 10%;
+        position: absolute;
+
+    }
+
+    .darkmode .form_input {
+        font-family: Tamil MN;
+        font-size: 30px;
+        font-weight: bold;
+        color: #d0d0d0;
+        text-align: center;
+
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        margin-top: 9%;
+        margin-left: 56.5%;
+    }
+
+    .darkmode .buttons .record_button {
+        text-decoration: none;
+        text-align: center;
+        background: #d0d0d0;
+        color: #2D2F42;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-top: 0.5%;
+    }
+
+    .darkmode .buttons .history_button {
+        text-decoration: none;
+        text-align: center;
+        background: #d0d0d0;
+        color: #2D2F42;
+        font-family: "Tamil MN";
         font-weight: bold;
         font-size: 15px;
         padding: 15px 40px;

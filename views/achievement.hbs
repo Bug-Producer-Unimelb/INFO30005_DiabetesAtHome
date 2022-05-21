@@ -5,6 +5,7 @@
         <title>Patient Achievement</title>
         <link rel="icon" type="image/png" href="/images/logo.png">
         <link rel="stylesheet" href="/css/p_achievement.css" />
+		<script src="/js/buttonInteraction.js"></script>
     </head>
 	<body>
 		<header>
@@ -14,7 +15,7 @@
 							<li><b href="/record">DASHBOARD</b></li>
 							<li><a href="/aboutus">ABOUT US</a></li>
 							<li><a href="/aboutdiabetes">ABOUT DIABETES</a></li>
-							<li><a href="/#">SWITCH MODE</a></li>
+							<li><button class="header_button" onclick="changeDarkmode()">SWITCH MODE</button></li>
 							<ri><form method="POST" action="/logout"><button>Logout</button></form></ri>
 							{{#with oneItem}}
 								<ri><a>{{first_name}}</a></ri>
@@ -61,7 +62,7 @@
 				</div>
 				<div class="buttons">
 				<button class="record_button" onclick="window.location.href='/'">Record data</button>
-				<button class="history_button" onclick="window.location.href='/patient_hdetail'">View data</button>
+				<button class="history_button" onclick="window.location.href='/p_historicaldetail'">View data</button>
 
 			</div>
 			</div>
