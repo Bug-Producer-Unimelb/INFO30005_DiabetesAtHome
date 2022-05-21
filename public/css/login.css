@@ -183,7 +183,7 @@
 
     #doc_image {
         position: absolute;
-        width: 600px;
+        width: 620px;
         left: -60px;
         bottom: 0px;
     }
@@ -212,6 +212,7 @@
         font-size: 15px;
         font-weight: bold;
         color: #3F79D6;
+        margin-top: 30%;
     }
 
     footer h2, a {
@@ -235,6 +236,7 @@
 
     .login_field h1 {
         font-size: 50px;
+        margin-right: 20%;
     }
 
     .login_fill {
@@ -327,13 +329,13 @@
         font-family: Tamil MN;
         font-weight: bold;
         font-size: 37px;
-        color: rgba(19, 32, 134, 0.65)
+        color: rgba(19, 32, 134, 0.65);
     }
     .phone_version {
         text-align: center;
         margin-top: 150px;
-        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("/images/phone_background.png") no-repeat 0% 20%;
-        background-size: 550px;
+        background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/images/phone_background.png") no-repeat 0% 20%;
+        background-size: 585px;
         background-position: top center;
         padding-bottom: 180px;
         
