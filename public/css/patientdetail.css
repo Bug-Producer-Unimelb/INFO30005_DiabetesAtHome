@@ -1210,7 +1210,7 @@
         text-decoration: none;
         font-family: "Tamil MN";
         font-weight: normal;
-        font-size: 15px;
+        font-size: 17px;
         color: #d0d0d0; 
         padding: 20px;
     }
@@ -1222,7 +1222,7 @@
         text-decoration: none;
         font-family: "Tamil MN";
         font-weight: normal;
-        font-size: 15px;
+        font-size: 17px;
         color: #d0d0d0; 
         padding: 20px;
         border: none;
@@ -1257,6 +1257,39 @@
         color: rgba(208, 208, 208, 1); 
     }
 
+    .darkmode button.header_button {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgba(208, 208, 208, 0.65); 
+        border: none;
+        background-color: transparent;
+        padding: 20px;
+    }
+
+    .darkmode .change_password {
+        text-decoration: none;
+        text-align: center;
+        background: #d0d0d0;
+        color: #2D2F42;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 8px 25px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        position: absolute;
+        text-align: center;
+        left: 340px;
+        top: 230px;
+    }
+
     .darkmode .dashboard {
         background-image:url(/images/ipad_darkmode.png);
         background-size: cover;
@@ -1265,15 +1298,13 @@
     }
 
     .darkmode .dashboard h1 {
-        padding-top: 8%;
-        padding-left: 6%;
+        padding-top: 14%;
         font-family: "Tamil MN";
         font-size: 15px;
         color: #d0d0d0;
     }
 
     .darkmode .dashboard h2 {
-        padding-top: 9%;
         padding-left: 6%;
         font-family: "Tamil MN";
         font-size: 25px;
@@ -1321,8 +1352,8 @@
     .darkmode .buttons .history_button {
         text-decoration: none;
         text-align: center;
-        background: #2D2F42;
-        color: #d0d0d0;
+        background: #d0d0d0;
+        color: #2D2F42;
         font-family: "Tamil MN";
         font-weight: bold;
         font-size: 10px;
@@ -1337,8 +1368,8 @@
     .darkmode .buttons .achievement_button {
         text-decoration: none;
         text-align: center;
-        background: #2D2F42;
-        color: #d0d0d0;
+        background: #d0d0d0;
+        color: #2D2F42;
         font-family: "Tamil MN";
         font-weight: bold;
         font-size: 10px;
@@ -1353,23 +1384,23 @@
     .darkmode .patient_note_content {
         position: absolute;
         width: 200px;
-        height: 120px;
-        top: 430px;
+        height: 138px;
+        top: 443px;
         left: 163px;
         border-radius:20px;
         font-size: 15px;
         border: solid 4px rgba(208, 208, 208, 0.65);
         overflow-y: scroll;
         font-family: "Tamil MN";
-        background-color: #d0d0d0;
+        background-color: #2D2F42;
         line-break: auto;
     }
 
     .darkmode .rectangle {
         position: absolute;
         width: 300px;
-        height: 120px;
-        top: 430px;
+        height: 45px;
+        top: 443px;
         left: 515px;
         border-radius:20px;
         border: solid 4px rgba(208, 208, 208, 0.65);
@@ -1385,6 +1416,25 @@
 
     .darkmode .rectangle h4 {
         font-family: "Tamil MN";
+        font-size: 15px;
+        color: #d0d0d0;
+    }
+
+    .darkmode .rectangle_2 {
+        position: absolute;
+        width: 300px;
+        height: 45px;
+        top: 533px;
+        left: 515px;
+        border-radius:20px;
+        border: solid 4px rgba(208, 208, 208, 0.65);
+        overflow-y: scroll;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .darkmode .rectangle_2 h4 {
+        font-family: Tamil MN;
         font-size: 15px;
         color: #d0d0d0;
     }
@@ -1430,37 +1480,6 @@
 
     }
 
-    .darkmode .buttons .history_button {
-        text-decoration: none;
-        text-align: center;
-        background: rgba(208, 208, 208, 0.65);
-        color: #d0d0d0;
-        font-family: "Tamil MN";
-        font-weight: bold;
-        font-size: 10px;
-        padding: 10px 20px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
-
-        margin-left: 15%;
-    }
-
-    .darkmode .buttons .achievement_button {
-        text-decoration: none;
-        text-align: center;
-        background: rgba(208, 208, 208, 0.65);
-        color: #d0d0d0;
-        font-family: "Tamil MN";
-        font-weight: bold;
-        font-size: 10px;
-        padding: 10px 20px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
-
-        margin-left: 15%;
-    }
 }
 
 @media screen and (device-width: 375px) and (device-height: 812px){
