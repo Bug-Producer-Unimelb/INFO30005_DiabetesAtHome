@@ -11,9 +11,9 @@ const ObjectId = require('mongodb').ObjectId
 const getAllPatientsData = async (req, res, next) => {
     try {
         const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
-        const patients = await Patient.find().lean()
+        const patients = await Patient.find().limit(5).lean()
 
-        return res.render('clinician_home.hbs', { data: patients, oneItem: clinician })
+        return res.render('clinician_home.hbs', { data: patients, page_num: 0, oneItem: clinician })
     } catch (err) {
         return next(err)
     }
@@ -31,6 +31,24 @@ const getDataById = async (req, res, next) => {
         const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
 
         return res.render('clinician_pdetail.hbs', { oneItem: patient, clinician:  clinician})
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const getPage = async (req, res, next) => {
+    try {
+        if (req.body.page_num < 1) {
+            return res.render('clinician_home.hbs', { data: patients, oneItem: clinician })
+        }
+        const patients = await Patient.find()
+            .skip(5 * (req.body.page_num - 1))
+            .limit(5)
+            .lean()
+
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
+
+        return res.render('clinician_home.hbs', { data: patients, oneItem:  clinician})
     } catch (err) {
         return next(err)
     }
@@ -233,5 +251,6 @@ module.exports = {
     updateData,
     getDataById,
     insertData,
+    getPage,
     reply,
 }

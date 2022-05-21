@@ -5,8 +5,8 @@
 
 | Need to fix (clinician part) | State |
 | :----------------------------| :---- |
-| cannot change table pages ||
-| could add a return button for patient sign up page ||
+| cannot change table pages | ✅ |
+| could add a return button for patient sign up page | ✅ |
 | comment box is not fixed| ✅ |
 
 
