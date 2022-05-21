@@ -1133,7 +1133,7 @@
         color: #d0d0d0;
     }
 
-    .darkmode .rectangle_2 h4 {
+    .rectangle_2 h4 {
         font-family: "Tamil MN";
         font-size: 25px;
         color: #d0d0d0;
@@ -1144,6 +1144,11 @@
         color: #d0d0d0;
     }
 
+    .rectangle_2 h4 {
+        font-family: Tamil MN;
+        font-size: 25px;
+        color: #FFFFFF;
+    }
 }
 
 @media screen and (device-width: 1024px) and (device-height: 768px){  
