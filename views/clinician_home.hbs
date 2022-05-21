@@ -16,7 +16,11 @@
                         <li><a>PATIENT DETAILS</a></li>
                         <li><a href="/comment">COMMENT LIST</a></li>
                         <ri><form method="POST" action="/logout"><button>Logout</button></form></ri>
-                        <ri><a href="#">Chris</a></ri>
+                        <ri><a href="#">
+                            {{#with oneItem}}
+                                {{this.first_name}}
+                            {{/with}}
+                        </a></ri>
                         <ri><img id="clinicianImg" src="/images/clinician_pic.jpg"  width="70" height="70"></ri>
                 </ul>
             </nav>            

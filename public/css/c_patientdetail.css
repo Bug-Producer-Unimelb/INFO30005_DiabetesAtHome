@@ -220,6 +220,10 @@
         border-radius: 17px;
         border: none;
         opacity: 75%; 
+    }
+
+    #for_note {
+        position: absolute;
         right: 100px;
         top: 520px;
     }
@@ -383,6 +387,10 @@
         font-family: Tamil MN;
         background-color: #FFFFFF;
         line-break: auto;
+
+        position: absolute;
+        top: 400px;
+        left: 1455px;
     }
 
     .data_image {

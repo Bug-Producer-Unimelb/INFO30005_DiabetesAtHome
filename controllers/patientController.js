@@ -1,6 +1,7 @@
 // import people model
 // const res = require('express/lib/response')
 const Patient = require('../models/patient')
+const Clinician = require('../models/clinician')
 const Comment = require('../models/comment')
 const User = require('../models/user')
 const bcrypt = require('bcrypt')
@@ -9,9 +10,10 @@ const ObjectId = require('mongodb').ObjectId
 // handle request to get all data instances
 const getAllPatientsData = async (req, res, next) => {
     try {
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
         const patients = await Patient.find().lean()
 
-        return res.render('clinician_home.hbs', { data: patients })
+        return res.render('clinician_home.hbs', { data: patients, oneItem: clinician })
     } catch (err) {
         return next(err)
     }
@@ -26,7 +28,9 @@ const getDataById = async (req, res, next) => {
             return res.sendStatus(404)
         }
 
-        return res.render('clinician_pdetail.hbs', { oneItem: patient })
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
+
+        return res.render('clinician_pdetail.hbs', { oneItem: patient, clinician:  clinician})
     } catch (err) {
         return next(err)
     }

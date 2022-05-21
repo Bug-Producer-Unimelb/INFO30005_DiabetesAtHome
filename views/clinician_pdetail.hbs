@@ -17,7 +17,11 @@
                         <li><b>PATIENT DETAILS</b></li>
                         <li><a href="/comment">COMMENT LIST</a></li>
                         <ri><a href="/">Log out</a></ri>
-                        <ri><a href="#">Chris</a></ri>
+                        <ri><a href="#">                            
+                            {{#with clinician}}
+                                {{this.first_name}}
+                            {{/with}}
+                        </a></ri>
                         <ri><img id="clinicianImg" src="/images/clinician_pic.jpg"  width="70" height="70"></ri>
                 </ul>
             </nav>            
@@ -68,7 +72,7 @@
                         <h1>Clinician Notes:</h1>
                         <textarea class="invisible" name="pid">{{this._id}}</textarea>
                         <textarea class="clinician_note_content" name="note">{{this.note}}</textarea>
-                        <input class="submit_button" type="submit" value="SAVE"/>
+                        <input class="submit_button" id="for_note" type="submit" value="SAVE"/>
                     </form>
                     <form method="POST" action="/sendSupportMessage">
                         <h1 id="support_title">Support Message:</h1>
