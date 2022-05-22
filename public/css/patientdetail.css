@@ -36,15 +36,15 @@
         font-family: Tamil MN;
         font-weight: bold;
         font-size: 15px;
-        padding: 15px 40px;
+        padding: 15px 20px;
         border-radius: 20px;
         border: none;
         opacity: 75%;
 
         position: absolute;
         text-align: center;
-        left: 210px;
-        top: 700px;
+        margin-left: 12.5%;
+        margin-top: 2.5%;
     }
 
     header ul {
@@ -235,10 +235,9 @@
 
     .clinician_note {
         width: 25%;
-        float: right;
+        float: left;
         padding-top: 4%;
     }
-
 
     .buttons {
         margin-left: 10%;

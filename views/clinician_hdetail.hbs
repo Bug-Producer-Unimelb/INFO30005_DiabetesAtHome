@@ -30,24 +30,49 @@
         <main>
             <div class="dashboard">
                 <h2>Working with individual patients</h2>
-
                 <div class="patient_info">
                     <h1>Patient Informations:</h1>
                     <img src="/images/info_avatar.png">
-                    {{#with oneItem}}
-                    <h3>Patient ID: {{this._id}}</h3>
-                    <h3>Patient Name: {{this.first_name}} {{this.last_name}}</h3>
-                    {{/with}}
+                    <h3>Patient ID: </h3>
+                    <h3>Patient Name: </h3>
                 </div>
 
                 <div class="support_message">
-                    <h1>current support message:</h1>
-                    <textarea class="support_message_content" id="support-message-content"
-                        disabled="disabled">This is a message.</textarea>
-                    <button class="edit_button" onclick="changeEditable('true', 'support-message-content')">EDIT</button>
-                    <button class="submit_button" onclick="changeEditable('false', 'support-message-content')">SAVE</button>
+                    <h1>Send a support message:</h1>
+                    <textarea class="p_hdetail_support_message_content" id="support-message-content"></textarea>
+                    <button class="p_hdetail_submit_button" onclick="changeEditable('false', 'support-message-content')">SAVE</button>
                 </div>
-                <img class="data_image" src="/images/imgPlaceholder.jpg">
+
+                <div class="patient_data">
+                    <h1>View last results:</h1>
+
+                    <form id="data_form" action="/patient/record" method="POST">
+                    <h2></h2>
+                    <label class="record_text">Weight:</label>
+                    <input type="number" class="form_input" name="data_content" disabled="disabled" value="10"/>
+                    <label class="record_text">kg</label>
+                    <h2></h2>
+                    <h3>Last record time: </h3>
+                    <h2></h2>
+                    <label class="record_text">Blood Glucose Level:</label>
+                    <input type="number" class="form_input" name="data_content" disabled="disabled" value="10"/>
+                    <label class="record_text">nmol/L</label>
+                    <h2></h2>
+                    <h3>Last record time: </h3>
+                    <h2></h2>
+                    <label class="record_text">Doses of insulin taken:</label>
+                    <input type="number" class="form_input" name="data_content" disabled="disbaled" value="10"/>
+                    <label class="record_text">Doses</label>
+                    <h2></h2>
+                    <h3>Last record time: </h3>
+                    <h2></h2>
+                    <label class="record_text">Exercise:</label>
+                    <input type="number" class="form_input" name="data_content" disabled="disabled" value="10"/>
+                    <label class="record_text">Steps</label>
+                    <h2></h2>
+                    <h3>Last record time: </h3>
+                </div>
+
                 <button class="back_button" onclick="window.location.href='/c_patientdetail'">Go back</button>
             </div>
         </main>
