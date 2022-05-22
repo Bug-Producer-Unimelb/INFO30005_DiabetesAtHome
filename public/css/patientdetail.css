@@ -687,7 +687,7 @@
         left: 163px;
         border-radius:20px;
         font-size: 15px;
-        border: solid 4px rgba(112, 112, 112, 0.65);
+        border: solid 3px rgba(112, 112, 112, 0.65);
         overflow-y: scroll;
         font-family: Tamil MN;
         background-color: #FFFFFF;
@@ -705,7 +705,7 @@
         top: 443px;
         left: 515px;
         border-radius:20px;
-        border: solid 4px rgba(112, 112, 112, 0.65);
+        border: solid 3px rgba(112, 112, 112, 0.65);
         overflow-y: scroll;
         text-align: left;
         padding: 10px;
@@ -718,7 +718,7 @@
         top: 533px;
         left: 515px;
         border-radius:20px;
-        border: solid 4px rgba(112, 112, 112, 0.65);
+        border: solid 3px rgba(112, 112, 112, 0.65);
         overflow-y: scroll;
         text-align: left;
         padding: 10px;
@@ -1433,7 +1433,7 @@
         left: 163px;
         border-radius:20px;
         font-size: 15px;
-        border: solid 4px rgba(208, 208, 208, 0.65);
+        border: solid 3px rgba(208, 208, 208, 0.65);
         overflow-y: scroll;
         font-family: "Tamil MN";
         background-color: #2D2F42;
@@ -1447,7 +1447,7 @@
         top: 443px;
         left: 515px;
         border-radius:20px;
-        border: solid 4px rgba(208, 208, 208, 0.65);
+        border: solid 3px rgba(208, 208, 208, 0.65);
         overflow-y: scroll;
         text-align: left;
         padding: 10px;
@@ -1471,7 +1471,7 @@
         top: 533px;
         left: 515px;
         border-radius:20px;
-        border: solid 4px rgba(208, 208, 208, 0.65);
+        border: solid 3px rgba(208, 208, 208, 0.65);
         overflow-y: scroll;
         text-align: left;
         padding: 10px;

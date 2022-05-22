@@ -1270,24 +1270,6 @@
         padding: 20px;
     }
 
-    .darkmode .change_password {
-        text-decoration: none;
-        text-align: center;
-        background: #d0d0d0;
-        color: #2D2F42;
-        font-family: Tamil MN;
-        font-weight: bold;
-        font-size: 10px;
-        padding: 8px 25px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
-
-        position: absolute;
-        text-align: center;
-        left: 340px;
-        top: 230px;
-    }
 
     .darkmode .dashboard {
         background-image:url(/images/ipad_darkmode.png);

@@ -318,7 +318,7 @@
         font-weight: normal;
         font-size: 17px;
         color: #707070; 
-        padding: 25px;
+        padding: 20px;
     }
 
     header ri button {
@@ -330,7 +330,7 @@
         font-weight: normal;
         font-size: 17px;
         color: #707070; 
-        padding: 25px;
+        padding: 20px;
         border: none;
         background-color: transparent;
     }
@@ -348,7 +348,7 @@
         font-weight: bold;
         font-size: 15px;
         color: rgba(29, 32, 134, 0.65); 
-        padding: 25px;
+        padding: 20px;
     }
 
     header li b {
@@ -361,7 +361,7 @@
         font-weight: bold;
         font-size: 15px;
         color: rgba(29, 32, 134, 1); 
-        padding: 25px;
+        padding: 20px;
     }
 
     header li a:active {
@@ -379,7 +379,7 @@
         color: rgba(29, 32, 134, 0.65); 
         border: none;
         background-color: transparent;
-        padding: 25px;
+        padding: 20px;
     }
 
     .patient_img {
@@ -403,10 +403,10 @@
     }
 
     .dashboard h1 {
-        padding-top: 14%;
+        padding-top: 10%;
         padding-left: 6%;
         font-family: Tamil MN;
-        font-size: 15px;
+        font-size: 13px;
         color: #132086;
     }
 
@@ -421,30 +421,31 @@
     .dashboard h3 {
         padding-left: 6%;
         font-family: Tamil MN;
-        font-size: 25px;
+        font-size: 24px;
         color: #132086;
     }
 
     .patient_info {
-        width: 25%;
-        height: 60%;
+        width: 35%;
+        height: 40%;
         float: left;
-        padding-top: 4%;
     }
 
     .patient_info h1 {
-        padding-left: 50%;
+        padding-left: 40%;
         padding-top: 25%;
     }
 
     .patient_info img {
         padding-top: 10%;
-        padding-left: 55%;
+        padding-left: 50%;
+        height: 80px;
+        width: 80px;
     }
 
     .info_text {
         font-family: Tamil MN;
-        font-size: 15px;
+        font-size: 10px;
         font-weight: bold;
         color: #303030;
 
@@ -454,7 +455,8 @@
     }
 
     .achieved {
-        width: 45%;
+        width: 65%;
+        height: 35%;
         float: left;
         padding-top: 6%;
         
@@ -464,16 +466,19 @@
         padding-top: 4%;
         padding-left: 7%;
         position: relative;
-        height: 60%;
+        height: 50%;
     }
 
     .days .image {
-        padding-left: 5%;
+        padding-left: 10%;
+        height: 300px;
+
+
     }
 
     .record_text {
         font-family: Tamil MN;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: bold;
         color: #132086;
         text-align: left;
@@ -492,10 +497,10 @@
         text-align: center;
 
         position: absolute;
-        width: 50px;
-        height: 50px;
-        margin-top: 9%;
-        margin-left: 56.5%;
+        width: 30px;
+        height: 30px;
+        margin-top: 7%;
+        margin-left: 52%;
     }
 
     .comment {
@@ -503,27 +508,22 @@
     }
 
     .ranking {
-        width: 30%;
-        height: 60%;
+        width: 35%;
+        height: 20%;
         float: left;
-        padding-top: 3%;
-
         position: relative;
     }
 
     .ranking h1 {
-        padding-top: 10%;
+        padding-left: 35%;
         position: absolute;
     }
 
     .ranking .image {
-        height: 100px;
-        width: 150px;
-        padding-left: 65%;
-    }
-
-    .buttons {
-        margin-right: 5%;
+        height: 50px;
+        width: 75px;
+        padding-left: 25%;
+        padding-top: 47%;
     }
 
     .buttons .record_button {
@@ -533,13 +533,13 @@
         color: white;
         font-family: Tamil MN;
         font-weight: bold;
-        font-size: 15px;
-        padding: 15px 40px;
+        font-size: 10px;
+        padding: 10px 20px;
         border-radius: 20px;
         border: none;
         opacity: 75%;
 
-        margin-top: 0.5%;
+        margin-top: 23%;
     }
 
     .buttons .history_button {
@@ -549,13 +549,47 @@
         color: white;
         font-family: Tamil MN;
         font-weight: bold;
-        font-size: 15px;
-        padding: 15px 40px;
+        font-size: 10px;
+        padding: 10px 20px;
         border-radius: 20px;
         border: none;
         opacity: 75%;
 
-        margin-left: 40%;
+        margin-left: 30%;
+    }
+
+    @media (max-width:1024px) {
+        .head_left{
+            padding-left:0px
+        }
+        .center_box{
+            width:80%
+        }
+
+        .form_name p,.form_info{
+            font-size:12px;
+        }
+        .form_part_one_left{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .form_name, .form_info{
+            padding: 10px;
+            padding-top:26px
+        }
+        .form_part_two{
+            padding-top:26px
+        }
+        .form_name>.title, .form_info>.title{
+            font-size: 14px;
+        }
+        .form_part_one_right>p{
+            font-size:14px;
+        }
+        .formbox{
+            top: 36px;
+        }
     }
 
 }
@@ -746,6 +780,288 @@
         opacity: 75%;
 
         margin-left: 40%;
+    }
+
+}
+
+@media screen and (device-width: 1024px) and (device-height: 768px){
+
+    .darkmode header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #282939;
+        position: fixed;
+        top: 0%;
+        height: 8%;
+        width: 100%;
+    }
+
+    .darkmode header ri a {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        margin-right: 10px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 17px;
+        color: #d0d0d0; 
+        padding: 20px;
+    }
+
+    .darkmode header ri button {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 17px;
+        color: #d0d0d0; 
+        padding: 20px;
+        border: none;
+        background-color: transparent;
+    }
+
+    .darkmode header li a {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgba(208, 208, 208, 0.65); 
+        padding: 20px;
+    }
+
+    .darkmode header li b {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgba(208, 208, 208, 1); 
+        padding: 20px;
+    }
+
+    .darkmode header li a:active {
+        color: rgba(208, 208, 208, 1); 
+    }
+
+    .darkmode button.header_button {
+        display: block;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 15px;
+        color: rgba(208, 208, 208, 0.65); 
+        border: none;
+        background-color: transparent;
+        padding: 20px;
+    }
+
+    .darkmode .dashboard {
+        background-image:url(/images/ipad_darkmode.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .darkmode .dashboard h1 {
+        padding-top: 10%;
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 13px;
+        color: #d0d0d0;
+    }
+
+    .darkmode .dashboard h2 {
+        padding-top: 9%;
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 25px;
+        color: #d0d0d0;
+    }
+
+    .darkmode .dashboard h3 {
+        padding-left: 6%;
+        font-family: Tamil MN;
+        font-size: 24px;
+        color: #d0d0d0;
+    }
+
+    .darkmode .patient_info {
+        width: 35%;
+        height: 40%;
+        float: left;
+    }
+
+    .darkmode .patient_info h1 {
+        padding-left: 40%;
+        padding-top: 25%;
+    }
+
+    .darkmode .patient_info img {
+        padding-top: 10%;
+        padding-left: 50%;
+        height: 80px;
+        width: 80px;
+    }
+
+    .darkmode .info_text {
+        font-family: Tamil MN;
+        font-size: 10px;
+        font-weight: bold;
+        color: #d0d0d0;
+
+        padding-top: 10%;
+        padding-left: 36%;
+        text-align: center;
+    }
+
+    .darkmode .achieved {
+        width: 65%;
+        height: 35%;
+        float: left;
+        padding-top: 6%;
+        
+    }
+
+    .darkmode .days {
+        padding-top: 4%;
+        padding-left: 7%;
+        position: relative;
+        height: 50%;
+    }
+
+    .darkmode .days .image {
+        padding-left: 10%;
+        height: 300px;
+
+
+    }
+
+    .darkmode .record_text {
+        font-family: Tamil MN;
+        font-size: 20px;
+        font-weight: bold;
+        color: #d0d0d0;
+        text-align: left;
+
+        padding-top: 3%;
+        padding-left: 10%;
+        position: absolute;
+
+    }
+
+    .darkmode .form_input {
+        font-family: Tamil MN;
+        font-size: 30px;
+        font-weight: bold;
+        color: #d0d0d0;
+        text-align: center;
+
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        margin-top: 7%;
+        margin-left: 52%;
+    }
+
+    .darkmode .comment {
+        size: 120%;
+    }
+
+    .darkmode .ranking {
+        width: 35%;
+        height: 20%;
+        float: left;
+        position: relative;
+    }
+
+    .darkmode .ranking h1 {
+        padding-left: 35%;
+        position: absolute;
+    }
+
+    .darkmode .ranking .image {
+        height: 50px;
+        width: 75px;
+        padding-left: 25%;
+        padding-top: 47%;
+    }
+
+    .darkmode .buttons .record_button {
+        text-decoration: none;
+        text-align: center;
+        background: #d0d0d0;
+        color: #2D2F42;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-top: 23%;
+    }
+
+    .darkmode .buttons .history_button {
+        text-decoration: none;
+        text-align: center;
+        background: #d0d0d0;
+        color: #2D2F42;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 30%;
+    }
+
+    @media (max-width:1024px) {
+        .head_left{
+            padding-left:0px
+        }
+        .center_box{
+            width:80%
+        }
+
+        .form_name p,.form_info{
+            font-size:12px;
+        }
+        .form_part_one_left{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .form_name, .form_info{
+            padding: 10px;
+            padding-top:26px
+        }
+        .form_part_two{
+            padding-top:26px
+        }
+        .form_name>.title, .form_info>.title{
+            font-size: 14px;
+        }
+        .form_part_one_right>p{
+            font-size:14px;
+        }
+        .formbox{
+            top: 36px;
+        }
     }
 
 }
