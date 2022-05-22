@@ -966,15 +966,15 @@
         font-family: "Tamil MN";
         font-weight: bold;
         font-size: 15px;
-        padding: 15px 40px;
+        padding: 15px 20px;
         border-radius: 20px;
         border: none;
         opacity: 75%;
 
         position: absolute;
         text-align: center;
-        left: 210px;
-        top: 700px;
+        margin-left: 12.5%;
+        margin-top: 2.5%;
     }
 
     .darkmode header ri a {
@@ -1080,6 +1080,20 @@
         text-align: center;
     }
 
+    .darkmode .patient_data {
+        width: 25%;
+        float: left;
+        padding-top: 4%;
+    }
+
+    .darkmode .patient_data h2 {
+        padding-top: 12%;
+    }
+
+    .darkmode .form_digit {
+        color: #d0d0d0;
+    }
+
     .darkmode .record_text {
         font-family: "Tamil MN";
         font-size: 15px;
@@ -1163,6 +1177,19 @@
         width: 360px;
         height: 150px;
         top: 361px;
+        left: 1455px;
+        border-radius:20px;
+        border: solid 4px rgba(208, 208, 208, 0.65);
+        overflow-y: scroll;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .darkmode .rectangle_2 {
+        position: absolute;
+        width: 360px;
+        height: 150px;
+        top: 600px;
         left: 1455px;
         border-radius:20px;
         border: solid 4px rgba(208, 208, 208, 0.65);
