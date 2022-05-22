@@ -38,6 +38,7 @@ const getDataById = async (req, res, next) => {
     }
 }
 
+
 const getPage = async (req, res, next) => {
     try {
         if (req.body.page_num < 1) {

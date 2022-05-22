@@ -113,12 +113,15 @@ const nextpage = async (req, res, next) => {
 const insertData = async (req, res, next) => {
     try {
         newComment = new Comment(req.body)
-        newComment.patient_id = ObjectId('62623d0a745775707e941445')
-        newComment.data_name = 'Blood Glucose Level'
+        newComment.patient_id = req.patient._id
+        newComment.data_name = req.body.data_name
+        newComment.data_content = req.body.data_content
         newComment.createdAt = Date.now()
 
+        console.log(newComment)
+
         await newComment.save()
-        return res.redirect('/patient')
+        return res.redirect('/')
     } catch (err) {
         return next(err)
     }
