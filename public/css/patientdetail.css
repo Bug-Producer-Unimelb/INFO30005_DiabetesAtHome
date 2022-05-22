@@ -400,15 +400,16 @@
         font-family: Tamil MN;
         font-weight: bold;
         font-size: 10px;
-        padding: 8px 25px;
+        padding: 6px 15px;
         border-radius: 20px;
         border: none;
         opacity: 75%;
 
         position: absolute;
         text-align: center;
-        left: 340px;
-        top: 230px;
+        margin-left: 5.5%;
+        margin-top: -2%;
+
     }
 
     header ul {
