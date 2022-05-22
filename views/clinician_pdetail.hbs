@@ -61,7 +61,11 @@
                 <div class="patient_note">
                     <h1>Patient notes:</h1>
                     <div class="rectangle">
-                        <h4>Patient message</h4>
+                        <h4>
+                            {{#with comment}}
+                                {{this.content}}
+                            {{/with}}
+                        </h4>
                     </div>
                 </div>
 

@@ -28,9 +28,11 @@ const getDataById = async (req, res, next) => {
             return res.sendStatus(404)
         }
 
+        const comment = await Comment.findOne({patient_id: req.params.patient_id}).limit(1).lean()
+
         const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
 
-        return res.render('clinician_pdetail.hbs', { oneItem: patient, clinician:  clinician})
+        return res.render('clinician_pdetail.hbs', { oneItem: patient, clinician:  clinician, comment: comment })
     } catch (err) {
         return next(err)
     }
