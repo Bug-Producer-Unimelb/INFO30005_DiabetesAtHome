@@ -229,7 +229,6 @@
     }
 
     .buttons .back_button {
-
         position: fixed;
         bottom: 160px;
         left: 420px;
@@ -259,27 +258,18 @@
     }
 
     .clinician_note {
-        width: 50%;
+        width: 25%;
         height: 40%;
-        float: right;
+        float: left;
         padding-top: 4%;
     }
 
-    .clinician_note .note {
-        padding-left: 12%;
-        margin-top: 100%;
-        font-family: Tamil MN;
-        font-size: 20px;
-        color: #132086;
-        font-weight: bold;
-    }
 
-    .clinician_note .support_note {
-        padding-left: 27%;
-        font-family: Tamil MN;
-        font-size: 20px;
-        color: #132086;
-        font-weight: bold;
+    .support_message {
+        width: 25%;
+        height: 40%;
+        float: right;
+        padding-top: 4%;
     }
     .support_note {
         position: absolute;
@@ -527,7 +517,6 @@
     }
 
     .dashboard h1 {
-        padding-top: 14%;
         padding-left: 6%;
         font-family: Tamil MN;
         font-size: 15px;
@@ -544,13 +533,14 @@
 
     .patient_info {
         width: 50%;
-        height: 30%;
+        height: 35%;
         float: left;
 
     }
 
     .patient_info h1 {
         padding-left: 40%;
+        padding-top: 14%;
     }
 
     .patient_info img {
@@ -573,8 +563,13 @@
 
     .patient_data {
         width: 50%;
-        height: 38%;
+        height: 35%;
         float: right;
+    }
+
+    .patient_data h1 {
+        padding-left: 10%;
+        padding-top: 14%;
     }
 
     .patient_data h2 {
@@ -591,8 +586,6 @@
         text-align: right;
     }
 
-
-
     .patient_note {
         width: 50%;
         height: 36%;
@@ -601,30 +594,28 @@
 
     .patient_note h1 {
         text-align: center;
-    }
+    } 
+
 
     .clinician_note {
-        width: 100%;
-        height: 36%;
+        width: 50%;
+        float: left;
+        padding-top: 4%;
+    }
+
+    .clinician_note h1 {
+        padding-left: 30%;
+    }
+
+    .support_message {
+        width: 50%;
         float: right;
-    }   
-
-    .clinician_note .note {
-        padding-left: 15%;
-        font-family: Tamil MN;
-        font-size: 15px;
-        color: #132086;
-        font-weight: bold;
+        padding-top: 4%;
     }
 
-    .clinician_note .support_note {
-        padding-left: 27%;
-        font-family: Tamil MN;
-        font-size: 15px;
-        color: #132086;
-        font-weight: bold;
+    .clinician_note h1 {
+        padding-left: 30%;
     }
-
     
 
 
@@ -1050,6 +1041,30 @@
         color: #d0d0d0;
     }
 
+    .dashboard h3 {
+        padding-left: 6%; 
+        font-family: Tamil MN;
+        font-size: 35px;
+        color: #d0d0d0;
+    }
+
+    .darkmode .clinician_note .note {
+        padding-left: 12%;
+        margin-top: 100%;
+        font-family: Tamil MN;
+        font-size: 20px;
+        color: #d0d0d0;
+        font-weight: bold;
+    }
+
+    .darkmode .clinician_note .support_note {
+        padding-left: 27%;
+        font-family: Tamil MN;
+        font-size: 20px;
+        color: #d0d0d0;
+        font-weight: bold;
+    }
+
     .darkmode .info_text {
         font-family: Tamil MN;
         font-size: 15px;
@@ -1086,6 +1101,23 @@
 
         margin-left: 15%;
         margin-top: 1.5%;
+    }
+
+    .darkmode .buttons .back_button {
+        position: fixed;
+        bottom: 160px;
+        left: 420px;
+        text-decoration: none;
+        text-align: center;
+        background: #d0d0d0;
+        color: #2D2F42;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
     }
 
     .darkmode .buttons .history_button {
