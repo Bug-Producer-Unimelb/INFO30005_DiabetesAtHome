@@ -74,6 +74,7 @@ app.use(authRouter)
 
 const patientRouter = require('./routes/patientRouter')
 const patientController = require('./controllers/patientController')
+const clinicianController = require('./controllers/clinicianController')
 app.use('/patient', patientRouter)
 
 app.use('/clinician', patientRouter)
@@ -144,9 +145,7 @@ app.get('/signup', (req, res) => {
     res.render('patient_signup.hbs')
 })
 
-app.get('/c_historicaldetail', (req, res) => {
-    res.render('clinician_hdetail.hbs')
-})
+app.get('/c_historicaldetail/:pid', clinicianController.renderHistoricaldetail)
 
 app.get('/changepassword', (req, res) => {
     res.render('changepassword.hbs')

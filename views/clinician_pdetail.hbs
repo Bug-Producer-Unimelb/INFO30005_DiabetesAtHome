@@ -85,13 +85,13 @@
                         <input class="submit_button" id="for_support" type="submit" value="SAVE"/>
                     </form>
                 </div>
-                {{/with}}
+                
                 <div class="buttons">
                     <button class="save_button">Save the changes</button>
                     <button class="dashboard_button" onclick="window.location.href='/clinicianhome'">Go back to Dashboard</button>
-                    <button class="data_button" onclick="window.location.href='/c_historicaldetail'">Visualise Health data</button>
+                    <button class="data_button" onclick="window.location.href='/c_historicaldetail/{{this._id}}'">Visualise Health data</button>
                 </div>
-                
+                {{/with}}
 
 
             </div>
