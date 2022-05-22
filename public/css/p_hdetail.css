@@ -258,27 +258,28 @@
     }
 
     .clinician_note {
-        width: 50%;
+        width: 25%;
+        height: 40%;
+        float: left;
+        padding-top: 4%;
+    }
+
+    .clinician_note h1 {
+
+        padding-left: 20%;
+    }
+
+
+    .support_message {
+        width: 25%;
         height: 40%;
         float: right;
         padding-top: 4%;
     }
-
-    .clinician_note .note {
-        padding-left: 12%;
-        margin-top: 100%;
-        font-family: Tamil MN;
-        font-size: 20px;
-        color: #132086;
-        font-weight: bold;
-    }
-
-    .clinician_note .support_note {
-        padding-left: 27%;
-        font-family: Tamil MN;
-        font-size: 20px;
-        color: #132086;
-        font-weight: bold;
+    .support_note {
+        position: absolute;
+        right: 35%;
+        top: 52%;
     }
 
 
@@ -391,25 +392,6 @@
         display: inherit;
     }
 
-    .change_password {
-        text-decoration: none;
-        text-align: center;
-        background: #132086;
-        color: white;
-        font-family: Tamil MN;
-        font-weight: bold;
-        font-size: 10px;
-        padding: 8px 25px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
-
-        position: absolute;
-        text-align: center;
-        left: 340px;
-        top: 230px;
-    }
-
     header ul {
         list-style-type: none;
         margin: 0;
@@ -436,7 +418,7 @@
         font-weight: normal;
         font-size: 17px;
         color: #707070; 
-        padding: 25px;
+        padding: 20px;
     }
 
     header ri button {
@@ -448,7 +430,7 @@
         font-weight: normal;
         font-size: 17px;
         color: #707070; 
-        padding: 25px;
+        padding: 20px;
         border: none;
         background-color: transparent;
     }
@@ -466,7 +448,7 @@
         font-weight: bold;
         font-size: 15px;
         color: rgba(29, 32, 134, 0.65); 
-        padding: 25px;
+        padding: 20px;
     }
 
     header li b {
@@ -479,7 +461,7 @@
         font-weight: bold;
         font-size: 15px;
         color: rgba(29, 32, 134, 1); 
-        padding: 25px;
+        padding: 20px;
     }
 
     header li a:active {
@@ -497,7 +479,7 @@
         color: rgba(29, 32, 134, 0.65); 
         border: none;
         background-color: transparent;
-        padding: 25px;
+        padding: 20px;
     }
 
     .patient_img {
@@ -521,7 +503,6 @@
     }
 
     .dashboard h1 {
-        padding-top: 14%;
         padding-left: 6%;
         font-family: Tamil MN;
         font-size: 15px;
@@ -538,13 +519,14 @@
 
     .patient_info {
         width: 50%;
-        height: 30%;
+        height: 35%;
         float: left;
 
     }
 
     .patient_info h1 {
         padding-left: 40%;
+        padding-top: 14%;
     }
 
     .patient_info img {
@@ -567,8 +549,13 @@
 
     .patient_data {
         width: 50%;
-        height: 38%;
+        height: 35%;
         float: right;
+    }
+
+    .patient_data h1 {
+        padding-left: 10%;
+        padding-top: 14%;
     }
 
     .patient_data h2 {
@@ -585,8 +572,6 @@
         text-align: right;
     }
 
-
-
     .patient_note {
         width: 50%;
         height: 36%;
@@ -595,28 +580,23 @@
 
     .patient_note h1 {
         text-align: center;
-    }
+    } 
+
 
     .clinician_note {
-        width: 100%;
-        height: 36%;
-        float: right;
-    }   
-
-    .clinician_note .note {
-        padding-left: 15%;
-        font-family: Tamil MN;
-        font-size: 15px;
-        color: #132086;
-        font-weight: bold;
+        width: 50%;
+        float: left;
+        padding-top: 4%;
     }
 
-    .clinician_note .support_note {
-        padding-left: 27%;
-        font-family: Tamil MN;
-        font-size: 15px;
-        color: #132086;
-        font-weight: bold;
+    .clinician_note h1 {
+        padding-left: 30%;
+    }
+
+    .support_message {
+        width: 50%;
+        float: right;
+        padding-top: 4%;
     }
 
     
@@ -661,26 +641,26 @@
         position: absolute;
         width: 300px;
         height: 135px;
-        top: 443px;
+        top: 450px;
         left: 120px;
         border-radius:20px;
-        border: solid 4px rgba(112, 112, 112, 0.65);
+        border: solid 3px rgba(112, 112, 112, 0.65);
         overflow-y: scroll;
         text-align: left;
-        padding: 10px;
+        padding: 8px;
     }
 
     .rectangle_2 {
         position: absolute;
         width: 300px;
         height: 135px;
-        top: 443px;
-        right: 180px;
+        top: 450px;
+        right: 150px;
         border-radius:20px;
-        border: solid 4px rgba(112, 112, 112, 0.65);
+        border: solid 3px rgba(112, 112, 112, 0.65);
         overflow-y: scroll;
         text-align: left;
-        padding: 10px;
+        padding: 8px;
     }
 
     .rectangle h4 {
@@ -1051,21 +1031,9 @@
         color: #d0d0d0;
     }
 
-    .darkmode .clinician_note .note {
-        padding-left: 12%;
-        margin-top: 100%;
-        font-family: Tamil MN;
-        font-size: 20px;
-        color: #d0d0d0;
-        font-weight: bold;
-    }
+    .darkmode .clinician_note h1 {
 
-    .darkmode .clinician_note .support_note {
-        padding-left: 27%;
-        font-family: Tamil MN;
-        font-size: 20px;
-        color: #d0d0d0;
-        font-weight: bold;
+        padding-left: 20%;
     }
 
     .darkmode .info_text {
@@ -1176,10 +1144,23 @@
 
     .darkmode .rectangle {
         position: absolute;
-        width: 360px;
-        height: 150px;
+        width: 300px;
+        height: 400px;
         top: 361px;
-        left: 1455px;
+        left: 1000px;
+        border-radius:20px;
+        border: solid 4px rgba(208, 208, 208, 0.65);
+        overflow-y: scroll;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .darkmode .rectangle_2 {
+        position: absolute;
+        width: 300px;
+        height: 400px;
+        top: 361px;
+        left: 1410px;
         border-radius:20px;
         border: solid 4px rgba(208, 208, 208, 0.65);
         overflow-y: scroll;
@@ -1289,24 +1270,6 @@
         padding: 20px;
     }
 
-    .darkmode .change_password {
-        text-decoration: none;
-        text-align: center;
-        background: #d0d0d0;
-        color: #2D2F42;
-        font-family: Tamil MN;
-        font-weight: bold;
-        font-size: 10px;
-        padding: 8px 25px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
-
-        position: absolute;
-        text-align: center;
-        left: 340px;
-        top: 230px;
-    }
 
     .darkmode .dashboard {
         background-image:url(/images/ipad_darkmode.png);
@@ -1316,7 +1279,7 @@
     }
 
     .darkmode .dashboard h1 {
-        padding-top: 14%;
+        padding-left: 6%;
         font-family: "Tamil MN";
         font-size: 15px;
         color: #d0d0d0;
@@ -1329,6 +1292,25 @@
         color: #d0d0d0;
     }
 
+    .darkmode .patient_info {
+        width: 50%;
+        height: 35%;
+        float: left;
+
+    }
+
+    .darkmode .patient_info h1 {
+        padding-left: 40%;
+        padding-top: 14%;
+    }
+
+    .darkmode .patient_info img {
+        padding-top: 5%;
+        padding-left: 45%;
+        height: 80px;
+        width: 80px;
+    }
+
     .darkmode .info_text {
         font-family: "Tamil MN";
         font-size: 10px;
@@ -1338,6 +1320,20 @@
         padding-top: 5%;
         padding-left: 10%;
         text-align: center;
+    }
+    .darkmode .patient_data {
+        width: 50%;
+        height: 35%;
+        float: right;
+    }
+
+    .darkmode .patient_data h1 {
+        padding-left: 10%;
+        padding-top: 14%;
+    }
+
+    .darkmode .patient_data h2 {
+        padding-top: 4%;
     }
 
     .darkmode .record_text {
@@ -1350,37 +1346,42 @@
         text-align: right;
     }
 
-    .darkmode .buttons .save_button {
-        text-decoration: none;
-        text-align: center;
-        background: #d0d0d0;
-        color: #2D2F42;
-        font-family: "Tamil MN";
-        font-weight: bold;
-        font-size: 10px;
-        padding: 10px 20px;
-        border-radius: 20px;
-        border: none;
-        opacity: 75%;
 
-        margin-left: 15%;
-        margin-top: 1.5%;
+    .darkmode .clinician_note {
+        width: 50%;
+        float: left;
+        padding-top: 4%;
     }
 
-    .darkmode .buttons .history_button {
+    .darkmode .clinician_note h1 {
+        padding-left: 30%;
+    }
+
+    .darkmode .support_message {
+        width: 50%;
+        float: right;
+        padding-top: 4%;
+    }
+
+    .darkmode .clinician_note h1 {
+        padding-left: 30%;
+    }
+
+    .darkmode .buttons .back_button {
+        position: fixed;
+        bottom: 80px;
+        left: 200px;
         text-decoration: none;
         text-align: center;
         background: #d0d0d0;
         color: #2D2F42;
-        font-family: "Tamil MN";
+        font-family: Tamil MN;
         font-weight: bold;
         font-size: 10px;
         padding: 10px 20px;
         border-radius: 20px;
         border: none;
         opacity: 75%;
-
-        margin-left: 15%;
     }
 
     .darkmode .buttons .achievement_button {
@@ -1417,14 +1418,27 @@
     .darkmode .rectangle {
         position: absolute;
         width: 300px;
-        height: 45px;
-        top: 443px;
-        left: 515px;
+        height: 135px;
+        top: 450px;
+        left: 120px;
         border-radius:20px;
-        border: solid 4px rgba(208, 208, 208, 0.65);
+        border: solid 3px rgba(112, 112, 112, 0.65);
         overflow-y: scroll;
         text-align: left;
-        padding: 10px;
+        padding: 8px;
+    }
+
+    .darkmode .rectangle_2 {
+        position: absolute;
+        width: 300px;
+        height: 135px;
+        top: 450px;
+        right: 150px;
+        border-radius:20px;
+        border: solid 3px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        text-align: left;
+        padding: 8px;
     }
 
     .darkmode textarea {
@@ -1436,19 +1450,6 @@
         font-family: "Tamil MN";
         font-size: 15px;
         color: #d0d0d0;
-    }
-
-    .darkmode .rectangle_2 {
-        position: absolute;
-        width: 300px;
-        height: 45px;
-        top: 533px;
-        left: 515px;
-        border-radius:20px;
-        border: solid 4px rgba(208, 208, 208, 0.65);
-        overflow-y: scroll;
-        text-align: left;
-        padding: 10px;
     }
 
     .darkmode .rectangle_2 h4 {
