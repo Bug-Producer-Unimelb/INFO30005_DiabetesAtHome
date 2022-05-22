@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>p historical detail</title>
+        <title>patient historical detail</title>
         <link rel="icon" type="image/png" href="/images/logo.png">
         <link rel="stylesheet" href="/css/p_hdetail.css"/>
         <script src="/js/buttonInteraction.js"></script>
@@ -44,13 +44,12 @@
 
                 <div class="patient_data">
                     <h1>View data:</h1>
-
+                    {{#with oneItem}}
                     <form id="data_form" action="/patient/record" method="POST">
                     <h2></h2>
                     <label class="record_text">Weight:</label>
                     <input type="number" class="form_input" name="data_content" disabled="disabled" value="10"/>
                     <label class="record_text">kg</label>
-
                     <h2></h2>
                     <label class="record_text">Blood Glucose Level:</label>
                     <input type="number" class="form_input" name="data_content" disabled="disabled" value="10"/>
@@ -66,17 +65,18 @@
                     <label class="record_text">Exercise:</label>
                     <input type="number" class="form_input" name="data_content" disabled="disabled" value="10"/>
                     <label class="record_text">Steps</label>
+                    {{/with}}
                 </div>
 
                 <div class="clinician_note">
 
-                    <h1>Clinician notes:</h1>
+                    <label class="note">Clinician notes:</label>
                     <div class="rectangle">
                         {{#with oneItem}}
                             <h4>{{this.note}}</h4>
                         {{/with}}
                     </div>
-                    <h1 id="sm">Support Message:</h1>
+                    <label class="support_note">Support Message:</label>
                     <div class="rectangle_2">
                         {{#with oneItem}}
                             <h4>{{this.support_message}}</h4>
@@ -85,9 +85,10 @@
                 </div>
 
                 <div class="buttons">
-				    <button class="back_button">Go Back</button>
-                    <button class="achievement_button">View Achievement</button>
+				    <a class="back_button" href='/'>Go Back</a>
+                    <a class="achievement_button" href='/achievement'>View Achievement</a>
                 </div>
+
             </div>
         </main>
     </body>

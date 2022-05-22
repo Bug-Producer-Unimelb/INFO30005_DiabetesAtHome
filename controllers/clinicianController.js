@@ -1,4 +1,5 @@
 const Clinician = require('../models/clinician')
+const Patient = require('../models/patient')
 
 // handle request to get all data instances
 const getAllCliniciansData = async (req, res, next) => {
@@ -37,8 +38,21 @@ const insertData = async (req, res, next) => {
     }
 }
 
+const renderHistoricaldetail = async (req, res, next) => {
+    try {
+        pid = req.params.pid
+        const patient = await Patient.findById(pid).lean()
+
+
+        res.render('clinician_hdetail.hbs', {patient: patient})
+    } catch (err) {
+        return next(err)
+    }
+}
+
 // exports an object, which contain functions imported by router
 module.exports = {
+    renderHistoricaldetail,
     getAllCliniciansData,
     getDataById,
     insertData,

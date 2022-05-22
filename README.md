@@ -2,23 +2,14 @@
 # INFO30005 - DiabetesAtHome - Bug Producer
 
 
-
-| Need to fix (clinician part) | State |
-| :----------------------------| :---- |
-| cannot change table pages | ✅ |
-| could add a return button for patient sign up page | ✅ |
-| comment box is not fixed| ✅ |
-
-
-
 ## Team Members and Contributions
 
 | Name         | Contributions                                                                             | State |
 | :----------- | :---------------------------------------------------------------------------------------- | :---- |
 | Zheng Li     | UI Design, clinician back end, patient back end, login and security | ✅    |
 | Lujia Yang   | UI Design, patient front end (phone), patient back end, clinician back end  | ✅    |
-| Jiayi Wu     | UI Design, clinician front end, patient front end (web, ipad) | ✅    |
-| Bowen Yu     | UI Design, Patient front end (web) | ✅    |
+| Jiayi Wu     | UI Design, clinician front end, patient front end (web, ipad), functional test | ✅    |
+| Bowen Yu     | patient front end (web), patient back end | ✅    |
 | Wuge Liu     | UI Design, clinician front end, patient front end (web, ipad) | ✅    |
 
 

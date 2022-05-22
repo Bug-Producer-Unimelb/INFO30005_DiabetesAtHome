@@ -273,7 +273,14 @@
 
 }
 
-@media screen and (device-width: 1920px) and (device-height: 1080px){
+@media screen and (device-width: 1080px) and (device-height: 768px){
+    #phone_content {
+        display: none;
+    }
+
+    #after_log_web_header {
+        display: inherit;
+    }
 
     .darkmode header ul {
         list-style-type: none;

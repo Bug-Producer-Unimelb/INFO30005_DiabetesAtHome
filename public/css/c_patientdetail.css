@@ -32,6 +32,21 @@
         padding: 25px;
     }
 
+    header ri button {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 15px;
+        text-decoration: none;
+        font-family: "Tamil MN";
+        font-weight: normal;
+        font-size: 25px;
+        color: #707070; 
+        padding: 25px;
+        border: none;
+        background-color: transparent;
+    }
+
     header li {
         float: left;
     }
@@ -275,6 +290,23 @@
 
     }
 
+    .p_hdetail_submit_button {
+        position: fixed;
+        top: 650px;
+        left: 760px;
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 8px 20px;
+        border-radius: 17px;
+        border: none;
+        opacity: 75%; 
+    }
+
 
 
     .buttons .dashboard_button {
@@ -391,6 +423,23 @@
         position: absolute;
         top: 400px;
         left: 1455px;
+    }
+
+    .p_hdetail_support_message_content {
+        width: 280px;
+        height: 230px;
+        margin-top: 10%;
+        border-radius:20px;
+        font-size: 25px;
+        border: solid 4px rgba(112, 112, 112, 0.65);
+        overflow-y: scroll;
+        font-family: Tamil MN;
+        background-color: #FFFFFF;
+        line-break: auto;
+
+        position: absolute;
+        top: 175px;
+        left: 550px;
     }
 
     .data_image {
