@@ -281,6 +281,11 @@
         color: #132086;
         font-weight: bold;
     }
+    .support_note {
+        position: absolute;
+        right: 35%;
+        top: 52%;
+    }
 
 
     .buttons {

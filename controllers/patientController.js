@@ -38,6 +38,27 @@ const getDataById = async (req, res, next) => {
     }
 }
 
+const getHistory = async (req, res, next) => {
+    // search the database by ID
+    try {
+        console.log(req)
+        const patient = await Patient.findOne({
+            user_id: req.user._id,
+        }).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        }
+
+        const comment = await Comment.findOne({patient_id: req.body.patient_id}).limit(1).lean()
+
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
+
+        return res.render('patient_hdetail.hbs', { oneItem: patient, clinician:  clinician, comment: comment })
+    } catch (err) {
+        return next(err)
+    }
+}
+
 
 const getPage = async (req, res, next) => {
     try {
@@ -254,6 +275,7 @@ module.exports = {
     updateData,
     getDataById,
     insertData,
+    getHistory,
     getPage,
     reply,
 }
