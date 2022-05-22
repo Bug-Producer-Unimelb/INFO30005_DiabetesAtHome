@@ -793,9 +793,6 @@
 }
 
 @media screen and (device-width: 375px) and (device-height: 812px){
-    #other_content {
-        display: none;
-    }
 
     main {
         margin-top: 60px;
@@ -860,10 +857,10 @@
      }
 
     .comment_icon {
-         background-image: url(/images/comment_icon.png) center no-repeat;
-         font-size: 16px;
-         background-size: cover;
-     }
+        background-image: url(/images/comment_icon.png) center no-repeat;
+        font-size: 16px;
+        background-size: cover;
+    }
 
     #data_form {
         padding-left: 35px;
@@ -943,8 +940,42 @@
         font-size: 15px;
         position: fixed;
         right: 25px;
-        bottom: 50px;
+        margin-bottom: 10%;
     }
+
+    .history_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+        margin-top: 30%;
+        margin-left: 15%;
+    }
+
+    .achievement_button {
+        text-decoration: none;
+        text-align: center;
+        background: #132086;
+        color: white;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 10px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
+
+        margin-left: 15%;
+    }
+
+
 }
 
 @media screen and (device-width: 1920px) and (device-height: 1080px){
