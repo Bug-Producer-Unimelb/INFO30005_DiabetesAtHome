@@ -11,6 +11,12 @@
         display: none;
     }
 
+    #back_button {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+    }
+
     #doc_image {
         position: absolute;
         right: 100px;

@@ -1,6 +1,7 @@
 // import people model
 // const res = require('express/lib/response')
 const Patient = require('../models/patient')
+const Clinician = require('../models/clinician')
 const Comment = require('../models/comment')
 const User = require('../models/user')
 const bcrypt = require('bcrypt')
@@ -9,9 +10,10 @@ const ObjectId = require('mongodb').ObjectId
 // handle request to get all data instances
 const getAllPatientsData = async (req, res, next) => {
     try {
-        const patients = await Patient.find().lean()
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
+        const patients = await Patient.find().limit(5).lean()
 
-        return res.render('clinician_home.hbs', { data: patients })
+        return res.render('clinician_home.hbs', { data: patients, page_num: 0, oneItem: clinician })
     } catch (err) {
         return next(err)
     }
@@ -26,7 +28,51 @@ const getDataById = async (req, res, next) => {
             return res.sendStatus(404)
         }
 
-        return res.render('clinician_pdetail.hbs', { oneItem: patient })
+        const comment = await Comment.findOne({patient_id: req.params.patient_id}).limit(1).lean()
+
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
+
+        return res.render('clinician_pdetail.hbs', { oneItem: patient, clinician:  clinician, comment: comment })
+    } catch (err) {
+        return next(err)
+    }
+}
+
+const getHistory = async (req, res, next) => {
+    // search the database by ID
+    try {
+        console.log(req)
+        const patient = await Patient.findOne({
+            user_id: req.user._id,
+        }).lean()
+        if (!patient) {
+            return res.sendStatus(404)
+        }
+
+        const comment = await Comment.findOne({patient_id: req.body.patient_id}).limit(1).lean()
+
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
+
+        return res.render('patient_hdetail.hbs', { oneItem: patient, clinician:  clinician, comment: comment })
+    } catch (err) {
+        return next(err)
+    }
+}
+
+
+const getPage = async (req, res, next) => {
+    try {
+        if (req.body.page_num < 1) {
+            return res.render('clinician_home.hbs', { data: patients, oneItem: clinician })
+        }
+        const patients = await Patient.find()
+            .skip(5 * (req.body.page_num - 1))
+            .limit(5)
+            .lean()
+
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
+
+        return res.render('clinician_home.hbs', { data: patients, oneItem:  clinician})
     } catch (err) {
         return next(err)
     }
@@ -229,5 +275,7 @@ module.exports = {
     updateData,
     getDataById,
     insertData,
+    getHistory,
+    getPage,
     reply,
 }

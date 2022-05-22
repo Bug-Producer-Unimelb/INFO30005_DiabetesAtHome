@@ -11,6 +11,8 @@ patientRouter.get('/:patient_id/:data_name', patientController.getNewestComment)
 
 patientRouter.post('/signup', patientController.insertData)
 
+patientRouter.post('/page', patientController.getPage)
+
 patientRouter.post('/record', patientController.updateData)
 
 patientRouter.post('/reply', patientController.reply)

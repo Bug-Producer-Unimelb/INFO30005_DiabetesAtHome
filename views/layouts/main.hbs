@@ -12,11 +12,15 @@
     <header> 
         <nav id="before_log_phone_header">
             <ul>
-                <img src="/images/ic_dehaze_24px.png" id="menu_icon">
+                <button class="menu_button" onclick="window.location.href='/'">⬅️</button>
+
+                <form method="POST" action="/logout"><button id="logout">Logout</button></form>
+
                 <li><img id="phone_logo" src="/images/logo_white.png"></li>
             </ul>
             <hr/>
         </nav>
+
         <nav id="after_log_web_header">
             <ul>
                 <li><img src="/images/logo.png"></li>
@@ -26,13 +30,14 @@
                     <ri><form method="POST" action="/logout"><button>Logout</button></form></ri>
             </ul>
         </nav>
+        
         <nav id="before_log_web_header">
             <ul>
                 <li><img src="/images/logo.png"></li>
                     <li><a href="/">Home</a></li>
                     <li><a href="/aboutdiabetes">About Diabetes</a></li>
                     <li><a href="/aboutus">About Us</a></li>
-                    <li><a href="#">Settings</a></li>
+                </li>
             </ul>
             <hr/>
             <p>Diabetes@Home</p>

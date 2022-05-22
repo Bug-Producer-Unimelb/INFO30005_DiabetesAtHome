@@ -2,6 +2,7 @@
 // const res = require('express/lib/response')
 const Comment = require('../models/comment')
 const Patient = require('../models/patient')
+const Clinician = require('../models/clinician')
 const ObjectId = require('mongodb').ObjectId
 
 const getAllCommentsData = async (req, res, next) => {
@@ -10,11 +11,13 @@ const getAllCommentsData = async (req, res, next) => {
             .populate('patient_id')
             .limit(5)
             .lean()
-        console.log(comments)
+
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
 
         return res.render('clinician_comment.hbs', {
             data: comments,
             page_num: 0,
+            oneItem: clinician
         })
     } catch (err) {
         return next(err)
@@ -49,7 +52,9 @@ const getData = async (req, res, next) => {
             return res.sendStatus(404)
         }
 
-        return res.render('clinician_home.hbs', { oneItem: comment })
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
+
+        return res.render('clinician_home.hbs', { oneItem: comment, oneItem: clinician })
     } catch (err) {
         return next(err)
     }
@@ -66,7 +71,9 @@ const getPage = async (req, res, next) => {
             .limit(5)
             .lean()
 
-        return res.render('clinician_comment.hbs', { data: comments })
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
+
+        return res.render('clinician_comment.hbs', { data: comments, oneItem:  clinician})
     } catch (err) {
         return next(err)
     }
@@ -94,9 +101,10 @@ const nextpage = async (req, res, next) => {
             .skip(5 * req.body.page_num)
             .limit(5)
             .lean()
-        console.log(req.body)
 
-        return res.render('clinician_comment.hbs', { data: comments })
+        const clinician = await Clinician.findOne({user_id: req.user.id}).lean()
+
+        return res.render('clinician_comment.hbs', { data: comments, oneItem:  clinician })
     } catch (err) {
         return next(err)
     }
@@ -105,12 +113,15 @@ const nextpage = async (req, res, next) => {
 const insertData = async (req, res, next) => {
     try {
         newComment = new Comment(req.body)
-        newComment.patient_id = ObjectId('62623d0a745775707e941445')
-        newComment.data_name = 'Blood Glucose Level'
+        newComment.patient_id = req.patient._id
+        newComment.data_name = req.body.data_name
+        newComment.data_content = req.body.data_content
         newComment.createdAt = Date.now()
 
+        console.log(newComment)
+
         await newComment.save()
-        return res.redirect('/patient')
+        return res.redirect('/')
     } catch (err) {
         return next(err)
     }
