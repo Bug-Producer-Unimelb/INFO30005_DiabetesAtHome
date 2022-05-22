@@ -19,6 +19,7 @@
         background-color: #F2F1F7;
         position: fixed;
         top: 0%;
+        height: 8%;
         width: 100%;
     }
     
@@ -87,6 +88,14 @@
 
     header li a:active {
         color: rgba(29, 32, 134, 1); 
+    }
+
+    .patient_img {
+        height: 70px;
+        width: 70px;
+        position: fixed;
+        top: 12px;
+        right: 350px;
     }
 
     button.header_button {
