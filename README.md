@@ -6,11 +6,11 @@
 
 | Name         | Contributions                                                                             | State |
 | :----------- | :---------------------------------------------------------------------------------------- | :---- |
-| Zheng Li     | UI Design, clinician back end, patient back end, login and security | ✅    |
-| Lujia Yang   | UI Design, patient front end (phone), patient back end, clinician back end  | ✅    |
-| Jiayi Wu     | UI Design, clinician front end, patient front end (web, ipad), functional test | ✅    |
-| Bowen Yu     | patient front end (web), patient back end | ✅    |
-| Wuge Liu     | UI Design, clinician front end, patient front end (web, ipad) | ✅    |
+| Zheng Li     | UI Design, clinician back end, patient back end, login and security, functional test | ✅    |
+| Lujia Yang   | UI Design, patient front end (phone), patient back end, clinician back end, functional test  | ✅    |
+| Jiayi Wu     | UI Design, clinician front end, patient front end (web, iPad, phone), functional test | ✅    |
+| Bowen Yu     | UI Design, Patient front end (web), Patient back end (web) | ✅    |
+| Wuge Liu     | UI Design, clinician front end, patient front end (web, iPad, phone), functional test | ✅    |
 
 
 
