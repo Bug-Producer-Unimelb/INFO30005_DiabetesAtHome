@@ -229,7 +229,6 @@
     }
 
     .buttons .back_button {
-
         position: fixed;
         bottom: 160px;
         left: 420px;
@@ -1037,6 +1036,30 @@
         color: #d0d0d0;
     }
 
+    .dashboard h3 {
+        padding-left: 6%; 
+        font-family: Tamil MN;
+        font-size: 35px;
+        color: #d0d0d0;
+    }
+
+    .darkmode .clinician_note .note {
+        padding-left: 12%;
+        margin-top: 100%;
+        font-family: Tamil MN;
+        font-size: 20px;
+        color: #d0d0d0;
+        font-weight: bold;
+    }
+
+    .darkmode .clinician_note .support_note {
+        padding-left: 27%;
+        font-family: Tamil MN;
+        font-size: 20px;
+        color: #d0d0d0;
+        font-weight: bold;
+    }
+
     .darkmode .info_text {
         font-family: Tamil MN;
         font-size: 15px;
@@ -1073,6 +1096,23 @@
 
         margin-left: 15%;
         margin-top: 1.5%;
+    }
+
+    .darkmode .buttons .back_button {
+        position: fixed;
+        bottom: 160px;
+        left: 420px;
+        text-decoration: none;
+        text-align: center;
+        background: #d0d0d0;
+        color: #2D2F42;
+        font-family: Tamil MN;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        opacity: 75%;
     }
 
     .darkmode .buttons .history_button {
