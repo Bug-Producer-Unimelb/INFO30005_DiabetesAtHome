@@ -193,7 +193,7 @@
     }
 
     header li img {
-        content: url(images/Group_192.png);
+        content: url(/images/logo_white.png);
         position: fixed;
         right: 10px;
         top: 28px;
